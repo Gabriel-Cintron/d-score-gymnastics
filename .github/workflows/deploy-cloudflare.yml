@@ -60,12 +60,17 @@ jobs:
           run-id: ${{ inputs.ci_run_id }}
           github-token: ${{ github.token }}
       - run: node scripts/verify-web-artifact.mjs
+      - name: Isolate the deployment CLI from the application workspace
+        run: |
+          node --input-type=module -e 'import { mkdir, writeFile } from "node:fs/promises"; const path = process.env.RUNNER_TEMP + "/d-score-pages-deploy"; await mkdir(path); await writeFile(path + "/package.json", "{\"private\":true}\n");'
       - name: Upload the tested static artifact without rebuilding it
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: npm
+          workingDirectory: ${{ runner.temp }}/d-score-pages-deploy
           command:
-            pages deploy build/web-release/site --project-name=d-score-gymnastics --branch=${{
-            inputs.target == 'production' && 'main' || 'release-preview' }} --commit-hash=${{
-            steps.candidate.outputs.sha }}
+            pages deploy "${{ github.workspace }}/build/web-release/site"
+            --project-name=d-score-gymnastics --branch=${{ inputs.target == 'production' && 'main'
+            || 'release-preview' }} --commit-hash=${{ steps.candidate.outputs.sha }}
