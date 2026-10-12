@@ -1,0 +1,93 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-floor-apparatus-policy
+description:
+  Covers the strength limit, connection value, current reserved dismount, and stick bonus.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: floor-exercise
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - { occurrenceId: low-strength, elementId: fx:mag-0003 }
+    - occurrenceId: high-strength
+      elementId: fx:mag-0007
+    - { occurrenceId: balance, elementId: fx:mag-0024 }
+    - { occurrenceId: front-d, elementId: fx:mag-0051 }
+    - { occurrenceId: front-b, elementId: fx:mag-0054 }
+    - { occurrenceId: dismount, elementId: fx:mag-0056 }
+  relationships:
+    - kind: connection
+      connectionId: front-connection
+      occurrenceIds: [front-d, front-b]
+expected:
+  total: 2.8
+  breakdown: { elementDifficulty: 1.6, elementGroup: 1.0, connection: 0.1, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: low-strength
+      elementId: fx:mag-0003
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.special-repetition-limit
+      reasonParameters: { limitId: strength, maximum: 1 }
+    - occurrenceId: high-strength
+      elementId: fx:mag-0007
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: balance
+      elementId: fx:mag-0024
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: front-d
+      elementId: fx:mag-0051
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: front-b
+      elementId: fx:mag-0054
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: fx:mag-0056
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [high-strength]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 1 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: connection
+      occurrenceIds: [front-d, front-b]
+      value: 0.1
+      reason: fig.connection-awarded
+      reasonParameters: { connectionId: front-connection }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.special-repetition-limit
+      occurrenceIds: [low-strength]
+      parameters: { limitId: strength, maximum: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 4 }

@@ -1,0 +1,142 @@
+schemaVersion: 1
+kind: fig-element-counting
+id: fig-floor-counting-selection
+description:
+  Reserves the current Floor dismount slot, selects seven other elements, and favors group coverage
+  on equal values.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+
+routine:
+  apparatus: floor-exercise
+  occurrences:
+    - occurrenceId: handstand
+      elementId: fx:mag-0011
+    - occurrenceId: front-basic
+      elementId: fx:mag-0053
+    - occurrenceId: front-layout
+      elementId: fx:mag-0054
+    - occurrenceId: morandi
+      elementId: fx:mag-0051
+    - occurrenceId: double-front-tuck
+      elementId: fx:mag-0055
+    - occurrenceId: walkover
+      elementId: fx:mag-0022
+    - occurrenceId: back-basic
+      elementId: fx:mag-0063
+    - occurrenceId: front-tuck-full
+      elementId: fx:mag-0089
+    - occurrenceId: front-layout-full
+      elementId: fx:mag-0090
+    - occurrenceId: double-front-pike
+      elementId: fx:mag-0056
+
+expected:
+  total: 3.8
+  breakdown:
+    elementDifficulty: 2.2
+    elementGroup: 1.6
+    connection: 0.0
+    bonus: 0.0
+  elementDecisions:
+    - occurrenceId: handstand
+      elementId: fx:mag-0011
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: front-basic
+      elementId: fx:mag-0053
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-group-limit
+      reasonParameters:
+        group: 2
+        maximum: 4
+    - occurrenceId: front-layout
+      elementId: fx:mag-0054
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: morandi
+      elementId: fx:mag-0051
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: double-front-tuck
+      elementId: fx:mag-0055
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: walkover
+      elementId: fx:mag-0022
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-count-limit
+      reasonParameters:
+        maximum: 7
+    - occurrenceId: back-basic
+      elementId: fx:mag-0063
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: front-tuck-full
+      elementId: fx:mag-0089
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: front-layout-full
+      elementId: fx:mag-0090
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: double-front-pike
+      elementId: fx:mag-0056
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.dismount-counted
+      reasonParameters:
+        slot: reserved-dismount
+  awards:
+    - component: element-group
+      occurrenceIds:
+        - handstand
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 1
+    - component: element-group
+      occurrenceIds:
+        - double-front-pike
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 2
+    - component: element-group
+      occurrenceIds:
+        - back-basic
+      value: 0.3
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 3
+    - component: element-group
+      occurrenceIds:
+        - front-layout-full
+      value: 0.3
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 4
+  warnings: []

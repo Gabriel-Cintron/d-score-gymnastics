@@ -1,0 +1,66 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-pommel-flop
+description: Credits a three-part flop as one D element and preserves the separate dismount slot.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: pommel-horse
+  occurrences:
+    - { occurrenceId: dsb-one, elementId: ph:mag-0033 }
+    - { occurrenceId: dsb-two, elementId: ph:mag-0033 }
+    - occurrenceId: dsa
+      elementId: ph:mag-0031
+    - occurrenceId: dismount
+      elementId: ph:mag-0100
+  relationships:
+    - kind: sequence
+      sequenceId: flop-one
+      sequenceType: pommel-flop
+      occurrenceIds: [dsb-one, dsb-two, dsa]
+expected:
+  total: 1.5
+  breakdown: { elementDifficulty: 0.7, elementGroup: 0.8, connection: 0.0, bonus: 0.0 }
+  elementDecisions:
+    - occurrenceId: dsb-one
+      elementId: ph:mag-0033
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.pommel-sequence-counted
+      reasonParameters: { sequenceId: flop-one, sequenceType: pommel-flop }
+    - occurrenceId: dsb-two
+      elementId: ph:mag-0033
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.pommel-sequence-component
+      reasonParameters: { creditedOccurrenceId: dsb-one, sequenceId: flop-one }
+    - occurrenceId: dsa
+      elementId: ph:mag-0031
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.pommel-sequence-component
+      reasonParameters: { creditedOccurrenceId: dsb-one, sequenceId: flop-one }
+    - occurrenceId: dismount
+      elementId: ph:mag-0100
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [dsb-one]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.3
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+  warnings:
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }

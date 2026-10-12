@@ -1,0 +1,2552 @@
+schemaVersion: 1
+apparatus: parallel-bars
+elements:
+  - id: pb:mag-0001
+    code:
+      group: 1
+      number: 1
+    name: Forward uprise into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: A
+  - id: pb:mag-0002
+    code:
+      group: 1
+      number: 2
+    name: Forward uprise then straddle cut backward into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: B
+  - id: pb:mag-0003
+    code:
+      group: 1
+      number: 3
+    name: Muntean — Forward uprise then straddle cut backward into hang
+    aliases:
+      - Muntean
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: C
+  - id: pb:mag-0004
+    code:
+      group: 1
+      number: 5
+    name: Forward uprise plus 1/2 rotation into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: E
+  - id: pb:mag-0005
+    code:
+      group: 1
+      number: 6
+    name:
+      Forward uprise plus Stützkehr 3/4 rotation or 1/4 rotation into handstand followed by a kip on
+      one rail
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: F
+  - id: pb:mag-0006
+    code:
+      group: 1
+      number: 7
+    name: Forward uprise plus 1/4 rotation into hang on 1 rail
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: A
+  - id: pb:mag-0007
+    code:
+      group: 1
+      number: 8
+    name:
+      Watanabe — Roll backward plus 1/2 rotation beginning in upper arm hang or forward uprise into
+      Kato hop into support
+    aliases:
+      - Watanabe
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: B
+  - id: pb:mag-0008
+    code:
+      group: 1
+      number: 11
+    name: Forward uprise into Makuts into upper arm
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: E
+  - id: pb:mag-0009
+    code:
+      group: 1
+      number: 12
+    name: Tsolakidis 1 — Forward uprise into Makuts into support
+    aliases:
+      - Tsolakidis 1
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: G
+  - id: pb:mag-0010
+    code:
+      group: 1
+      number: 14
+    name: Roll backward into handstand plus straight arms
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: B
+  - id: pb:mag-0011
+    code:
+      group: 1
+      number: 15
+    name: Kovtun — Back toss beginning in upper arm plus 1/4 rotation into one rail
+    aliases:
+      - Kovtun
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: C
+  - id: pb:mag-0012
+    code:
+      group: 1
+      number: 17
+    name: Richards — Forward uprise plus 1/1 rotation into handstand
+    aliases:
+      - Richards
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: E
+  - id: pb:mag-0013
+    code:
+      group: 1
+      number: 18
+    name: Tsolakidis 2 — Forward uprise plus 3/2 rotation into handstand
+    aliases:
+      - Tsolakidis 2
+    families: []
+    roles: []
+    traits:
+      - front-uprise-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: F
+  - id: pb:mag-0014
+    code:
+      group: 1
+      number: 20
+    name: Somersault backward plus straddled cut into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: B
+  - id: pb:mag-0015
+    code:
+      group: 1
+      number: 21
+    name: Roll backward plus straddled cut into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: C
+  - id: pb:mag-0016
+    code:
+      group: 1
+      number: 24
+    name: Dimitrenko — Roll backward plus somersault backward tuck into upper arm hang
+    aliases:
+      - Dimitrenko
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 96
+    difficulty: F
+  - id: pb:mag-0017
+    code:
+      group: 1
+      number: 30
+    name: Li Xiaopeng — Roll backward plus somersault backward pike into upper arm hang
+    aliases:
+      - Li Xiaopeng
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: G
+  - id: pb:mag-0018
+    code:
+      group: 1
+      number: 34
+    name: Harada — Roll backward plus 1/2 rotation tuck into upper arm hang
+    aliases:
+      - Harada
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: D
+  - id: pb:mag-0019
+    code:
+      group: 1
+      number: 35
+    name: Dalton — Roll backward plus 1/2 rotation tuck into hang
+    aliases:
+      - Dalton
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: E
+  - id: pb:mag-0020
+    code:
+      group: 1
+      number: 38
+    name: Backward uprise into handstand (or plus 1/2 t)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: B
+  - id: pb:mag-0021
+    code:
+      group: 1
+      number: 40
+    name: Backward uprise plus 1/2 rotation hop into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: D
+  - id: pb:mag-0022
+    code:
+      group: 1
+      number: 41
+    name: Backward uprise plus 3/4 rotation hop into handstand on 1 rail
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: E
+  - id: pb:mag-0023
+    code:
+      group: 1
+      number: 44
+    name: Backward uprise plus 1/2 rotation then straddle cut backward into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: B
+  - id: pb:mag-0024
+    code:
+      group: 1
+      number: 45
+    name: Backward uprise plus 1/2 rotation then straddled cut backward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 97
+    difficulty: C
+  - id: pb:mag-0025
+    code:
+      group: 1
+      number: 50
+    name: Backward uprise plus 1/2 rotation into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: B
+  - id: pb:mag-0026
+    code:
+      group: 1
+      number: 51
+    name: Yamawaki — Backward uprise then 5/4 somersault forward rotation into upper arm hang
+    aliases:
+      - Yamawaki
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: C
+  - id: pb:mag-0027
+    code:
+      group: 1
+      number: 52
+    name: Backward uprise then somersault forward pike or straight into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: D
+  - id: pb:mag-0028
+    code:
+      group: 1
+      number: 54
+    name: Backward uprise then double somersault forward tuck into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: F
+  - id: pb:mag-0029
+    code:
+      group: 1
+      number: 59
+    name: Pakhniuk 1 — Backward uprise then 5/4 somersault forward straddled into upper arm hang
+    aliases:
+      - Pakhniuk 1
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: E
+  - id: pb:mag-0030
+    code:
+      group: 1
+      number: 60
+    name: Pakhniuk 2 — Backward uprise then 5/4 somersault forward straddled into hang
+    aliases:
+      - Pakhniuk 2
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: F
+  - id: pb:mag-0031
+    code:
+      group: 1
+      number: 61
+    name: Backward uprise then straddled cut or flank over into support. bent arm
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: A
+  - id: pb:mag-0032
+    code:
+      group: 1
+      number: 62
+    name: Backward uprise then straddled cut or flank over into support straight. arm
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 98
+    difficulty: B
+  - id: pb:mag-0033
+    code:
+      group: 2
+      number: 1
+    name: Any swing into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: A
+  - id: pb:mag-0034
+    code:
+      group: 2
+      number: 2
+    name: Kato — Bent arm swing forward into hop 1/2 rotation into support
+    aliases:
+      - Kato
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: B
+  - id: pb:mag-0035
+    code:
+      group: 2
+      number: 3
+    name: Stützkehr forward into handstand (into 1 or 2 bars)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: C
+  - id: pb:mag-0036
+    code:
+      group: 2
+      number: 4
+    name:
+      'Bilozerchev - Peters — Stützkehr forward into handstand (1 rail) (alternative: plus
+      additional 1/4 or 3/4 rotation into handstand)'
+    aliases:
+      - Bilozerchev - Peters
+      - Dimic
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: D
+  - id: pb:mag-0037
+    code:
+      group: 2
+      number: 7
+    name: Any L-sit on 1 or 2 rails 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: A
+  - id: pb:mag-0038
+    code:
+      group: 2
+      number: 8
+    name:
+      'Any press plus bent arm straight. body, or straight arm bent body into handstand., on 1 or 2
+      rails 2-second hold alternative: straddled'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: B
+  - id: pb:mag-0039
+    code:
+      group: 2
+      number: 9
+    name: Salazar — 3/4 Diamidov then 1/2 rotation into upper arms
+    aliases:
+      - Salazar
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: C
+  - id: pb:mag-0040
+    code:
+      group: 2
+      number: 10
+    name: De Freitas — 3/4 Diamidov then rear vault into side hang on 1 bar
+    aliases:
+      - De Freitas
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: D
+  - id: pb:mag-0041
+    code:
+      group: 2
+      number: 13
+    name: Straddle cut backward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: A
+  - id: pb:mag-0042
+    code:
+      group: 2
+      number: 14
+    name: Straddle cut backward into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: B
+  - id: pb:mag-0043
+    code:
+      group: 2
+      number: 15
+    name: Babos — Straddle cut backward directly into hang
+    aliases:
+      - Babos
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: C
+  - id: pb:mag-0044
+    code:
+      group: 2
+      number: 19
+    name: Straddle cut forward into support or L-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 99
+    difficulty: A
+  - id: pb:mag-0045
+    code:
+      group: 2
+      number: 27
+    name: Diamidov — Swing forward plus 1/1 rotation on 1 arm into handstand
+    aliases:
+      - Diamidov
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: C
+  - id: pb:mag-0046
+    code:
+      group: 2
+      number: 28
+    name: Diamidov plus 1/4 or 1/2 rotation into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: D
+  - id: pb:mag-0047
+    code:
+      group: 2
+      number: 32
+    name: Carminucci — Swing forward plus 1/1 rotation into upper arm hang
+    aliases:
+      - Carminucci
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: B
+  - id: pb:mag-0048
+    code:
+      group: 2
+      number: 34
+    name: Swing forward plus 5/4 rotation on one arm through handstand. then Healy into upper arm
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - healy
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: D
+  - id: pb:mag-0049
+    code:
+      group: 2
+      number: 35
+    name: Makuts — 3/4 Diamidov & 3/4 Healy on the other hand into support
+    aliases:
+      - Makuts
+    families: []
+    roles: []
+    traits:
+      - healy
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: E
+  - id: pb:mag-0050
+    code:
+      group: 2
+      number: 36
+    name:
+      Zonderland — Swing forward plus 5/4 rotation on one arm through handstand. then Healy into
+      support
+    aliases:
+      - Zonderland
+    families: []
+    roles: []
+    traits:
+      - healy
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: F
+  - id: pb:mag-0051
+    code:
+      group: 2
+      number: 39
+    name: 'Rumbutis — Somersault backward into handstand. alternative: into one rail'
+    aliases:
+      - Rumbutis
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: C
+  - id: pb:mag-0052
+    code:
+      group: 2
+      number: 40
+    name: Somersault backward plus straddle cut into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: D
+  - id: pb:mag-0053
+    code:
+      group: 2
+      number: 45
+    name: Toumilovich — Somersault backward plus 1/2 rotation into upper arm hang
+    aliases:
+      - Toumilovich
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: C
+  - id: pb:mag-0054
+    code:
+      group: 2
+      number: 46
+    name: Somersault backward into handstand 1 rail (connected into Healy type element)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - healy
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: D
+  - id: pb:mag-0055
+    code:
+      group: 2
+      number: 47
+    name: Morisue — Double somersault tuck into upper arm hang
+    aliases:
+      - Morisue
+    families:
+      - salto-morisue
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: E
+  - id: pb:mag-0056
+    code:
+      group: 2
+      number: 48
+    name: Huang Liping — Double somersault pike into up. arm hang
+    aliases:
+      - Huang Liping
+    families:
+      - salto-morisue
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 100
+    difficulty: F
+  - id: pb:mag-0057
+    code:
+      group: 2
+      number: 52
+    name: Suarez — 3/2 somersault backward plus 1/2 rotation into upper arm hang
+    aliases:
+      - Suarez
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: D
+  - id: pb:mag-0058
+    code:
+      group: 2
+      number: 54
+    name: Kuavita — Double somersault backwards plus half rotation into upper arm
+    aliases:
+      - Kuavita
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: G
+  - id: pb:mag-0059
+    code:
+      group: 2
+      number: 56
+    name: Handstand. plus 1/4 rotation then fall back into support plus 1/4 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: B
+  - id: pb:mag-0060
+    code:
+      group: 2
+      number: 57
+    name: Brändström — Handstand. plus 3/4 rotation then fall back into support plus 1/4 rotation
+    aliases:
+      - Brändström
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: C
+  - id: pb:mag-0061
+    code:
+      group: 2
+      number: 62
+    name: Stützkehr backward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: B
+  - id: pb:mag-0062
+    code:
+      group: 2
+      number: 63
+    name: Novikov — Stützkehr backward through handstand. into support
+    aliases:
+      - Novikov
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: C
+  - id: pb:mag-0063
+    code:
+      group: 2
+      number: 69
+    name: Stützkehr backward plus straddle cut backward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 101
+    difficulty: C
+  - id: pb:mag-0064
+    code:
+      group: 2
+      number: 73
+    name: 'Healy into upper arm hang (alternative: beginning in handstand on 1 rail)'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - healy
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: A
+  - id: pb:mag-0065
+    code:
+      group: 2
+      number: 74
+    name:
+      Following a swing element (min. B) into handstand on 1 rail, Healy into upper arm hang. Min. B
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - healy
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: B
+  - id: pb:mag-0066
+    code:
+      group: 2
+      number: 75
+    name: 'Healy — into support (alternative: beginning in handstand on 1 rail)'
+    aliases:
+      - Healy
+    families: []
+    roles: []
+    traits:
+      - healy
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: C
+  - id: pb:mag-0067
+    code:
+      group: 2
+      number: 76
+    name:
+      Bejenaru — Following a swing element (min. B) into handstand on 1 rail, Healy (360° or more)
+      into support. Min B
+    aliases:
+      - Bejenaru
+    families: []
+    roles: []
+    traits:
+      - healy
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: D
+  - id: pb:mag-0068
+    code:
+      group: 2
+      number: 81
+    name: Swing backward plus 1/2 rotation hop into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: C
+  - id: pb:mag-0069
+    code:
+      group: 2
+      number: 82
+    name: Swing backward plus 3/4 rotation hop into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: D
+  - id: pb:mag-0070
+    code:
+      group: 2
+      number: 83
+    name:
+      Gatson 1 — Swing backward plus 1/1 rotation hop into handstand (or reverse 1/1 rotation into
+      handstand)
+    aliases:
+      - Gatson 1
+      - Patron
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: E
+  - id: pb:mag-0071
+    code:
+      group: 2
+      number: 84
+    name:
+      Gatson 2 — Gatson 1 plus 1/4 t into handstand on 1 rail then 1/4 rotation handstand on 2 rails
+    aliases:
+      - Gatson 2
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: F
+  - id: pb:mag-0072
+    code:
+      group: 2
+      number: 86
+    name: 1/2 or 3/4 rotation forward or backward in handstand; begins in handstand on 1 rail
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: B
+  - id: pb:mag-0073
+    code:
+      group: 2
+      number: 91
+    name: 'Any handstand. plus 1/2 rotation. (alternative: plus 2-second hold.)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: A
+  - id: pb:mag-0074
+    code:
+      group: 2
+      number: 92
+    name: Any 1/1 pirouette in handstand on 2 rails
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 102
+    difficulty: B
+  - id: pb:mag-0075
+    code:
+      group: 2
+      number: 95
+    name: Hall — 5/4 somersault forward straddled plus 1/2 rotation into upper arm
+    aliases:
+      - Hall
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 8
+    difficulty: E
+  - id: pb:mag-0076
+    code:
+      group: 2
+      number: 99
+    name:
+      Carballo 2 — Somersault forward into support or beginning in handstand plus rotated grip,
+      inlocate into support; begins in handstand
+    aliases:
+      - Carballo 2
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: C
+  - id: pb:mag-0077
+    code:
+      group: 2
+      number: 101
+    name: Lee Chul Hon — 5/4 somersault forward straddle directly into hang. (Lee Chul Hon/Sasaki)
+    aliases:
+      - Lee Chul Hon
+      - Sasaki
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: E
+  - id: pb:mag-0078
+    code:
+      group: 2
+      number: 104
+    name: 5/4 somersault forward tuck or pike into upper arm hang
+    aliases: []
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: B
+  - id: pb:mag-0079
+    code:
+      group: 2
+      number: 105
+    name: Somersault forward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: C
+  - id: pb:mag-0080
+    code:
+      group: 2
+      number: 106
+    name: 5/4 somersault forward straddled into upper arm hang
+    aliases: []
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: D
+  - id: pb:mag-0081
+    code:
+      group: 2
+      number: 107
+    name: 5/4 somersault forward straddled into bent arm support
+    aliases: []
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: E
+  - id: pb:mag-0082
+    code:
+      group: 2
+      number: 111
+    name: Juarez 2 — Somersault forward piked into hang
+    aliases:
+      - Juarez 2
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: C
+  - id: pb:mag-0083
+    code:
+      group: 2
+      number: 113
+    name: Double somersault forward tuck into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: E
+  - id: pb:mag-0084
+    code:
+      group: 2
+      number: 114
+    name: Double somersault forward pike into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: F
+  - id: pb:mag-0085
+    code:
+      group: 2
+      number: 117
+    name: 5/4 somersault forward straight into upper arm hang
+    aliases: []
+    families:
+      - salto-five-quarter-forward
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: C
+  - id: pb:mag-0086
+    code:
+      group: 2
+      number: 119
+    name: Urzica — Somersault forward plus 1/1 rotation into upper arm hang
+    aliases:
+      - Urzica
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 103
+    difficulty: E
+  - id: pb:mag-0087
+    code:
+      group: 2
+      number: newsletter-3-patron-2
+    name:
+      Patron 2 — Swing backward plus 1/4 rotation hop into 3/4 handstand on one rail in reverse
+      direction
+    aliases:
+      - Patron 2
+    families: []
+    roles: []
+    traits:
+      - one-rail
+    source:
+      documentId: mag-newsletter-3-2025
+      page: 5
+    difficulty: C
+  - id: pb:mag-0088
+    code:
+      group: 3
+      number: 3
+    name:
+      Alsadi — Swing forward, straddle cut backward, then regrasp plus straight body at horizontal
+      into bent then upper arm
+    aliases:
+      - Alsadi
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: C
+  - id: pb:mag-0089
+    code:
+      group: 3
+      number: 4
+    name: Tippelt — Moy piked plus straddle backward into handstand
+    aliases:
+      - Tippelt
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: D
+  - id: pb:mag-0090
+    code:
+      group: 3
+      number: 5
+    name:
+      Bhavsar — Swing forward, straddle cut backward, then regrasp plus straight body at horizontal
+    aliases:
+      - Bhavsar
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: E
+  - id: pb:mag-0091
+    code:
+      group: 3
+      number: 8
+    name:
+      'Moy piked plus straddled cut backward then 1/2 rotation into upper arm hang (alternative:
+      legs together)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: B
+  - id: pb:mag-0092
+    code:
+      group: 3
+      number: 9
+    name: Nolet — Moy piked plus 1/1 rotation into upper arm hang
+    aliases:
+      - Nolet
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: C
+  - id: pb:mag-0093
+    code:
+      group: 3
+      number: 10
+    name: Giraldo — Moy then somersault forward tuck, pike. or straddled into upper arm hang
+    aliases:
+      - Giraldo
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: D
+  - id: pb:mag-0094
+    code:
+      group: 3
+      number: 14
+    name: 'Moy into support bent legs (alternative: without grip release)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: B
+  - id: pb:mag-0095
+    code:
+      group: 3
+      number: 15
+    name: 'Moy — into support straight legs (alternative: without grip release)'
+    aliases:
+      - Moy
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: C
+  - id: pb:mag-0096
+    code:
+      group: 3
+      number: 21
+    name:
+      'Kenmotsu — Giant swing backward into handstand or plus inlocation forward (alternative: plus
+      1/4 or 1/2 rotation then into one rail)'
+    aliases:
+      - Kenmotsu
+      - Wells
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: C
+  - id: pb:mag-0097
+    code:
+      group: 3
+      number: 22
+    name:
+      Piasecky — Giant swing backward into handstand on one rail (connected into Healy type element)
+    aliases:
+      - Piasecky
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 104
+    difficulty: D
+  - id: pb:mag-0098
+    code:
+      group: 3
+      number: 29
+    name: 'Giant swing backward plus Diamidov into handstand, alternative: into one rail'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: E
+  - id: pb:mag-0099
+    code:
+      group: 3
+      number: 30
+    name: Giant swing Diamidov plus 1/4 or 1/2 rotation into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: F
+  - id: pb:mag-0100
+    code:
+      group: 3
+      number: 38
+    name: Swing down plus somersault backward straight into hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: B
+  - id: pb:mag-0101
+    code:
+      group: 3
+      number: 39
+    name: Gushiken — Giant swing backward plus 1/2 rotation into upper arm hang
+    aliases:
+      - Gushiken
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: C
+  - id: pb:mag-0102
+    code:
+      group: 3
+      number: 40
+    name: Marinitch — Giant swing backward plus 1/2 rotation into support
+    aliases:
+      - Marinitch
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: D
+  - id: pb:mag-0103
+    code:
+      group: 3
+      number: 42
+    name:
+      Giant swing. backward plus Diamidov into handstand into one rail (connected into Healy type
+      element)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: F
+  - id: pb:mag-0104
+    code:
+      group: 3
+      number: 46
+    name: Dauser — Giant swing backward plus Makuts into upper hang
+    aliases:
+      - Dauser
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: D
+  - id: pb:mag-0105
+    code:
+      group: 3
+      number: 48
+    name: Baumann — Giant swing backward plus Makuts
+    aliases:
+      - Baumann
+    families: []
+    roles: []
+    traits:
+      - giant-swing
+    source:
+      documentId: mag-code-of-points
+      page: 105
+    difficulty: F
+  - id: pb:mag-0106
+    code:
+      group: 3
+      number: 50
+    name: Giant swing backward plus straddled cut into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: B
+  - id: pb:mag-0107
+    code:
+      group: 3
+      number: 52
+    name: Korolev — Giant swing backward plus straddle cut into support or bent arms support
+    aliases:
+      - Korolev
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: D
+  - id: pb:mag-0108
+    code:
+      group: 3
+      number: 53
+    name: Sosa — Giant swing backward plus 1/2 rotation then straddled cut backward into upper arms
+    aliases:
+      - Sosa
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: E
+  - id: pb:mag-0109
+    code:
+      group: 3
+      number: 59
+    name: Belle — Double somersault tuck into upper arm hang; begins in giant. swing backward
+    aliases:
+      - Belle
+    families:
+      - salto-belle
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: E
+  - id: pb:mag-0110
+    code:
+      group: 3
+      number: 60
+    name: Belle pike
+    aliases: []
+    families:
+      - salto-belle
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: F
+  - id: pb:mag-0111
+    code:
+      group: 3
+      number: 66
+    name: Belle plus 1/1 rotation
+    aliases: []
+    families:
+      - salto-belle
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: H
+  - id: pb:mag-0112
+    code:
+      group: 3
+      number: 69
+    name: Chartrand — Giant swing backward then somersault plus 1/2 rotation into hang on the end
+    aliases:
+      - Chartrand
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: C
+  - id: pb:mag-0113
+    code:
+      group: 3
+      number: 70
+    name: Matsunaga — Giant swing backward then somersault plus 1/2 rotation into upper arm hang
+    aliases:
+      - Matsunaga
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: D
+  - id: pb:mag-0114
+    code:
+      group: 3
+      number: 71
+    name: Solis — Giant swing backward then somersault plus 1/2 rotation into hang
+    aliases:
+      - Solis
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: E
+  - id: pb:mag-0115
+    code:
+      group: 3
+      number: 72
+    name:
+      Tanaka — Giant swing backward plus 1/2 rotation then 3/2 somersault forward into up p arm hang
+    aliases:
+      - Tanaka
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 106
+    difficulty: F
+  - id: pb:mag-0116
+    code:
+      group: 3
+      number: 73
+    name: Glide kip
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: A
+  - id: pb:mag-0117
+    code:
+      group: 3
+      number: 74
+    name: Glide kip plus 1/2 rotation into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: B
+  - id: pb:mag-0118
+    code:
+      group: 3
+      number: 75
+    name: Glide kip backward into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: C
+  - id: pb:mag-0119
+    code:
+      group: 3
+      number: 77
+    name: Torres — Giant swing backward then somersault plus 1/2 rotation into support
+    aliases:
+      - Torres
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: E
+  - id: pb:mag-0120
+    code:
+      group: 3
+      number: 78
+    name:
+      Esparza — Giant swing backward plus 1/2 rotation then 3/2 somersault forward piked into upper
+      arm hang
+    aliases:
+      - Esparza
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: H
+  - id: pb:mag-0121
+    code:
+      group: 3
+      number: 80
+    name: Glide kip into straddled cut backward handstand on 1 or 2 rail
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: B
+  - id: pb:mag-0122
+    code:
+      group: 3
+      number: 81
+    name: Okubo — Glide kip into straddled cut backward into hand
+    aliases:
+      - Okubo
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: C
+  - id: pb:mag-0123
+    code:
+      group: 3
+      number: 83
+    name: Fokin — Giant swing backward then somersault plus 1/2 straight into upper arm hang
+    aliases:
+      - Fokin
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: E
+  - id: pb:mag-0124
+    code:
+      group: 3
+      number: 86
+    name: Glide kip one rail through L-sit straddled into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - one-rail
+      - straddled-one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: B
+  - id: pb:mag-0125
+    code:
+      group: 3
+      number: 87
+    name: Glide kip through L-sit piked into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: C
+  - id: pb:mag-0126
+    code:
+      group: 3
+      number: 88
+    name: Glide kip through L-sit piked into handstand then hop plus 3/4 rotation or more
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: D
+  - id: pb:mag-0127
+    code:
+      group: 3
+      number: 92
+    name: Li Donghua — Glide kip through V-sit then hop 1/2 rotation into hang on other rail
+    aliases:
+      - Li Donghua
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 107
+    difficulty: B
+  - id: pb:mag-0128
+    code:
+      group: 3
+      number: 97
+    name: Cast into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: A
+  - id: pb:mag-0129
+    code:
+      group: 3
+      number: 98
+    name: Cast into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: B
+  - id: pb:mag-0130
+    code:
+      group: 3
+      number: 99
+    name: Felge plus 1/2 rotation into upper arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: C
+  - id: pb:mag-0131
+    code:
+      group: 3
+      number: 100
+    name: Felge plus 1/2 rotation into rear support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: D
+  - id: pb:mag-0132
+    code:
+      group: 3
+      number: 104
+    name: Cast plus 1/2 rotation into up. arm hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: B
+  - id: pb:mag-0133
+    code:
+      group: 3
+      number: 105
+    name: Cast plus 1/2 rotation into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: C
+  - id: pb:mag-0134
+    code:
+      group: 3
+      number: 106
+    name:
+      'Peach — Felge into handstand. alternative: into one rail or 1/4 rotation (Cucherat - Celen)'
+    aliases:
+      - Peach
+      - Peach to handstand
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: D
+  - id: pb:mag-0135
+    code:
+      group: 3
+      number: 107
+    name: Felge plus 1/2 or 3/4 rotation into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: E
+  - id: pb:mag-0136
+    code:
+      group: 3
+      number: 108
+    name: Teng Hai Bin — Felge plus 1/1 rotation into handstand
+    aliases:
+      - Teng Hai Bin
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: F
+  - id: pb:mag-0137
+    code:
+      group: 3
+      number: 111
+    name: Arican — Cast into straddle cut backward into handstand
+    aliases:
+      - Arican
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: C
+  - id: pb:mag-0138
+    code:
+      group: 3
+      number: 114
+    name: Zhou Shixiong — Felge plus 5/4 rotation into handstand
+    aliases:
+      - Zhou Shixiong
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: G
+  - id: pb:mag-0139
+    code:
+      group: 3
+      number: 115
+    name: Felge plus travel into hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: A
+  - id: pb:mag-0140
+    code:
+      group: 3
+      number: 116
+    name: Felge into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: B
+  - id: pb:mag-0141
+    code:
+      group: 3
+      number: 117
+    name: Felge plus immediate straddle cut into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: C
+  - id: pb:mag-0142
+    code:
+      group: 3
+      number: 119
+    name: Chiarlo — Felge into one rail handstand (connected into Healy type element)
+    aliases:
+      - Chiarlo
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+      - one-rail
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: E
+  - id: pb:mag-0143
+    code:
+      group: 3
+      number: 120
+    name: Yamamuro — Felge through handstand into Makuts
+    aliases:
+      - Yamamuro
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 108
+    difficulty: G
+  - id: pb:mag-0144
+    code:
+      group: 3
+      number: 122
+    name: Gagnon — Felge roll backward plus tuck somersault 1/2 into upper arm hang
+    aliases:
+      - Gagnon
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: B
+  - id: pb:mag-0145
+    code:
+      group: 3
+      number: 123
+    name: Gagnon 2 — Felge roll backward plus straight somersault 1/2 into upper arm hang
+    aliases:
+      - Gagnon 2
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: C
+  - id: pb:mag-0146
+    code:
+      group: 3
+      number: 125
+    name: Tejada — Felge plus somersault backward tuck into upper arm hang
+    aliases:
+      - Tejada
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: E
+  - id: pb:mag-0147
+    code:
+      group: 3
+      number: 126
+    name: Juarez 1 — Felge plus somersault backward piked into up. arm hang
+    aliases:
+      - Juarez 1
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: F
+  - id: pb:mag-0148
+    code:
+      group: 3
+      number: 127
+    name: Felge forward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: A
+  - id: pb:mag-0149
+    code:
+      group: 3
+      number: 128
+    name: Felge forward plus 1/2 rotation into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: B
+  - id: pb:mag-0150
+    code:
+      group: 3
+      number: 130
+    name: Shoot up plus 1/4 rotation into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: D
+  - id: pb:mag-0151
+    code:
+      group: 3
+      number: 131
+    name: Nguyen — Shoot up plus 1/2 or 3/4 rotation into handstand
+    aliases:
+      - Nguyen
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: E
+  - id: pb:mag-0152
+    code:
+      group: 3
+      number: 137
+    name: Malone — Shoot up into handstand then fall back into support plus 1/4 rotation
+    aliases:
+      - Malone
+    families: []
+    roles: []
+    traits:
+      - felge-swing
+    source:
+      documentId: mag-code-of-points
+      page: 109
+    difficulty: E
+  - id: pb:mag-0153
+    code:
+      group: 4
+      number: 1
+    name: 'Somersault forward piked or straight alternative: plus 1/2 rotation'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: A
+  - id: pb:mag-0154
+    code:
+      group: 4
+      number: 5
+    name: Double somersault forward tucked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: E
+  - id: pb:mag-0155
+    code:
+      group: 4
+      number: 6
+    name: Belyavskiy — Double somersault forward piked
+    aliases:
+      - Belyavskiy
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: F
+  - id: pb:mag-0156
+    code:
+      group: 4
+      number: 8
+    name: Somersault forward piked or straight plus 1/1
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: B
+  - id: pb:mag-0157
+    code:
+      group: 4
+      number: 9
+    name: Somersault forward piked or straight. 3/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: C
+  - id: pb:mag-0158
+    code:
+      group: 4
+      number: 10
+    name: Somersault forward piked or straight plus 2/1 or 5/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: D
+  - id: pb:mag-0159
+    code:
+      group: 4
+      number: 11
+    name:
+      Double somersault forward tuck plus 1/2 rotation or 1/2 rotation double somersault backward
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: E
+  - id: pb:mag-0160
+    code:
+      group: 4
+      number: 12
+    name: Larduet — Double somersault forward tucked plus 1/1 rotation
+    aliases:
+      - Larduet
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: G
+  - id: pb:mag-0161
+    code:
+      group: 4
+      number: 15
+    name: Double somersault forward tuck beginning in end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: C
+  - id: pb:mag-0162
+    code:
+      group: 4
+      number: 16
+    name: Garza — Double somersault forward piked; begins in support on end
+    aliases:
+      - Garza
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-newsletter-4-2026
+      page: 3
+    difficulty: D
+  - id: pb:mag-0163
+    code:
+      group: 4
+      number: 18
+    name: Dalaloyan — Double somersault forward piked plus 1/2 rotation
+    aliases:
+      - Dalaloyan
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: F
+  - id: pb:mag-0164
+    code:
+      group: 4
+      number: 19
+    name: 'Somersault backward piked or straight, alternative: plus 1/2 rotation'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: A
+  - id: pb:mag-0165
+    code:
+      group: 4
+      number: 21
+    name: Somersault backward piked or straight plus 1/1 or 3/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: C
+  - id: pb:mag-0166
+    code:
+      group: 4
+      number: 22
+    name: Kan — Somersault backward straight plus 2/1 rotation
+    aliases:
+      - Kan
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 110
+    difficulty: D
+  - id: pb:mag-0167
+    code:
+      group: 4
+      number: 28
+    name: Roethlisberger — High wende then somersault backward tuck or pike
+    aliases:
+      - Roethlisberger
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: D
+  - id: pb:mag-0168
+    code:
+      group: 4
+      number: 32
+    name: Double somersault backward tuck beginning in end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: B
+  - id: pb:mag-0169
+    code:
+      group: 4
+      number: 33
+    name: Double somersault backward tucked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: C
+  - id: pb:mag-0170
+    code:
+      group: 4
+      number: 34
+    name: Double somersault backward pike
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: D
+  - id: pb:mag-0171
+    code:
+      group: 4
+      number: 36
+    name: Hiroyuki Kato — Double somersault backward rotation plus 1/1 rotation
+    aliases:
+      - Hiroyuki Kato
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: G
+  - id: pb:mag-0172
+    code:
+      group: 4
+      number: 40
+    name:
+      Double somersault backward tucked plus 1/2 rotation or somersault backward 1/2 tucked into
+      somersault forward tucked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: D
+  - id: pb:mag-0173
+    code:
+      group: 4
+      number: 43
+    name: Somersault backward straight; begins in hang on end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: A
+  - id: pb:mag-0174
+    code:
+      group: 4
+      number: 45
+    name: Double somersault backward tucked; begins in hang on end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: C
+  - id: pb:mag-0175
+    code:
+      group: 4
+      number: 46
+    name: Double somersault backward pike; begins in hang on end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: D
+  - id: pb:mag-0176
+    code:
+      group: 4
+      number: 47
+    name: Alvarez — Double somersault backward straight; begins in hang on end
+    aliases:
+      - Alvarez
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: E
+  - id: pb:mag-0177
+    code:
+      group: 4
+      number: 48
+    name: Triple somersault backward Tuck; begins in hang on end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 111
+    difficulty: G
+  - id: pb:mag-0178
+    code:
+      group: 4
+      number: 53
+    name: Double somersault backward tuck plus 1/1 or 1/2 rotation; begins in hang on end
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 112
+    difficulty: E
+  - id: pb:mag-0179
+    code:
+      group: 4
+      number: 54
+    name: Vera — Double somersault backward tucked plus 2/1 rotation; begins in hang on end
+    aliases:
+      - Vera
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-newsletter-4-2026
+      page: 3
+    difficulty: F

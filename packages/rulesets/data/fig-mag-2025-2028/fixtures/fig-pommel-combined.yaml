@@ -1,0 +1,90 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-pommel-combined
+description:
+  Covers a minimum-D combined sequence, Russian location input, overlapping limits, and dismount
+  priority.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: pommel-horse
+  occurrences:
+    - occurrenceId: russian
+      elementId: ph:mag-0058
+    - { occurrenceId: dsb, elementId: ph:mag-0033 }
+    - occurrenceId: separator
+      elementId: ph:mag-0017
+    - occurrenceId: end-e
+      elementId: ph:mag-0061
+      qualifiers: [russian-location-end]
+    - occurrenceId: between-d
+      elementId: ph:mag-0060
+      qualifiers: [russian-location-between-pommels]
+    - occurrenceId: dismount
+      elementId: ph:mag-0100
+  relationships:
+    - kind: sequence
+      sequenceId: combined-one
+      sequenceType: pommel-combined
+      occurrenceIds: [russian, dsb]
+expected:
+  total: 2.0
+  breakdown: { elementDifficulty: 1.2, elementGroup: 0.8, connection: 0.0, bonus: 0.0 }
+  elementDecisions:
+    - occurrenceId: russian
+      elementId: ph:mag-0058
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.pommel-sequence-counted
+      reasonParameters: { sequenceId: combined-one, sequenceType: pommel-combined }
+    - occurrenceId: dsb
+      elementId: ph:mag-0033
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.pommel-sequence-component
+      reasonParameters: { creditedOccurrenceId: russian, sequenceId: combined-one }
+    - occurrenceId: separator
+      elementId: ph:mag-0017
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: end-e
+      elementId: ph:mag-0061
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.special-repetition-limit
+      reasonParameters: { limitId: russian-wendeswing, maximum: 2 }
+    - occurrenceId: between-d
+      elementId: ph:mag-0060
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: ph:mag-0100
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [russian]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.3
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+  warnings:
+    - code: fig.special-repetition-limit
+      occurrenceIds: [end-e]
+      parameters: { limitId: russian-wendeswing, maximum: 2 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }

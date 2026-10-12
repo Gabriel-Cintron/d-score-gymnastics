@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "rulesetId": "fig-mag-2025-2028",
+  "authoritativeRulesUrl": "https://www.gymnastics.sport/site/rules/",
+  "checkedOn": "2026-10-11",
+  "officialPublicationCutoff": "2026-08-10",
+  "result": "Compared the authoritative rules page MAG Code, Appendix and Specific Judges Rules listings with the recorded publication dates; those listings show no newer scoring publication. Newsletter completeness is not independently established by that page check.",
+  "latestRelevantPublications": [
+    {
+      "title": "Men's Artistic Gymnastics Code of Points 2025-2028",
+      "publicationDate": "2025-04-25"
+    },
+    {
+      "title": "Appendix to the Men's Artistic Gymnastics Code of Points 2025-2028",
+      "publicationDate": "2026-05-25"
+    },
+    {
+      "title": "Men's Artistic Gymnastics Specific Judges' Rules 2025-2028",
+      "publicationDate": "2026-03-27"
+    }
+  ],
+  "nextAction": "Recheck the authoritative rules page immediately before each public release and whenever a MAG publication or newsletter changes."
+}

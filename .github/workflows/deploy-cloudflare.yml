@@ -1,0 +1,71 @@
+name: Deploy verified artifact to Cloudflare Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      ci_run_id:
+        description: Successful CI run on main containing web-release artifact
+        required: true
+      target:
+        description: Deployment target (Git integration remains the primary build path)
+        type: choice
+        options: [preview, production]
+        default: preview
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: cloudflare-pages-release
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      ${{ inputs.target == 'production' && 'cloudflare-production' || 'cloudflare-preview' }}
+    steps:
+      - name: Select trusted successful CI commit
+        id: candidate
+        uses: actions/github-script@v7
+        env:
+          RUN_ID: ${{ inputs.ci_run_id }}
+        with:
+          script: |
+            if (!/^\d+$/.test(process.env.RUN_ID)) throw new Error('Invalid CI run ID');
+            const {data: run} = await github.rest.actions.getWorkflowRun({...context.repo, run_id: Number(process.env.RUN_ID)});
+            if (run.conclusion !== 'success' || run.event !== 'push' || run.head_branch !== 'main' ||
+                run.head_repository.full_name !== `${context.repo.owner}/${context.repo.repo}` || run.path !== '.github/workflows/ci.yml') {
+              throw new Error('Select successful main-branch CI from this repository');
+            }
+            core.setOutput('sha', run.head_sha);
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.candidate.outputs.sha }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm publication:check -- web
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-release
+          path: build/web-release
+          run-id: ${{ inputs.ci_run_id }}
+          github-token: ${{ github.token }}
+      - run: node scripts/verify-web-artifact.mjs
+      - name: Upload the tested static artifact without rebuilding it
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command:
+            pages deploy build/web-release/site --project-name=d-score-gymnastics --branch=${{
+            inputs.target == 'production' && 'main' || 'release-preview' }} --commit-hash=${{
+            steps.candidate.outputs.sha }}

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private support
+    url: https://d-score.app/support/
+    about: Email support when a report requires private information.

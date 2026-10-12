@@ -1,0 +1,95 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-horizontal-bar-flight-policy
+description:
+  Covers a flight-family limit, flight connection, capped dismount group credit, and stick.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: horizontal-bar
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - occurrenceId: tkatchev-c
+      elementId: hb:mag-0034
+    - occurrenceId: tkatchev-d
+      elementId: hb:mag-0035
+    - { occurrenceId: tkatchev-g, elementId: hb:mag-0036 }
+    - { occurrenceId: kovacs-d, elementId: hb:mag-0062 }
+    - { occurrenceId: kovacs-e, elementId: hb:mag-0063 }
+    - occurrenceId: dismount
+      elementId: hb:mag-0118
+  relationships:
+    - kind: connection
+      connectionId: flight-connection
+      occurrenceIds: [tkatchev-g, kovacs-d]
+expected:
+  total: 3.8
+  breakdown: { elementDifficulty: 2.5, elementGroup: 1.0, connection: 0.2, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: tkatchev-c
+      elementId: hb:mag-0034
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.special-repetition-limit
+      reasonParameters: { limitId: flight-tkatchev-piatti, maximum: 2 }
+    - occurrenceId: tkatchev-d
+      elementId: hb:mag-0035
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: tkatchev-g
+      elementId: hb:mag-0036
+      status: counted
+      creditedDifficulty: 0.7
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: kovacs-d
+      elementId: hb:mag-0062
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: kovacs-e
+      elementId: hb:mag-0063
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: hb:mag-0118
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [tkatchev-g]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+    - component: connection
+      occurrenceIds: [tkatchev-g, kovacs-d]
+      value: 0.2
+      reason: fig.connection-awarded
+      reasonParameters: { connectionId: flight-connection }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.special-repetition-limit
+      occurrenceIds: [tkatchev-c]
+      parameters: { limitId: flight-tkatchev-piatti, maximum: 2 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="D-Score Gymnastics mark">
+  <rect width="1024" height="1024" fill="#101828" />
+  <rect x="120" y="120" width="784" height="784" rx="176" fill="#2563eb" />
+  <path
+    fill="#ffffff"
+    d="M326 274h190c153 0 258 91 258 238S669 750 516 750H326V274Zm184 350c78 0 126-40 126-112s-48-112-126-112h-46v224h46Z"
+  />
+  <rect x="326" y="790" width="372" height="28" rx="14" fill="#bfdbfe" />
+</svg>

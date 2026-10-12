@@ -1,0 +1,23 @@
+schemaVersion: 1
+apparatus: still-rings
+sources:
+  - documentId: mag-code-of-points
+    pages: [60, 61]
+  - documentId: mag-newsletter-1-2025
+    pages: [5]
+
+strengthGroups: [2, 3]
+maximumConsecutiveStrength: 3
+finalPositionFamilyPrefix: final-position
+
+separator:
+  group: 1
+  minimumDifficulty: B
+  excludedTraits: [strength-separator-excluded]
+
+swingHandstandRequirementTrait: swing-to-handstand
+
+upgradeConnection:
+  sourceTrait: yamawaki-jonasson
+  targetTrait: swing-to-handstand
+  increment: 0.1

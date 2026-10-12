@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Verified web release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Export once. Subsequent browser checks use this same directory.
+      - run: pnpm check
+      - run: pnpm release:web:validate
+      - run: pnpm publication:preflight -- web open-source-repository
+      - name: Install browser engines
+        run:
+          pnpm --filter @d-score-gymnastics/app exec playwright install --with-deps chromium firefox
+          webkit
+      - name: Test exported site
+        run: pnpm test:e2e
+        env:
+          DSCORE_USE_EXISTING_BUILD: '1'
+      - name: Check Lighthouse budgets
+        run: pnpm test:lighthouse
+        env:
+          DSCORE_USE_EXISTING_BUILD: '1'
+      - run: node scripts/create-web-artifact.mjs
+      - run: node scripts/verify-web-artifact.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-release
+          path: build/web-release
+          if-no-files-found: error
+          retention-days: 30
+      - name: Retain browser evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failures
+          path: |
+            apps/d-score-gymnastics/test-results
+            apps/d-score-gymnastics/playwright-report
+            apps/d-score-gymnastics/.lighthouseci
+          retention-days: 14

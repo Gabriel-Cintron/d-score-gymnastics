@@ -1,0 +1,35 @@
+schemaVersion: 1
+apparatus: horizontal-bar
+sources:
+  - documentId: mag-code-of-points
+    pages: [114, 115, 116]
+  - documentId: mag-newsletter-1-2025
+    pages: [6]
+  - documentId: mag-newsletter-2-2025
+    pages: [2, 3]
+  - documentId: mag-newsletter-3-2025
+    pages: [4, 5]
+
+specialLimits:
+  - { kind: trait, id: adler, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-tkatchev-piatti, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-kovacs, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-gienger, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-jaeger, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-markelov, maximum: 2, includeDismount: false }
+  - { kind: family, id: flight-forward-salto-over-bar, maximum: 2, includeDismount: false }
+
+fifthFlight:
+  group: 2
+  connectedMinimumDifficulty: C
+  maximumWhenQualified: 5
+
+connection:
+  flightFlight:
+    - { minimumFirst: D, minimumSecond: E, value: 0.2 }
+    - { minimumFirst: E, minimumSecond: D, value: 0.2 }
+    - { minimumFirst: C, minimumSecond: D, value: 0.1 }
+    - { minimumFirst: D, minimumSecond: C, value: 0.1 }
+  flightWithNonFlight:
+    - { minimumFlight: E, minimumNonFlight: D, value: 0.2 }
+    - { minimumFlight: D, minimumNonFlight: D, value: 0.1 }

@@ -1,0 +1,1540 @@
+schemaVersion: 1
+apparatus: floor-exercise
+elements:
+  - id: fx:mag-0001
+    code:
+      group: 1
+      number: 1
+    name: Lower out of handstand into L-sit or straddled L-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: A
+  - id: fx:mag-0002
+    code:
+      group: 1
+      number: 2
+    name: V-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: B
+  - id: fx:mag-0003
+    code:
+      group: 1
+      number: 3
+    name: Manna — V-sit plus legs horizontal 2-second hold
+    aliases:
+      - Manna
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: C
+  - id: fx:mag-0004
+    code:
+      group: 1
+      number: 7
+    name: Swiss press into handstand 2-second hold; begins in stand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: A
+  - id: fx:mag-0005
+    code:
+      group: 1
+      number: 8
+    name:
+      Piked body, straight arm or straight body, bent arm press into handstand plus legs together
+      2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: B
+  - id: fx:mag-0006
+    code:
+      group: 1
+      number: 9
+    name:
+      'V-sit 2-second hold then press into handstand 2-second hold. alternative: final phase plus
+      straddle'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: C
+  - id: fx:mag-0007
+    code:
+      group: 1
+      number: 10
+    name:
+      'Manna 2-second hold then press into handstand 2-second hold. alternative: final phase plus
+      straddle'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: D
+  - id: fx:mag-0008
+    code:
+      group: 1
+      number: 13
+    name: Rock into handstand beginning in prone position 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: A
+  - id: fx:mag-0009
+    code:
+      group: 1
+      number: 14
+    name: Press beginning in split, L-sit straddled or front support 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: B
+  - id: fx:mag-0010
+    code:
+      group: 1
+      number: 16
+    name: Rotation over (dislocation) into handstand 2-second hold; begins in Manna 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: D
+  - id: fx:mag-0011
+    code:
+      group: 1
+      number: 19
+    name: Handstand — 2-second hold
+    aliases:
+      - Handstand
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: A
+  - id: fx:mag-0012
+    code:
+      group: 1
+      number: 20
+    name: Press or lower or swing into Japanese handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: B
+  - id: fx:mag-0013
+    code:
+      group: 1
+      number: 21
+    name: Beginning in split press into Japanese handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 28
+    difficulty: C
+  - id: fx:mag-0014
+    code:
+      group: 1
+      number: 25
+    name: Planche, legs straddle 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: A
+  - id: fx:mag-0015
+    code:
+      group: 1
+      number: 27
+    name: Planche 2-second hold. / Swallow 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: C
+  - id: fx:mag-0016
+    code:
+      group: 1
+      number: 31
+    name: 1/2 or 1/1 rotation in handstand or into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: A
+  - id: fx:mag-0017
+    code:
+      group: 1
+      number: 32
+    name: Beginning in straddled planche 2-second hold press handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: B
+  - id: fx:mag-0018
+    code:
+      group: 1
+      number: 34
+    name:
+      Alvariño — Beginning in Planche 2-second hold. press handstand 2-second hold. beginning in
+      Swallow 2-second hold. press into Japanese handstand 2-second hold
+    aliases:
+      - Alvariño
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: D
+  - id: fx:mag-0019
+    code:
+      group: 1
+      number: 37
+    name: Etc., rotation over backward into stand; begins in L-sit
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: A
+  - id: fx:mag-0020
+    code:
+      group: 1
+      number: 44
+    name: Endo roll into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: B
+  - id: fx:mag-0021
+    code:
+      group: 1
+      number: 45
+    name: Endo roll piked into handstand legs together 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength
+    source:
+      documentId: mag-code-of-points
+      page: 29
+    difficulty: C
+  - id: fx:mag-0022
+    code:
+      group: 1
+      number: 49
+    name: Front walkover — Forward walkover
+    aliases:
+      - Front walkover
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: A
+  - id: fx:mag-0023
+    code:
+      group: 1
+      number: 55
+    name: Cross or side split (stop required)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: A
+  - id: fx:mag-0024
+    code:
+      group: 1
+      number: 61
+    name: Any standing scale 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+      - one-leg-balance
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: A
+  - id: fx:mag-0025
+    code:
+      group: 1
+      number: 62
+    name: Any standing scale plus 180 ° straddle, no hand hold 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+      - one-leg-balance
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: B
+  - id: fx:mag-0026
+    code:
+      group: 1
+      number: 67
+    name: Jump backward into front support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: A
+  - id: fx:mag-0027
+    code:
+      group: 1
+      number: 68
+    name: Endo — Jump backward plus pike-stretch or plus 1/1 rotation into front support
+    aliases:
+      - Endo
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-code-of-points
+      page: 30
+    difficulty: B
+  - id: fx:mag-0028
+    code:
+      group: 1
+      number: 73
+    name: Butterfly
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: A
+  - id: fx:mag-0029
+    code:
+      group: 1
+      number: 74
+    name: Tong Fei — Butterfly plus 1/1 twist forward or backward
+    aliases:
+      - Tong Fei
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: B
+  - id: fx:mag-0030
+    code:
+      group: 1
+      number: 75
+    name: Butterfly plus 2/1 twist
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: C
+  - id: fx:mag-0031
+    code:
+      group: 1
+      number: 79
+    name: 1 circle or flair
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: A
+  - id: fx:mag-0032
+    code:
+      group: 1
+      number: 80
+    name: Circles or flair into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: B
+  - id: fx:mag-0033
+    code:
+      group: 1
+      number: 81
+    name: Gogoladze — Flair or circle into handstand continue into flair or circle
+    aliases:
+      - Gogoladze
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: C
+  - id: fx:mag-0034
+    code:
+      group: 1
+      number: 82
+    name:
+      Flair hopping plus 360° rotation backward passing through handstand then back into flair (2
+      hops)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: D
+  - id: fx:mag-0035
+    code:
+      group: 1
+      number: 86
+    name: Lower beginning in handstand into flair or circle
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: B
+  - id: fx:mag-0036
+    code:
+      group: 1
+      number: 91
+    name: Flair plus 1/2 spindle
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: A
+  - id: fx:mag-0037
+    code:
+      group: 1
+      number: 92
+    name: Flair plus 1/1 spindle (in 2 circles)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: B
+  - id: fx:mag-0038
+    code:
+      group: 1
+      number: 93
+    name: Flair plus >270 spindle (in 2 circles) directly into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 31
+    difficulty: C
+  - id: fx:mag-0039
+    code:
+      group: 1
+      number: 98
+    name: Flair plus 1/2 spindle into handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: B
+  - id: fx:mag-0040
+    code:
+      group: 1
+      number: 100
+    name:
+      Flair plus > 270º spindle (in 2 circles) directly into handstand then continue into circle or
+      flair
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: D
+  - id: fx:mag-0041
+    code:
+      group: 1
+      number: 103
+    name: Russian wendeswing plus 360° or 540°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: A
+  - id: fx:mag-0042
+    code:
+      group: 1
+      number: 104
+    name: Russian wendeswing plus 720° or 900°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: B
+  - id: fx:mag-0043
+    code:
+      group: 1
+      number: 105
+    name: Fedorchenko — Russian wendeswing plus 1080° or more
+    aliases:
+      - Fedorchenko
+    families: []
+    roles: []
+    traits:
+      - circle-flair-russian
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: C
+  - id: fx:mag-0044
+    code:
+      group: 1
+      number: 109
+    name: Roll backward through handstand plus 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: A
+  - id: fx:mag-0045
+    code:
+      group: 1
+      number: 110
+    name: Roll backward plus hop 1/1 rotation through handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 32
+    difficulty: B
+  - id: fx:mag-0046
+    code:
+      group: 1
+      number: newsletter-1-i-15
+    name: Jump forward plus 1/1 rotation into front support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 9
+    difficulty: A
+  - id: fx:mag-0047
+    code:
+      group: 1
+      number: newsletter-1-i-16
+    name: Jump backward plus 3/2 twist into front support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 9
+    difficulty: B
+  - id: fx:mag-0048
+    code:
+      group: 1
+      number: newsletter-1-i-17
+    name: Jump forward plus 2/1 twist into front support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 9
+    difficulty: C
+  - id: fx:mag-0049
+    code:
+      group: 1
+      number: newsletter-1-i-43
+    name: Jump forward plus 1/2 rotation into momentary handstand
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 9
+    difficulty: A
+  - id: fx:mag-0050
+    code:
+      group: 2
+      number: 1
+    name: Front handspring — Forward handspring or flyspring
+    aliases:
+      - Front handspring
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: A
+  - id: fx:mag-0051
+    code:
+      group: 2
+      number: 4
+    name: Front handspring front tuck — Handspring somersault forward tucked (Morandi)
+    aliases:
+      - Front handspring front tuck
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: D
+  - id: fx:mag-0052
+    code:
+      group: 2
+      number: 7
+    name: Dive roll
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: A
+  - id: fx:mag-0053
+    code:
+      group: 2
+      number: 13
+    name: 'Front tuck — Somersault forward tucked or piked, alternative: plus 1/2 rotation'
+    aliases:
+      - Front tuck
+      - Front pike
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: A
+  - id: fx:mag-0054
+    code:
+      group: 2
+      number: 14
+    name: 'Front layout — Somersault forward straight, alternative: plus 1/2 rotation'
+    aliases:
+      - Front layout
+      - Front layout half
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: B
+  - id: fx:mag-0055
+    code:
+      group: 2
+      number: 16
+    name: 'Double front tuck — Double somersault forward tucked, alternative: plus 1/2 rotation'
+    aliases:
+      - Double front tuck
+      - Double front tuck half
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: D
+  - id: fx:mag-0056
+    code:
+      group: 2
+      number: 17
+    name: 'Double front pike — Double somersault forward piked, alternative: plus 1/2 rotation'
+    aliases:
+      - Double front pike
+      - Double front pike half
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 33
+    difficulty: E
+  - id: fx:mag-0057
+    code:
+      group: 2
+      number: 36
+    name: Double somersault forward tucked plus 1/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 34
+    difficulty: F
+  - id: fx:mag-0058
+    code:
+      group: 2
+      number: 38
+    name: Somersault forward rotation or piked into front support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 34
+    difficulty: B
+  - id: fx:mag-0059
+    code:
+      group: 2
+      number: 42
+    name: Zapata — Double somersault forward tucked plus 3/2 rotation
+    aliases:
+      - Zapata
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 34
+    difficulty: F
+  - id: fx:mag-0060
+    code:
+      group: 2
+      number: 46
+    name: Deferr — Jump forward plus 1/2 rotation into double somersault backward Tuck
+    aliases:
+      - Deferr
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 34
+    difficulty: D
+  - id: fx:mag-0061
+    code:
+      group: 2
+      number: 48
+    name: Zapata 2 — Double somersault forward piked or straight plus 3/2 rotation
+    aliases:
+      - Zapata 2
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 34
+    difficulty: G
+  - id: fx:mag-0062
+    code:
+      group: 2
+      number: newsletter-1-ii-8
+    name: Dive roll plus 1/1 twist
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - balance-or-leap-requirement
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 9
+    difficulty: B
+  - id: fx:mag-0063
+    code:
+      group: 3
+      number: 1
+    name: Back tuck — Somersault backwards tucked or piked
+    aliases:
+      - Back tuck
+      - Back pike
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: A
+  - id: fx:mag-0064
+    code:
+      group: 3
+      number: 2
+    name: Somersault backwards straight or Tempo somersault backward
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: B
+  - id: fx:mag-0065
+    code:
+      group: 3
+      number: 3
+    name: Double somersault backward tucked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: C
+  - id: fx:mag-0066
+    code:
+      group: 3
+      number: 4
+    name:
+      'Tsukahara — Somersault backward plus 1/1 rotation then somersault backward Arabian jump
+      backward into double somersault forward tucked, alternative: plus 1/2 rotation'
+    aliases:
+      - Tsukahara
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: D
+  - id: fx:mag-0067
+    code:
+      group: 3
+      number: 5
+    name:
+      'Korosteljev — Double somersault backward tucked plus 2/1 rotation or double somersault
+      backward rotation plus 3/2 rotation.or somersault backward straight 3/2 into forward
+      somersault tucked. alternative:'
+    aliases:
+      - Korosteljev
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: E
+  - id: fx:mag-0068
+    code:
+      group: 3
+      number: 6
+    name: Ri Jong Song — Double somersault backward tucked plus 3/1 rotation
+    aliases:
+      - Ri Jong Song
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: G
+  - id: fx:mag-0069
+    code:
+      group: 3
+      number: 7
+    name: Somersault backwards tucked or piked plus 1/2 rotation or Arabian tucked or piked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: A
+  - id: fx:mag-0070
+    code:
+      group: 3
+      number: 8
+    name: Somersault backwards straight plus 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: B
+  - id: fx:mag-0071
+    code:
+      group: 3
+      number: 11
+    name:
+      'Arabian jump backward into double somersault forward piked, alternative: plus 1/2 rotation'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: E
+  - id: fx:mag-0072
+    code:
+      group: 3
+      number: 12
+    name: Double somersault backward tucked plus 5/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: F
+  - id: fx:mag-0073
+    code:
+      group: 3
+      number: 13
+    name: Back handspring
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: A
+  - id: fx:mag-0074
+    code:
+      group: 3
+      number: 16
+    name: Double somersault backward piked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: D
+  - id: fx:mag-0075
+    code:
+      group: 3
+      number: 18
+    name: Liukin — Triple somersault backward tucked
+    aliases:
+      - Liukin
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: I
+  - id: fx:mag-0076
+    code:
+      group: 3
+      number: 24
+    name: Nagornyy — Triple somersault backward piked
+    aliases:
+      - Nagornyy
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 35
+    difficulty: J
+  - id: fx:mag-0077
+    code:
+      group: 3
+      number: 29
+    name: Lou Yun — Double somersault backward straddled plus 1/1 rotation
+    aliases:
+      - Lou Yun
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: E
+  - id: fx:mag-0078
+    code:
+      group: 3
+      number: 30
+    name: Double somersault backward straight w 5/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: H
+  - id: fx:mag-0079
+    code:
+      group: 3
+      number: 31
+    name: Jump backward plus 1/2 rotation into roll forward
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: A
+  - id: fx:mag-0080
+    code:
+      group: 3
+      number: 35
+    name: Somersault backward straight plus 1/1 t then somersault backward piked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: E
+  - id: fx:mag-0081
+    code:
+      group: 3
+      number: 36
+    name: Kolyvanov — Somersault backward straight plus 2/1 t then somersault backward piked
+    aliases:
+      - Kolyvanov
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: F
+  - id: fx:mag-0082
+    code:
+      group: 3
+      number: 41
+    name:
+      Tamayo — Double somersault backward straight or Double somersault backward straight then plus
+      1/2 rotation, or Arabian Jump backward into double somersault forward straight
+    aliases:
+      - Tamayo
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: E
+  - id: fx:mag-0083
+    code:
+      group: 3
+      number: 42
+    name:
+      'Double somersault backward straight plus 3/2 rotation or Arabian Jump backward into double
+      somersault forward straight plus 1/1 rotation alternative: Hypolito'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: G
+  - id: fx:mag-0084
+    code:
+      group: 3
+      number: 48
+    name:
+      'Double somersault backward straight plus 1/1 rotation or Arabian jump backward into double
+      somersault forward straight plus 1/2 rotation alternative: Penev'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 36
+    difficulty: F
+  - id: fx:mag-0085
+    code:
+      group: 3
+      number: 54
+    name: Double somersault backward straight plus 2/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 37
+    difficulty: G
+  - id: fx:mag-0086
+    code:
+      group: 3
+      number: 60
+    name: Minami — Double somersault backward tucked plus 7/2 rotation
+    aliases:
+      - Minami
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 37
+    difficulty: H
+  - id: fx:mag-0087
+    code:
+      group: 3
+      number: 66
+    name: Shirai 3 — Double somersault backward straight plus 3/1 rotation
+    aliases:
+      - Shirai 3
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 37
+    difficulty: I
+  - id: fx:mag-0088
+    code:
+      group: 3
+      number: 72
+    name: Jarman — Double somersault backward straight plus 7/2 rotation
+    aliases:
+      - Jarman
+    families: []
+    roles:
+      - dismount
+    traits:
+      - acrobatic
+      - multiple-salto
+    source:
+      documentId: mag-code-of-points
+      page: 37
+    difficulty: J
+  - id: fx:mag-0089
+    code:
+      group: 4
+      number: 2
+    name:
+      'Front tuck full — Somersault forward tucked plus 1/1 rotation, alternative: plus 3/2 rotation'
+    aliases:
+      - Front tuck full
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: B
+  - id: fx:mag-0090
+    code:
+      group: 4
+      number: 3
+    name:
+      'Front layout full — Somersault forward straight plus 1/1 rotation, alternative: plus 3/2
+      rotation'
+    aliases:
+      - Front layout full
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: C
+  - id: fx:mag-0091
+    code:
+      group: 4
+      number: 4
+    name: Somersault forward straight plus 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: D
+  - id: fx:mag-0092
+    code:
+      group: 4
+      number: 5
+    name: Somersault forward straight plus 5/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: E
+  - id: fx:mag-0093
+    code:
+      group: 4
+      number: 6
+    name: Shirai 2 — Somersault forward straight plus 3/1 rotation
+    aliases:
+      - Shirai 2
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: F
+  - id: fx:mag-0094
+    code:
+      group: 4
+      number: 8
+    name: Somersault backwards straight plus 1/1 t
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: B
+  - id: fx:mag-0095
+    code:
+      group: 4
+      number: 9
+    name: Somersault backward straight plus 3/2 rotation or 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: C
+  - id: fx:mag-0096
+    code:
+      group: 4
+      number: 10
+    name: Somersault backward straight plus 5/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: D
+  - id: fx:mag-0097
+    code:
+      group: 4
+      number: 11
+    name: González — Somersault backward straight plus 7/2 t
+    aliases:
+      - González
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: E
+  - id: fx:mag-0098
+    code:
+      group: 4
+      number: 12
+    name: Goshima — Somersault forward straight plus 7/2 rotation
+    aliases:
+      - Goshima
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: G
+  - id: fx:mag-0099
+    code:
+      group: 4
+      number: 14
+    name: Somersault backwards tucked plus 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: B
+  - id: fx:mag-0100
+    code:
+      group: 4
+      number: 22
+    name: Somersault backward straight plus 3/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: D
+  - id: fx:mag-0101
+    code:
+      group: 4
+      number: 24
+    name: Shirai — Somersault backward straight plus 4/1 rotation (Shirai / Nguyen)
+    aliases:
+      - Shirai
+      - Nguyen
+    families: []
+    roles: []
+    traits:
+      - acrobatic
+      - single-salto-with-turn
+    source:
+      documentId: mag-code-of-points
+      page: 38
+    difficulty: F

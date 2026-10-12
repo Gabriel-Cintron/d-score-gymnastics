@@ -1,0 +1,89 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-rings-repetition-limits
+description:
+  Covers the final-position limit, consecutive-strength limit, and missing swing-handstand warning.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: still-rings
+  occurrences:
+    - { occurrenceId: cross-c, elementId: sr:mag-0037 }
+    - occurrenceId: cross-e
+      elementId: sr:mag-0040
+    - { occurrenceId: strength-two, elementId: sr:mag-0033 }
+    - { occurrenceId: strength-three, elementId: sr:mag-0031 }
+    - occurrenceId: strength-four
+      elementId: sr:mag-0082
+    - occurrenceId: dismount
+      elementId: sr:mag-0134
+expected:
+  total: 2.4
+  breakdown: { elementDifficulty: 1.4, elementGroup: 1.0, connection: 0.0, bonus: 0.0 }
+  elementDecisions:
+    - occurrenceId: cross-c
+      elementId: sr:mag-0037
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.rings-final-position-limit
+      reasonParameters: { family: final-position-cross, maximum: 1 }
+    - occurrenceId: cross-e
+      elementId: sr:mag-0040
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-two
+      elementId: sr:mag-0033
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-three
+      elementId: sr:mag-0031
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.rings-strength-sequence-limit
+      reasonParameters: { maximum: 3 }
+    - occurrenceId: strength-four
+      elementId: sr:mag-0082
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.rings-strength-sequence-limit
+      reasonParameters: { maximum: 3 }
+    - occurrenceId: dismount
+      elementId: sr:mag-0134
+      status: counted
+      creditedDifficulty: 0.6
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [cross-e]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+  warnings:
+    - code: fig.rings-strength-sequence-limit
+      occurrenceIds: [strength-three]
+      parameters: { maximum: 3 }
+    - code: fig.rings-strength-sequence-limit
+      occurrenceIds: [strength-four]
+      parameters: { maximum: 3 }
+    - code: fig.rings-final-position-limit
+      occurrenceIds: [cross-c]
+      parameters: { family: final-position-cross, maximum: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }
+    - code: fig.rings-missing-swing-handstand
+      occurrenceIds: []
+      parameters: {}

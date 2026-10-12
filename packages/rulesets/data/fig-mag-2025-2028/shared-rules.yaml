@@ -1,0 +1,100 @@
+schemaVersion: 1
+sources:
+  - documentId: mag-code-of-points
+    pages:
+      - 14
+      - 15
+      - 16
+  - documentId: mag-newsletter-1-2025
+    pages:
+      - 3
+  - documentId: mag-newsletter-3-2025
+    pages:
+      - 1
+
+repetition:
+  maximumCreditsPerCode: 1
+
+# Regular slots are selected by value. A reserved dismount slot is evaluated separately.
+elementCounting:
+  floor-exercise:
+    regularElementSlots: 7
+    reservedDismountSlots: 1
+    maximumPerElementGroup: 4
+  pommel-horse:
+    regularElementSlots: 7
+    reservedDismountSlots: 1
+    maximumPerElementGroup: 4
+  still-rings:
+    regularElementSlots: 7
+    reservedDismountSlots: 1
+    maximumPerElementGroup: 4
+  parallel-bars:
+    regularElementSlots: 7
+    reservedDismountSlots: 1
+    maximumPerElementGroup: 4
+  horizontal-bar:
+    regularElementSlots: 7
+    reservedDismountSlots: 1
+    maximumPerElementGroup: 4
+
+elementGroupRequirements:
+  regularGroups:
+    floor-exercise:
+      - 1
+      - 2
+      - 3
+      - 4
+    pommel-horse:
+      - 1
+      - 2
+      - 3
+    still-rings:
+      - 1
+      - 2
+      - 3
+    parallel-bars:
+      - 1
+      - 2
+      - 3
+    horizontal-bar:
+      - 1
+      - 2
+      - 3
+
+  regularAwards:
+    - difficulties:
+        - A
+        - B
+        - C
+      value: 0.3
+    - difficulties:
+        - D
+        - E
+        - F
+        - G
+        - H
+        - I
+        - J
+      value: 0.5
+
+  # Element Group I receives at least 0.5 regardless of element difficulty.
+  minimumAwards:
+    - group: 1
+      value: 0.5
+
+  # Newsletter 3 caps the separate EG IV award at 0.5 from 1 January 2026.
+  dismountAward:
+    mode: element-difficulty
+    maximum: 0.5
+
+landingBonus:
+  value: 0.1
+  minimumDifficulty: C
+  apparatus:
+    - floor-exercise
+    - still-rings
+    - vault
+    - parallel-bars
+    - horizontal-bar
+  vaultRequiredTrait: salto-vault

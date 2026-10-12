@@ -1,0 +1,1168 @@
+schemaVersion: 1
+apparatus: vault
+elements:
+  - id: vt:mag-0001
+    code:
+      group: 1
+      number: 101
+    name: Handspring tucked. 1/2 rotation (Cuervo t.)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.4
+  - id: vt:mag-0002
+    code:
+      group: 1
+      number: 102
+    name: Handspring tucked 1/1 rotation (Cuervo tucked plus1/2 rotation)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0003
+    code:
+      group: 1
+      number: 103
+    name: Kroll — Handspring tucked 3/2 rotation
+    aliases:
+      - Kroll
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0004
+    code:
+      group: 1
+      number: 104
+    name: Canbas — Handspring tucked 2/1 rotation
+    aliases:
+      - Canbas
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0005
+    code:
+      group: 1
+      number: 107
+    name: Handspring Piked (Cuervo piked)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0006
+    code:
+      group: 1
+      number: 108
+    name: Handspring piked 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0007
+    code:
+      group: 1
+      number: 109
+    name: Handspring piked 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0008
+    code:
+      group: 1
+      number: 113
+    name: Handspring straight 1/2 rotation (Cuervo straight.)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0009
+    code:
+      group: 1
+      number: 114
+    name: Handspring straight 1/1 rotation (Cuervo straight.1/2 rotation)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4
+  - id: vt:mag-0010
+    code:
+      group: 1
+      number: 115
+    name: Lou Yun — Handspring straight 3/2 rotation
+    aliases:
+      - Lou Yun
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.4
+  - id: vt:mag-0011
+    code:
+      group: 1
+      number: 116
+    name: Handspring straight 2/1 rotation (Cuervo straight.3/2 rotation)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0012
+    code:
+      group: 1
+      number: 117
+    name: Yeo 2 — Handspring straight 5/2 rotation
+    aliases:
+      - Yeo 2
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0013
+    code:
+      group: 1
+      number: 118
+    name: Yang Hak Seon — Handspring straight 3/1 rotation
+    aliases:
+      - Yang Hak Seon
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.6
+  - id: vt:mag-0014
+    code:
+      group: 1
+      number: 119
+    name: Kasamatsu — Tsukahara tucked 1/1 rotation
+    aliases:
+      - Kasamatsu
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.4
+  - id: vt:mag-0015
+    code:
+      group: 1
+      number: 120
+    name: Tsukahara tucked 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0016
+    code:
+      group: 1
+      number: 121
+    name: Barbieri — Tsukahara tucked 2/1 rotation
+    aliases:
+      - Barbieri
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0017
+    code:
+      group: 1
+      number: 122
+    name: Tsukahara tucked 5/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0018
+    code:
+      group: 1
+      number: 125
+    name: Tsukahara straight 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0019
+    code:
+      group: 1
+      number: 126
+    name: Tsukahara straight 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4
+  - id: vt:mag-0020
+    code:
+      group: 1
+      number: 127
+    name: Akopian — Tsukahara straight 2/1 rotation
+    aliases:
+      - Akopian
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.4
+  - id: vt:mag-0021
+    code:
+      group: 1
+      number: 131
+    name: Driggs — Tsukahara straight 5/2 rotation
+    aliases:
+      - Driggs
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0022
+    code:
+      group: 1
+      number: 132
+    name: Lopez — Tsukahara straight 3/1 rotation
+    aliases:
+      - Lopez
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0023
+    code:
+      group: 1
+      number: 133
+    name: Yonekura — Tsukahara straight 7/2 rotation
+    aliases:
+      - Yonekura
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.6
+  - id: vt:mag-0024
+    code:
+      group: 2
+      number: 201
+    name: Handspring
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.2
+  - id: vt:mag-0025
+    code:
+      group: 2
+      number: 202
+    name: Handspring 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.4
+  - id: vt:mag-0026
+    code:
+      group: 2
+      number: 203
+    name: Handspring 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.6
+  - id: vt:mag-0027
+    code:
+      group: 2
+      number: 204
+    name: Handspring 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.8
+  - id: vt:mag-0028
+    code:
+      group: 2
+      number: 205
+    name: Handspring 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0029
+    code:
+      group: 2
+      number: 206
+    name: Tsygnkov — Handspring 5/2 rotation
+    aliases:
+      - Tsygnkov
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.2
+  - id: vt:mag-0030
+    code:
+      group: 2
+      number: 207
+    name: Handspring tucked
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0031
+    code:
+      group: 2
+      number: 213
+    name: Handspring piked
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.4
+  - id: vt:mag-0032
+    code:
+      group: 2
+      number: 219
+    name: Handspring straight
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0033
+    code:
+      group: 2
+      number: 225
+    name: Roche — Handspring double somersault
+    aliases:
+      - Roche
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0034
+    code:
+      group: 2
+      number: 226
+    name: Dragulescu — Roche 1/2 rotation
+    aliases:
+      - Dragulescu
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0035
+    code:
+      group: 2
+      number: 228
+    name: Zimmerman — Handspring 1/2 rotation backward
+    aliases:
+      - Zimmerman
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0036
+    code:
+      group: 2
+      number: 231
+    name: Blanik — Handspring double piked
+    aliases:
+      - Blanik
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0037
+    code:
+      group: 2
+      number: 232
+    name: Dragulescu piked. (RI Se Gwang2)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.6
+  - id: vt:mag-0038
+    code:
+      group: 3
+      number: 301
+    name: Handspring swing 1/4 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.2
+  - id: vt:mag-0039
+    code:
+      group: 3
+      number: 302
+    name: Handspring 3/4 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.4
+  - id: vt:mag-0040
+    code:
+      group: 3
+      number: 303
+    name: Handspring swing 5/4 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.6
+  - id: vt:mag-0041
+    code:
+      group: 3
+      number: 307
+    name: Tucked Tsukahara — Tsukahara Tucked. (Tsukahara)
+    aliases:
+      - Tucked Tsukahara
+      - Tuck Tsuk
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.8
+  - id: vt:mag-0042
+    code:
+      group: 3
+      number: 308
+    name: Tsukahara piked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0043
+    code:
+      group: 3
+      number: 309
+    name: Tsukahara tucked 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0044
+    code:
+      group: 3
+      number: 313
+    name: Tsukahara straight
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0045
+    code:
+      group: 3
+      number: 314
+    name: Tsukahara straight 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0046
+    code:
+      group: 3
+      number: 319
+    name: Yeo — Tsukahara double tucked
+    aliases:
+      - Yeo
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0047
+    code:
+      group: 3
+      number: 320
+    name: Lu Yu Fu — Tsukahara double piked
+    aliases:
+      - Lu Yu Fu
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0048
+    code:
+      group: 3
+      number: 321
+    name: Ri Se Gwang — Tsukahara double 1/1 rotation
+    aliases:
+      - Ri Se Gwang
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.6
+  - id: vt:mag-0049
+    code:
+      group: 4
+      number: 401
+    name: Yurchenko tucked 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.4
+  - id: vt:mag-0050
+    code:
+      group: 4
+      number: 402
+    name: Yurchenko tucked 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0051
+    code:
+      group: 4
+      number: 403
+    name: Yurchenko tucked 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0052
+    code:
+      group: 4
+      number: 404
+    name: Yurchenko tucked 5/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0053
+    code:
+      group: 4
+      number: 405
+    name: Yurchenko straight 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.6
+  - id: vt:mag-0054
+    code:
+      group: 4
+      number: 406
+    name: Yurchenko straight 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4
+  - id: vt:mag-0055
+    code:
+      group: 4
+      number: 407
+    name: Yurchenko straight 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.4
+  - id: vt:mag-0056
+    code:
+      group: 4
+      number: 408
+    name: Shewfelt — Yurchenko straight 5/2 rotation
+    aliases:
+      - Shewfelt
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0057
+    code:
+      group: 4
+      number: 409
+    name: Yurchenko straight 3/1 rotation (Shirai, KIM Hee Hoon)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0058
+    code:
+      group: 4
+      number: 413
+    name: Round-off, 1/2 rotation tucked. 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.6
+  - id: vt:mag-0059
+    code:
+      group: 4
+      number: 414
+    name: Nemov — Round-off, 1/2 rotation piked. 1/2 rotation
+    aliases:
+      - Nemov
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3
+  - id: vt:mag-0060
+    code:
+      group: 4
+      number: 415
+    name: Hutcheon — Round-off, 1/2 rotation straight 1/2 rotation
+    aliases:
+      - Hutcheon
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.8
+  - id: vt:mag-0061
+    code:
+      group: 4
+      number: 416
+    name: Round-off, 1/2 rotation straight 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.2
+  - id: vt:mag-0062
+    code:
+      group: 4
+      number: 417
+    name: Round-off, 1/2 rotation straight 3/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.6
+  - id: vt:mag-0063
+    code:
+      group: 4
+      number: 419
+    name: Round-off, 1/2 rotation straight 2/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5
+  - id: vt:mag-0064
+    code:
+      group: 4
+      number: 420
+    name: Li Xiao Peng — Round-off, 1/2 rotation straight 5/2 rotation
+    aliases:
+      - Li Xiao Peng
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.4
+  - id: vt:mag-0065
+    code:
+      group: 5
+      number: 501
+    name: Round-off, handspring backward
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.2
+  - id: vt:mag-0066
+    code:
+      group: 5
+      number: 502
+    name: Round-off, handspring backward 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.4
+  - id: vt:mag-0067
+    code:
+      group: 5
+      number: 503
+    name: Round-off, handspring backward 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.6
+  - id: vt:mag-0068
+    code:
+      group: 5
+      number: 507
+    name: Yurchenko — Round-off, tucked somersault
+    aliases:
+      - Yurchenko
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.8
+  - id: vt:mag-0069
+    code:
+      group: 5
+      number: 508
+    name: Yurchenko tucked 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0070
+    code:
+      group: 5
+      number: 509
+    name: Yurchenko piked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2
+  - id: vt:mag-0071
+    code:
+      group: 5
+      number: 510
+    name: Yurchenko straight
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.8
+  - id: vt:mag-0072
+    code:
+      group: 5
+      number: 511
+    name: Yurchenko straight 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.2
+  - id: vt:mag-0073
+    code:
+      group: 5
+      number: 513
+    name: Round-off, 1/2 rotation handspring
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.4
+  - id: vt:mag-0074
+    code:
+      group: 5
+      number: 514
+    name: Round-off, 1/2 rotation handspring 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.6
+  - id: vt:mag-0075
+    code:
+      group: 5
+      number: 515
+    name: Round-off, 1/2 rotation handspring 1/1 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 1.8
+  - id: vt:mag-0076
+    code:
+      group: 5
+      number: 516
+    name: Round-off, 1/2 rotation tucked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.2
+  - id: vt:mag-0077
+    code:
+      group: 5
+      number: 517
+    name: Round-off, 1/2 rotation piked
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 2.6
+  - id: vt:mag-0078
+    code:
+      group: 5
+      number: 518
+    name: Round-off, 1/2 rotation straight
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 3.4
+  - id: vt:mag-0079
+    code:
+      group: 5
+      number: 519
+    name: Melissanidis — Yurchenko double tucked
+    aliases:
+      - Melissanidis
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 4.8
+  - id: vt:mag-0080
+    code:
+      group: 5
+      number: 520
+    name: Yang Wei — Yurchenko double piked
+    aliases:
+      - Yang Wei
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5.2
+  - id: vt:mag-0081
+    code:
+      group: 5
+      number: 521
+    name: Off, 1/2 rotation double somersault
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-code-of-points
+      page: 84
+    difficulty: 5
+  - id: vt:mag-0082
+    code:
+      group: 5
+      number: 522
+    name: Olfati — Yurchenko then somersault backward tucked plus 1/1 rotation
+    aliases:
+      - Olfati
+    families: []
+    roles: []
+    traits:
+      - salto-vault
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 7
+    difficulty: 5.6

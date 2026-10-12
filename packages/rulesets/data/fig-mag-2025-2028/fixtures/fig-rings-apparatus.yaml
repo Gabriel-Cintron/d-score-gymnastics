@@ -1,0 +1,105 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-rings-apparatus-policy
+description:
+  Covers a counted strength separator, the direct Jonasson upgrade, capped dismount group credit,
+  and stick bonus.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: still-rings
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - occurrenceId: jonasson
+      elementId: sr:mag-0016
+    - occurrenceId: handstand
+      elementId: sr:mag-0024
+    - { occurrenceId: strength-one, elementId: sr:mag-0037 }
+    - { occurrenceId: strength-two, elementId: sr:mag-0033 }
+    - { occurrenceId: strength-three, elementId: sr:mag-0031 }
+    - { occurrenceId: separator, elementId: sr:mag-0010 }
+    - occurrenceId: strength-four
+      elementId: sr:mag-0082
+    - occurrenceId: dismount
+      elementId: sr:mag-0134
+  relationships:
+    - kind: connection
+      connectionId: rings-upgrade
+      occurrenceIds: [jonasson, handstand]
+expected:
+  total: 4.7
+  breakdown: { elementDifficulty: 3.1, elementGroup: 1.5, connection: 0.0, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: jonasson
+      elementId: sr:mag-0016
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.rings-direct-upgrade
+      reasonParameters: { connectionId: rings-upgrade }
+    - occurrenceId: handstand
+      elementId: sr:mag-0024
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-one
+      elementId: sr:mag-0037
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-two
+      elementId: sr:mag-0033
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-three
+      elementId: sr:mag-0031
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: separator
+      elementId: sr:mag-0010
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: strength-four
+      elementId: sr:mag-0082
+      status: counted
+      creditedDifficulty: 0.6
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: sr:mag-0134
+      status: counted
+      creditedDifficulty: 0.6
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [jonasson]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 1 }
+    - component: element-group
+      occurrenceIds: [strength-four]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }

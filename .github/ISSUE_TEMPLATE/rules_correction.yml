@@ -1,0 +1,50 @@
+name: Rules or catalogue correction
+description: Propose a source-backed correction to scoring data or behavior.
+title: '[Rules]: '
+labels: [rules]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Please cite the governing publication and exact page or section. Describe the correction in
+        your own words; do not upload an entire copyrighted publication.
+  - type: dropdown
+    id: apparatus
+    attributes:
+      label: Apparatus
+      options:
+        - Floor Exercise
+        - Pommel Horse
+        - Still Rings
+        - Vault
+        - Parallel Bars
+        - Horizontal Bar
+        - Shared rule
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current app behavior or data
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Publication and page or section
+      placeholder: Publication title, edition/date, page or section
+    validations:
+      required: true
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: Short supporting excerpt or explanation
+      description: Keep any direct quotation brief and include only what is needed.
+    validations:
+      required: true

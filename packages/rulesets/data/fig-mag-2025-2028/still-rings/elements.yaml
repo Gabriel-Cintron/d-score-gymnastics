@@ -1,0 +1,1985 @@
+schemaVersion: 1
+apparatus: still-rings
+elements:
+  - id: sr:mag-0001
+    code:
+      group: 1
+      number: 1
+    name: Uprise forward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: A
+  - id: sr:mag-0002
+    code:
+      group: 1
+      number: 7
+    name:
+      Swallow or swing backward in support, roll forward into backward swing in hang; begins in any
+      support scale
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: A
+  - id: sr:mag-0003
+    code:
+      group: 1
+      number: 8
+    name: Chechi — Uprise forward then counter somersault forward into backward swing in hang
+    aliases:
+      - Chechi
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: B
+  - id: sr:mag-0004
+    code:
+      group: 1
+      number: 19
+    name: Felge upward into support. Prohibited for juniors; begins in hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: A
+  - id: sr:mag-0005
+    code:
+      group: 1
+      number: 20
+    name: Swing forward through handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: B
+  - id: sr:mag-0006
+    code:
+      group: 1
+      number: 21
+    name: Guczoghy — Tucked double somersault backward into hang
+    aliases:
+      - Guczoghy
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: C
+  - id: sr:mag-0007
+    code:
+      group: 1
+      number: 22
+    name: Piked or straight double somersault backward into hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 63
+    difficulty: D
+  - id: sr:mag-0008
+    code:
+      group: 1
+      number: 25
+    name: Dislocate backward piked or straight
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: A
+  - id: sr:mag-0009
+    code:
+      group: 1
+      number: 31
+    name: Uprise backward into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: A
+  - id: sr:mag-0010
+    code:
+      group: 1
+      number: 32
+    name: Uprise backward straight through handstand
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: B
+  - id: sr:mag-0011
+    code:
+      group: 1
+      number: 37
+    name: Inlocate piked or straight
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: A
+  - id: sr:mag-0012
+    code:
+      group: 1
+      number: 38
+    name: Honma — Backward swing into somersault forward piked into support
+    aliases:
+      - Honma
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: B
+  - id: sr:mag-0013
+    code:
+      group: 1
+      number: 39
+    name: Honma straight
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: C
+  - id: sr:mag-0014
+    code:
+      group: 1
+      number: 43
+    name: Slow inlocate beginning in hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: A
+  - id: sr:mag-0015
+    code:
+      group: 1
+      number: 44
+    name: Yamawaki — Double somersault forward tucked into hang
+    aliases:
+      - Yamawaki
+    families: []
+    roles: []
+    traits:
+      - yamawaki-jonasson
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: B
+  - id: sr:mag-0016
+    code:
+      group: 1
+      number: 45
+    name: Jonasson — Double somersault forward piked or straight into hang
+    aliases:
+      - Jonasson
+    families: []
+    roles: []
+    traits:
+      - yamawaki-jonasson
+    source:
+      documentId: mag-code-of-points
+      page: 64
+    difficulty: C
+  - id: sr:mag-0017
+    code:
+      group: 1
+      number: 49
+    name: Kip into support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength-separator-excluded
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: A
+  - id: sr:mag-0018
+    code:
+      group: 1
+      number: 55
+    name: Back kip plus bent arms into support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength-separator-excluded
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: A
+  - id: sr:mag-0019
+    code:
+      group: 1
+      number: 56
+    name: Back kip into support
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength-separator-excluded
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: B
+  - id: sr:mag-0020
+    code:
+      group: 1
+      number: 61
+    name: Forward swing into swing backward in hang
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: A
+  - id: sr:mag-0021
+    code:
+      group: 1
+      number: 63
+    name: Backward swing, somersault piked into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: C
+  - id: sr:mag-0022
+    code:
+      group: 1
+      number: 67
+    name: Felge backward piked or straight plus bent arms into support; begins in support or cross
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 65
+    difficulty: A
+  - id: sr:mag-0023
+    code:
+      group: 1
+      number: 74
+    name: Back kip or roll backward straight plus bent arms into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - strength-separator-excluded
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: B
+  - id: sr:mag-0024
+    code:
+      group: 1
+      number: 75
+    name: Swing forward into handstand or giant swing backward into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - swing-to-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: C
+  - id: sr:mag-0025
+    code:
+      group: 1
+      number: 81
+    name: Uprise backward into handstand or giant swing forward into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - swing-to-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: C
+  - id: sr:mag-0026
+    code:
+      group: 1
+      number: 86
+    name: Beginning in support swing backward into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - swing-to-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: B
+  - id: sr:mag-0027
+    code:
+      group: 1
+      number: 87
+    name: Honma then swing backward into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - swing-to-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: C
+  - id: sr:mag-0028
+    code:
+      group: 1
+      number: 88
+    name: Honma straight then swing backward into handstand 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - swing-to-handstand
+    source:
+      documentId: mag-code-of-points
+      page: 66
+    difficulty: D
+  - id: sr:mag-0029
+    code:
+      group: 2
+      number: 1
+    name: L-sit 2-second hold or straddled L-sit 2-second hold
+    aliases: []
+    families:
+      - final-position-straddled-l-sit
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: A
+  - id: sr:mag-0030
+    code:
+      group: 2
+      number: 2
+    name: V-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: B
+  - id: sr:mag-0031
+    code:
+      group: 2
+      number: 4
+    name: Inverted cross 2-second hold
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: D
+  - id: sr:mag-0032
+    code:
+      group: 2
+      number: 7
+    name: Hanging scale rearways (back lever) 2-second hold
+    aliases: []
+    families:
+      - final-position-hanging-scale-rearwards
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: A
+  - id: sr:mag-0033
+    code:
+      group: 2
+      number: 9
+    name: Support scale (planche) 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: C
+  - id: sr:mag-0034
+    code:
+      group: 2
+      number: 10
+    name: Hirondelle — Support scale at ring height (swallow or maltese cross) 2-second hold
+    aliases:
+      - Hirondelle
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: D
+  - id: sr:mag-0035
+    code:
+      group: 2
+      number: 11
+    name: Inverted swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-inverted-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: E
+  - id: sr:mag-0036
+    code:
+      group: 2
+      number: 13
+    name: Hanging scale frontways (front lever) 2-second hold
+    aliases: []
+    families:
+      - final-position-hanging-scale-frontways
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: A
+  - id: sr:mag-0037
+    code:
+      group: 2
+      number: 15
+    name: Any cross 2-second hold or V cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: C
+  - id: sr:mag-0038
+    code:
+      group: 2
+      number: 19
+    name: Support scale straddled 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: A
+  - id: sr:mag-0039
+    code:
+      group: 2
+      number: 22
+    name: Tsukahara 3 — V Cross, press into V-sit (2 sec.)
+    aliases:
+      - Tsukahara 3
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: D
+  - id: sr:mag-0040
+    code:
+      group: 2
+      number: 23
+    name: Colak — Vertical pull up plus straight arms into V-cross 2-second hold
+    aliases:
+      - Colak
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 67
+    difficulty: E
+  - id: sr:mag-0041
+    code:
+      group: 2
+      number: 25
+    name:
+      'Press into handstand plus bent body then bent arms 2-second hold - alternative: straddle legs'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: A
+  - id: sr:mag-0042
+    code:
+      group: 2
+      number: 26
+    name:
+      'Press into handstand plus straight body then bent arms or b. body. then straight arms, or
+      beginning in straddled support lever 2-second hold. - alternative: straddle legs'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: B
+  - id: sr:mag-0043
+    code:
+      group: 2
+      number: 27
+    name:
+      Press into handstand plus straight body then straight arms beginning in support or support
+      scale 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: C
+  - id: sr:mag-0044
+    code:
+      group: 2
+      number: 31
+    name: Slow roll forward piked plus bent arms, into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: A
+  - id: sr:mag-0045
+    code:
+      group: 2
+      number: 32
+    name: Slow roll forward straight plus bent arms, into support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: B
+  - id: sr:mag-0046
+    code:
+      group: 2
+      number: 38
+    name: Slow roll backward slowly then straight. body into L sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: B
+  - id: sr:mag-0047
+    code:
+      group: 2
+      number: 39
+    name: Slow roll forward straight into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 68
+    difficulty: C
+  - id: sr:mag-0048
+    code:
+      group: 2
+      number: 50
+    name: Vertical pull up plus bent arms into hanging scale rearways 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: B
+  - id: sr:mag-0049
+    code:
+      group: 2
+      number: 51
+    name: Vertical pull up plus straight arms into hanging scale rearways 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: C
+  - id: sr:mag-0050
+    code:
+      group: 2
+      number: 52
+    name:
+      Azarian — Slow Roll backward plus straight body into cross, L-cross or V cross 2-second hold
+    aliases:
+      - Azarian
+      - Tay
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: D
+  - id: sr:mag-0051
+    code:
+      group: 2
+      number: 56
+    name: Move forward into back lever 2-second hold; begins in cross or L- cr
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: B
+  - id: sr:mag-0052
+    code:
+      group: 2
+      number: 57
+    name: Vertical pull up into L-sit 2-second hold
+    aliases: []
+    families:
+      - final-position-l-sit
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: C
+  - id: sr:mag-0053
+    code:
+      group: 2
+      number: 58
+    name:
+      Nakayama — L-cross, or V cross 2-second hold; begins in or through hanging scale rearways pull
+      into cross
+    aliases:
+      - Nakayama
+      - NG Kiu Chung
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: D
+  - id: sr:mag-0054
+    code:
+      group: 2
+      number: 60
+    name:
+      Zahran — Through hanging scale rearways pull plus straight body through cross into inverted
+      swallow 2-second hold
+    aliases:
+      - Zahran
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: F
+  - id: sr:mag-0055
+    code:
+      group: 2
+      number: 62
+    name: Lower horizontal into back lever 2-second hold; begins in handstand
+    aliases: []
+    families:
+      - final-position-hanging-scale-rearwards
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: B
+  - id: sr:mag-0056
+    code:
+      group: 2
+      number: 63
+    name:
+      Li Xiaoshuang — Lower slowly into hang, then pull plus straight arms into cross 2-second hold;
+      begins in support or cross
+    aliases:
+      - Li Xiaoshuang
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: C
+  - id: sr:mag-0057
+    code:
+      group: 2
+      number: 64
+    name: Vertical pull up into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: D
+  - id: sr:mag-0058
+    code:
+      group: 2
+      number: 65
+    name:
+      Van Gelder — Lower horizontal then slowly into hanging scale rw. then press into swallow
+      2-second hold or beginning in swallow same into planche or planche into planche; begins in
+      planche
+    aliases:
+      - Van Gelder
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: E
+  - id: sr:mag-0059
+    code:
+      group: 2
+      number: 66
+    name:
+      Tulloch 2 — Slowly plus straight arms through cross into inverted swallow 2-second hold;
+      begins in hang vertical pull up
+    aliases:
+      - Tulloch 2
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: G
+  - id: sr:mag-0060
+    code:
+      group: 2
+      number: 68
+    name: Lower slowly through inverted cross into inverted hang; begins in handstand
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: B
+  - id: sr:mag-0061
+    code:
+      group: 2
+      number: 70
+    name: Press into support scale 2-second hold; begins in swallow
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: D
+  - id: sr:mag-0062
+    code:
+      group: 2
+      number: 71
+    name: Lower slowly into hanging scale rw, pr ess into swallow 2-second hold; begins in swallow
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: E
+  - id: sr:mag-0063
+    code:
+      group: 2
+      number: 72
+    name:
+      'Beginning in hanging scale rw. press into swallow (alternative: into Support Scale) 2-second
+      hold'
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 69
+    difficulty: F
+  - id: sr:mag-0064
+    code:
+      group: 2
+      number: 75
+    name: Press into L-sit 2-second hold; begins in cross or L-cross
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: C
+  - id: sr:mag-0065
+    code:
+      group: 2
+      number: 77
+    name: Press plus bent body into inverted cross 2-second hold; begins in L-cross
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: E
+  - id: sr:mag-0066
+    code:
+      group: 2
+      number: 78
+    name: Press plus straight body into inverted cross 2-second hold; begins in cross
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: F
+  - id: sr:mag-0067
+    code:
+      group: 2
+      number: 84
+    name: Press into inverted cross 2-second hold; begins in swallow
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: F
+  - id: sr:mag-0068
+    code:
+      group: 2
+      number: 88
+    name: Press into planche without first going into support 2-second hold; begins in cross
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: D
+  - id: sr:mag-0069
+    code:
+      group: 2
+      number: 89
+    name: Press into swallow 2-second hold; begins in cross
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: E
+  - id: sr:mag-0070
+    code:
+      group: 2
+      number: 90
+    name: Carmona — Through hang rearways press then straight body into inverted cross 2-second hold
+    aliases:
+      - Carmona
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: G
+  - id: sr:mag-0071
+    code:
+      group: 2
+      number: 94
+    name:
+      Vorobiov — Beginning in inverted cross lower slowly into inverted hang then felge backward
+      slowly into cross 2-second hold (Vorobiov/Zou)
+    aliases:
+      - Vorobiov
+      - Zou
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: D
+  - id: sr:mag-0072
+    code:
+      group: 2
+      number: 95
+    name:
+      Jotchev — Beginning in inverted cross lower slowly into inverted hang then felge backward
+      slowly into swallow 2-second hold or into support scale 2-second hold
+    aliases:
+      - Jotchev
+      - Zou 2
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 70
+    difficulty: E
+  - id: sr:mag-0073
+    code:
+      group: 2
+      number: 101
+    name:
+      Yan Mijayoun g — Roll backward slowly plus straight arms then body into free support scale
+      2-second hold
+    aliases:
+      - Yan Mijayoun g
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: E
+  - id: sr:mag-0074
+    code:
+      group: 2
+      number: 107
+    name: Slow Roll backward plus straight body into swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: E
+  - id: sr:mag-0075
+    code:
+      group: 2
+      number: 108
+    name:
+      Simonov — Roll backward slowly plus straight arms then body into inverted cross through
+      swallow
+    aliases:
+      - Simonov
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: F
+  - id: sr:mag-0076
+    code:
+      group: 2
+      number: 118
+    name:
+      Ng Kiu Chung 2 — Slow roll forward plus straight body through cross then press into support
+      scale without first going into support 2-second hold
+    aliases:
+      - Ng Kiu Chung 2
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: D
+  - id: sr:mag-0077
+    code:
+      group: 2
+      number: 119
+    name:
+      Wynn — Slow roll forward plus straight body through cross into inverted cross 2-second hold
+    aliases:
+      - Wynn
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: E
+  - id: sr:mag-0078
+    code:
+      group: 2
+      number: 120
+    name: Tulloch — Azarian into inverted Swallow 2-second hold
+    aliases:
+      - Tulloch
+    families:
+      - final-position-inverted-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 71
+    difficulty: F
+  - id: sr:mag-0079
+    code:
+      group: 2
+      number: 124
+    name:
+      'Davtyan — Slow roll forward plus straight body into Cross or L-Cross 2-second hold,
+      alternative: beginning in inverted hang'
+    aliases:
+      - Davtyan
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: D
+  - id: sr:mag-0080
+    code:
+      group: 2
+      number: 125
+    name: Pham 2 — Slow roll forward plus straight body through cross into swallow (2 sec)
+    aliases:
+      - Pham 2
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: E
+  - id: sr:mag-0081
+    code:
+      group: 2
+      number: 130
+    name:
+      Beginning in hang vertical pull up support then press into handstand plus straight body then
+      straight arms
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: D
+  - id: sr:mag-0082
+    code:
+      group: 2
+      number: 132
+    name: Balandin 1 — Beginning in hang vertical pull up into swallow 2-second hold
+    aliases:
+      - Balandin 1
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: F
+  - id: sr:mag-0083
+    code:
+      group: 2
+      number: 137
+    name:
+      Balandin 3 — Beginning in hang vertical pull up passing through swallow into support scale
+      2-second hold
+    aliases:
+      - Balandin 3
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: E
+  - id: sr:mag-0084
+    code:
+      group: 2
+      number: 138
+    name: Balandin 2 — Beginning in hang vertical pull up into inverted cross 2-second hold
+    aliases:
+      - Balandin 2
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 72
+    difficulty: G
+  - id: sr:mag-0085
+    code:
+      group: 3
+      number: 2
+    name: Uprise forward into L-sit, 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: B
+  - id: sr:mag-0086
+    code:
+      group: 3
+      number: 3
+    name: Uprise forward into V-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: C
+  - id: sr:mag-0087
+    code:
+      group: 3
+      number: 4
+    name: Front u prise forward into V cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: D
+  - id: sr:mag-0088
+    code:
+      group: 3
+      number: 8
+    name: Kip into L-sit 2-second hold
+    aliases: []
+    families:
+      - final-position-l-sit
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: B
+  - id: sr:mag-0089
+    code:
+      group: 3
+      number: 9
+    name: Kip into V-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: C
+  - id: sr:mag-0090
+    code:
+      group: 3
+      number: 14
+    name: Honma into L-sit 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: B
+  - id: sr:mag-0091
+    code:
+      group: 3
+      number: 15
+    name: Gr acia — Hom n a into V-sit 2-second hold
+    aliases:
+      - Gr acia
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: C
+  - id: sr:mag-0092
+    code:
+      group: 3
+      number: 16
+    name: Honma into cross / L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: D
+  - id: sr:mag-0093
+    code:
+      group: 3
+      number: 17
+    name: Tanaka — Honma into V cross 2-second hold
+    aliases:
+      - Tanaka
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: E
+  - id: sr:mag-0094
+    code:
+      group: 3
+      number: 22
+    name: Backward swing, somersault forward piked into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 73
+    difficulty: D
+  - id: sr:mag-0095
+    code:
+      group: 3
+      number: 27
+    name: Uprise forward into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: C
+  - id: sr:mag-0096
+    code:
+      group: 3
+      number: 33
+    name: Uprise backward into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: C
+  - id: sr:mag-0097
+    code:
+      group: 3
+      number: 39
+    name: Kip into cross, or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: C
+  - id: sr:mag-0098
+    code:
+      group: 3
+      number: 40
+    name: Molinari — Kip into V cross 2-second hold
+    aliases:
+      - Molinari
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: D
+  - id: sr:mag-0099
+    code:
+      group: 3
+      number: 42
+    name: Kip into inverted swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-inverted-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: F
+  - id: sr:mag-0100
+    code:
+      group: 3
+      number: 45
+    name: Back kip into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: C
+  - id: sr:mag-0101
+    code:
+      group: 3
+      number: 46
+    name: Back kip into support scale 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: D
+  - id: sr:mag-0102
+    code:
+      group: 3
+      number: 47
+    name: Back kip into swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 74
+    difficulty: E
+  - id: sr:mag-0103
+    code:
+      group: 3
+      number: 50
+    name:
+      Deltchev — Felge upward into support plus straddled legs supported above the rings 2-second
+      hold
+    aliases:
+      - Deltchev
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: B
+  - id: sr:mag-0104
+    code:
+      group: 3
+      number: 53
+    name: Back kip into inverted cross 2-second hold
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: E
+  - id: sr:mag-0105
+    code:
+      group: 3
+      number: 56
+    name: Felge upward into support scale straddled 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: B
+  - id: sr:mag-0106
+    code:
+      group: 3
+      number: 57
+    name: Felge upward into cross or L-cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: C
+  - id: sr:mag-0107
+    code:
+      group: 3
+      number: 58
+    name: Felge upward into support scale 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: D
+  - id: sr:mag-0108
+    code:
+      group: 3
+      number: 59
+    name: Felge upward into Swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: E
+  - id: sr:mag-0109
+    code:
+      group: 3
+      number: 60
+    name: Rodrigues — Uprise forward into inverted swallow 2-second hold
+    aliases:
+      - Rodrigues
+    families:
+      - final-position-inverted-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: F
+  - id: sr:mag-0110
+    code:
+      group: 3
+      number: 65
+    name: Felge upward into invert. cross 2-second hold
+    aliases: []
+    families:
+      - final-position-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: E
+  - id: sr:mag-0111
+    code:
+      group: 3
+      number: 68
+    name: Uprise backward into support scale straddled 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: B
+  - id: sr:mag-0112
+    code:
+      group: 3
+      number: 70
+    name: Uprise backward into support scale 2-second hold
+    aliases: []
+    families:
+      - final-position-support-scale
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: D
+  - id: sr:mag-0113
+    code:
+      group: 3
+      number: 71
+    name: Uprise backward into Swallow 2-second hold
+    aliases: []
+    families:
+      - final-position-swallow
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 75
+    difficulty: E
+  - id: sr:mag-0114
+    code:
+      group: 3
+      number: 77
+    name: Uprise backward into inverted cross 2-second hold
+    aliases: []
+    families:
+      - final-position-inverted-cross
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 76
+    difficulty: E
+  - id: sr:mag-0115
+    code:
+      group: 3
+      number: 82
+    name: Felge backward straight into free support scale 2-second hold
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 76
+    difficulty: D
+  - id: sr:mag-0116
+    code:
+      group: 4
+      number: 1
+    name: 'Somersault forward piked or straight, alternative: plus 1/2 rotation'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: A
+  - id: sr:mag-0117
+    code:
+      group: 4
+      number: 2
+    name: Somersault forward piked or straight plus 1/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: B
+  - id: sr:mag-0118
+    code:
+      group: 4
+      number: 3
+    name: Somersault forward piked or straight plus 3/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: C
+  - id: sr:mag-0119
+    code:
+      group: 4
+      number: 4
+    name: Somersault forward piked or straight plus 2/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: D
+  - id: sr:mag-0120
+    code:
+      group: 4
+      number: 9
+    name: Double somersault forward tucked or tucked plus 1/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: C
+  - id: sr:mag-0121
+    code:
+      group: 4
+      number: 10
+    name: 'Fischer — Double somersault forward tucked plus 3/2 t (alternative: 1/1 rotation)'
+    aliases:
+      - Fischer
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: D
+  - id: sr:mag-0122
+    code:
+      group: 4
+      number: 16
+    name: Balabanov — Double somersault forward piked or piked plus 1/2 rotation
+    aliases:
+      - Balabanov
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: D
+  - id: sr:mag-0123
+    code:
+      group: 4
+      number: 17
+    name: 'Double somersault forward piked plus 3/2 rotation (alternative: 1/1 rotation)'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 77
+    difficulty: E
+  - id: sr:mag-0124
+    code:
+      group: 4
+      number: 25
+    name: 'Somersault backward piked or straight alternative: plus 1/2'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: A
+  - id: sr:mag-0125
+    code:
+      group: 4
+      number: 26
+    name: Somersault backward straight plus 1/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: B
+  - id: sr:mag-0126
+    code:
+      group: 4
+      number: 27
+    name: Somersault backward straight plus 2/1 rotation or 3/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: C
+  - id: sr:mag-0127
+    code:
+      group: 4
+      number: 29
+    name: Somersault backward straight plus 3/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: E
+  - id: sr:mag-0128
+    code:
+      group: 4
+      number: 32
+    name: Double back tuck dismount — Double somersault backward tucked or piked
+    aliases:
+      - Double back tuck dismount
+      - Double back pike dismount
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: B
+  - id: sr:mag-0129
+    code:
+      group: 4
+      number: 33
+    name: Double somersault backward straight
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: C
+  - id: sr:mag-0130
+    code:
+      group: 4
+      number: 36
+    name: Triple somersault backward tucked
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: G
+  - id: sr:mag-0131
+    code:
+      group: 4
+      number: 42
+    name: Whittenburg — Triple somersault backward piked
+    aliases:
+      - Whittenburg
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: I
+  - id: sr:mag-0132
+    code:
+      group: 4
+      number: 45
+    name:
+      Double somersault backward rotation plus 1/2 or 1/1 rotation Double somersault backward
+      rotation plus 3/2 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: C
+  - id: sr:mag-0133
+    code:
+      group: 4
+      number: 47
+    name: Double somersault backward rotation plus 2/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: E
+  - id: sr:mag-0134
+    code:
+      group: 4
+      number: 48
+    name: Tuuha — Double somersault backward rotation plus 5/2 rotation
+    aliases:
+      - Tuuha
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 78
+    difficulty: F
+  - id: sr:mag-0135
+    code:
+      group: 4
+      number: 51
+    name: Somersault backward straight plus 1/1 rotation then somersault rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 79
+    difficulty: C
+  - id: sr:mag-0136
+    code:
+      group: 4
+      number: 52
+    name: Double somersault backward straight plus 1/2 or 1/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 79
+    difficulty: D
+  - id: sr:mag-0137
+    code:
+      group: 4
+      number: 54
+    name: Double somersault backward straight plus 3/2 or 2/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 79
+    difficulty: F
+  - id: sr:mag-0138
+    code:
+      group: 4
+      number: 60
+    name: Double somersault backward tuck plus 3/1 rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 79
+    difficulty: G

@@ -1,0 +1,37 @@
+schemaVersion: 1
+apparatus: pommel-horse
+sources:
+  - documentId: mag-code-of-points
+    pages: [40, 41, 42, 43, 44, 45]
+  - documentId: mag-newsletter-1-2025
+    pages: [4, 5]
+  - documentId: mag-newsletter-3-2025
+    pages: [3]
+
+specialLimits:
+  - { kind: trait, id: cross-travel-3-3, maximum: 2, includeDismount: false }
+  - { kind: trait, id: russian-wendeswing, maximum: 2, includeDismount: true }
+  - { kind: trait, id: handstand, maximum: 2, includeDismount: false }
+  - { kind: trait, id: russian-travel-3-3, maximum: 2, includeDismount: false }
+  - { kind: trait, id: spindle-travel-3-3, maximum: 2, includeDismount: false }
+  - { kind: trait, id: full-spindle, maximum: 2, includeDismount: false }
+  - { kind: trait, id: sohn-bezugo, maximum: 2, includeDismount: false }
+  - { kind: trait, id: flair, maximum: 4, includeDismount: false }
+  - { kind: family, id: busnari-variation, maximum: 1, includeDismount: false }
+  - { kind: family, id: russian-travel-variation, maximum: 1, includeDismount: false }
+  - { kind: family, id: tong-fei-variation, maximum: 1, includeDismount: false }
+  - { kind: family, id: nin-reyes-variation, maximum: 1, includeDismount: false }
+  - { kind: family, id: russian-location-end, maximum: 1, includeDismount: true }
+  - { kind: family, id: russian-location-between-pommels, maximum: 1, includeDismount: false }
+
+sequenceTypes:
+  flop: pommel-flop
+  combined: pommel-combined
+sequenceSeparatorTrait: pommel-sequence-separator
+
+occurrenceQualifiers:
+  russianLocation:
+    requiredTrait: russian-location-required
+    options:
+      - russian-location-end
+      - russian-location-between-pommels

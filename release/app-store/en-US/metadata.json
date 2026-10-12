@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "locale": "en-US",
+  "app": {
+    "name": "D-Score Gymnastics",
+    "subtitle": "Men's Gymnastics D-Score",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.gcinsteam.dscoregymnastics",
+    "primaryCategory": "SPORTS",
+    "price": "FREE",
+    "targetAgeRating": "4+",
+    "copyright": "2026 Gabriel Dabin Cintron",
+    "creator": "Gabriel Dabin Cintron",
+    "publisher": "Jose Gabriel Cintron"
+  },
+  "listing": {
+    "promotionalText": "Plan all six men's events, see every counted decision, and keep routines private on your device.",
+    "description": "D-Score Gymnastics is a fast, local-first routine planner for men's artistic gymnastics. Build counted routines for Floor Exercise, Pommel Horse, Still Rings, Vault, Parallel Bars, and Horizontal Bar under the 2025–2028 senior rules cycle.\n\nSearch a 738-element catalogue, organize complete six-event all-arounds, and see a live difficulty breakdown as you work. Clear explanations show counted and excluded elements, element-group credit, connections, Pommel Horse sequences, landing bonuses, and other apparatus-specific decisions.\n\nYour routines stay on your device. There is no account, advertising, analytics, tracking, or cloud upload. Export a versioned backup whenever you want to protect or move your work.\n\nD-Score Gymnastics calculates recognized-as-entered difficulty only. It does not judge execution, technical recognition from video, neutral deductions, or official competition results. Always resolve competition questions against current governing publications and qualified human judgment.\n\nD-Score Gymnastics is an independent project. It is not affiliated with, endorsed by, or officially authorized by World Gymnastics or the Fédération Internationale de Gymnastique (FIG).",
+    "keywords": "gymnastics,d score,MAG,routine,FIG,pommel,vault,rings,floor,parallel bars,high bar",
+    "whatsNew": "Initial release with all six men's artistic events, explained difficulty scoring, local routine and all-around libraries, offline support, and versioned backup and restore.",
+    "supportUrl": "https://d-score.app/support/",
+    "marketingUrl": "https://d-score.app/",
+    "privacyPolicyUrl": "https://d-score.app/privacy/",
+    "officialRulesUrl": "https://www.gymnastics.sport/site/rules/"
+  },
+  "availability": {
+    "countries": ["US", "CA"],
+    "releaseMode": "MANUAL",
+    "platforms": ["IPHONE"]
+  },
+  "privacy": {
+    "dataCollected": false,
+    "tracking": false,
+    "analytics": false,
+    "advertising": false,
+    "accountRequired": false
+  },
+  "review": {
+    "contactFirstName": "Jose Gabriel",
+    "contactLastName": "Cintron",
+    "contactEmail": "support@d-score.app",
+    "signInRequired": false,
+    "notesFile": "review-notes.md"
+  },
+  "screenshots": [
+    "01-home.png",
+    "02-build-floor.png",
+    "03-score-breakdown.png",
+    "04-pommel-flops.png",
+    "05-save-and-settings.png"
+  ]
+}

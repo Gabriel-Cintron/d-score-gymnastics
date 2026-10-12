@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build and test output
+coverage/
+dist/
+build/
+web-build/
+.lighthouseci/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Expo
+.expo/
+.expo-shared/
+apps/*/android/
+apps/*/ios/
+
+# Generated rules data
+packages/rulesets/generated/
+
+# Environment and local files
+.env
+.env.*
+!.env.example
+.private/
+.DS_Store
+*.log
+release/app-store/screenshots/raw/*.png

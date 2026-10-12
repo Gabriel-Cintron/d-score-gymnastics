@@ -1,0 +1,46 @@
+{
+  "name": "@d-score-gymnastics/app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "postinstall": "pnpm --dir ../.. rules:build",
+    "android": "expo start --android",
+    "export:web": "expo export --platform web && node scripts/assemble-web-release.mjs && workbox generateSW workbox-config.cjs && node scripts/check-web-export.mjs",
+    "ios": "expo start --ios",
+    "screenshots:store": "playwright test --config=playwright.store.config.ts && node scripts/compose-store-screenshots.mjs",
+    "serve:web": "expo serve dist --port 4173",
+    "test:e2e": "playwright test",
+    "test:lighthouse": "node scripts/run-lighthouse.mjs",
+    "typecheck": "tsc --noEmit --project tsconfig.json",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@d-score-gymnastics/rulesets": "workspace:*",
+    "@d-score-gymnastics/scoring": "workspace:*",
+    "@expo/metro-runtime": "~57.0.9",
+    "expo": "~57.0.12",
+    "expo-dev-client": "~57.0.11",
+    "expo-sqlite": "~57.0.1",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-web": "~0.21.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.62.1",
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3",
+    "workbox-cli": "7.4.1"
+  }
+}

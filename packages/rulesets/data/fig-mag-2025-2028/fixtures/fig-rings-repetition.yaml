@@ -1,0 +1,77 @@
+schemaVersion: 1
+kind: fig-element-counting
+id: fig-rings-repetition-and-dismount
+description: Excludes a repeated code while preserving the final reserved dismount slot.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+
+routine:
+  apparatus: still-rings
+  occurrences:
+    - occurrenceId: first-kip
+      elementId: sr:mag-0017
+    - occurrenceId: repeated-kip
+      elementId: sr:mag-0017
+    - occurrenceId: dismount
+      elementId: sr:mag-0128
+
+expected:
+  total: 1.0
+  breakdown:
+    elementDifficulty: 0.3
+    elementGroup: 0.7
+    connection: 0.0
+    bonus: 0.0
+  elementDecisions:
+    - occurrenceId: first-kip
+      elementId: sr:mag-0017
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+    - occurrenceId: repeated-kip
+      elementId: sr:mag-0017
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-repeated
+      reasonParameters:
+        creditedOccurrenceId: first-kip
+    - occurrenceId: dismount
+      elementId: sr:mag-0128
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.dismount-counted
+      reasonParameters:
+        slot: reserved-dismount
+  awards:
+    - component: element-group
+      occurrenceIds:
+        - first-kip
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 1
+    - component: element-group
+      occurrenceIds:
+        - dismount
+      value: 0.2
+      reason: fig.dismount-group-awarded
+      reasonParameters:
+        group: 4
+  warnings:
+    - code: fig.repeated-element
+      occurrenceIds:
+        - first-kip
+        - repeated-kip
+      parameters:
+        group: 1
+        number: 49
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters:
+        group: 2
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters:
+        group: 3

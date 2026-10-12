@@ -1,0 +1,25 @@
+schemaVersion: 1
+apparatus: parallel-bars
+sources:
+  - documentId: mag-code-of-points
+    pages: [93, 94, 95]
+  - documentId: mag-newsletter-1-2025
+    pages: [5]
+  - documentId: mag-newsletter-2-2025
+    pages: [1]
+  - documentId: mag-newsletter-3-2025
+    pages: [4]
+
+specialLimits:
+  - { kind: family, id: salto-morisue, maximum: 1, includeDismount: false }
+  - { kind: family, id: salto-belle, maximum: 1, includeDismount: false }
+  - { kind: family, id: salto-five-quarter-forward, maximum: 1, includeDismount: false }
+  - { kind: trait, id: giant-swing, maximum: 2, includeDismount: false }
+  - { kind: trait, id: felge-swing, maximum: 2, includeDismount: false }
+  - { kind: trait, id: front-uprise-handstand, maximum: 2, includeDismount: false }
+
+healyUpgrade:
+  sourceTrait: one-rail
+  excludedSourceTrait: straddled-one-rail
+  targetTrait: healy
+  incrementPerElement: 0.1

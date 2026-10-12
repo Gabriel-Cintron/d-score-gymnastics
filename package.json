@@ -1,0 +1,53 @@
+{
+  "name": "d-score-gymnastics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first gymnastics difficulty scoring, beginning with FIG men's artistic gymnastics.",
+  "license": "MIT",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=22.22.0 <23",
+    "pnpm": "11.21.0"
+  },
+  "scripts": {
+    "catalog:private:archive": "pnpm --filter @d-score-gymnastics/rulesets catalog:private:archive",
+    "backup:migrate:private": "pnpm --filter @d-score-gymnastics/rulesets backup:migrate:private",
+    "check": "prettier --check . && eslint . && pnpm typecheck && vitest run && pnpm rules:check && pnpm --filter @d-score-gymnastics/app export:web",
+    "dev": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "publication:check": "pnpm rules:build && node scripts/check-publication-gate.mjs",
+    "publication:preflight": "pnpm rules:build && node scripts/check-publication-gate.mjs --preflight",
+    "rules:build": "pnpm --filter @d-score-gymnastics/rulesets rules:build",
+    "rules:build:private": "pnpm --filter @d-score-gymnastics/rulesets rules:build:private",
+    "rules:check": "pnpm --filter @d-score-gymnastics/rulesets rules:check",
+    "release:check": "pnpm check && pnpm release:validate && pnpm publication:check -- web open-source-repository ios-app-store && pnpm test:e2e && pnpm test:lighthouse",
+    "release:preflight": "pnpm check && pnpm release:validate && pnpm publication:preflight && pnpm test:e2e && pnpm test:lighthouse",
+    "release:snapshot": "node scripts/create-public-snapshot.mjs",
+    "release:validate": "node scripts/check-release-materials.mjs",
+    "release:web": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app export:web",
+    "screenshots:store": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app screenshots:store",
+    "test": "vitest run",
+    "test:e2e": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app test:e2e",
+    "test:lighthouse": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app test:lighthouse",
+    "test:watch": "vitest",
+    "typecheck": "pnpm rules:build && tsc --noEmit --project packages/scoring/tsconfig.json && tsc --noEmit --project packages/rulesets/tsconfig.json && tsc --noEmit --project apps/d-score-gymnastics/tsconfig.json",
+    "web": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app web",
+    "web:export": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app export:web",
+    "web:serve": "pnpm --filter @d-score-gymnastics/app serve:web",
+    "release:web:validate": "node scripts/check-web-release-materials.mjs",
+    "release:web:check": "node scripts/check-web-release.mjs",
+    "release:web:preflight": "node scripts/check-web-release.mjs --preflight"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "^22.0.0",
+    "eslint": "10.8.1",
+    "prettier": "3.9.6",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "8.67.0",
+    "vitest": "4.1.10"
+  }
+}

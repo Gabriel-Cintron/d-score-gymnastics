@@ -1,0 +1,32 @@
+{
+  "name": "@d-score-gymnastics/rulesets",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./compiled/fig-mag-2025-2028": "./generated/fig-mag-2025-2028.json"
+  },
+  "scripts": {
+    "catalog:import": "node --import tsx scripts/import-fig-catalog.ts",
+    "catalog:private:archive": "node --import tsx scripts/archive-private-catalog.ts",
+    "backup:migrate:private": "node --import tsx scripts/migrate-private-backup.ts",
+    "routine:explain": "node --import tsx scripts/explain-routine.ts",
+    "rules:build": "node --import tsx scripts/build-rules.ts",
+    "rules:build:private": "node --import tsx scripts/build-private-rules.ts",
+    "rules:check": "node --import tsx scripts/check-rules.ts",
+    "typecheck": "tsc --noEmit --project tsconfig.json"
+  },
+  "dependencies": {
+    "@d-score-gymnastics/scoring": "workspace:*",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "tsx": "4.23.12",
+    "yaml": "2.9.0"
+  }
+}

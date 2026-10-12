@@ -1,0 +1,31 @@
+schemaVersion: 1
+apparatus: floor-exercise
+sources:
+  - documentId: mag-code-of-points
+    pages: [25, 26]
+  - documentId: mag-newsletter-1-2025
+    pages: [2, 3]
+  - documentId: mag-newsletter-2-2025
+    pages: [3, 4]
+  - documentId: mag-newsletter-3-2025
+    pages: [2, 3]
+
+dismountRequiredTrait: multiple-salto
+balanceRequirementTrait: balance-or-leap-requirement
+
+specialLimits:
+  - kind: trait
+    id: strength
+    maximum: 1
+    includeDismount: false
+  - kind: trait
+    id: circle-flair-russian
+    maximum: 1
+    includeDismount: false
+
+connection:
+  minimumFirstDifficulty: D
+  minimumPartnerDifficulty: B
+  highPartnerMinimum: D
+  standardValue: 0.1
+  highValue: 0.2

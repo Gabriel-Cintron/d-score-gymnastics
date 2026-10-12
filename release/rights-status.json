@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "figDistributionPermission": {
+    "status": "approved",
+    "requestSent": true,
+    "evidenceReference": "Private operator archive: World Gymnastics Legal & Sports Counsel email received before 2026-09-03 release preparation",
+    "approvedScope": ["web", "open-source-repository", "ios-app-store"],
+    "conditions": [
+      "Use factual scoring information only from the referenced publications.",
+      "Do not reproduce Code wording, illustrations, layout, or substantial protected content.",
+      "Use independently drafted public descriptions.",
+      "Do not use World Gymnastics or FIG logos or imply affiliation, endorsement, or authorization.",
+      "Identify the official Code and World Gymnastics rules page as authoritative."
+    ],
+    "notes": "The maintainers treat the written response as sufficient for the three listed channels. This scope interpretation is an operator decision and not legal advice."
+  }
+}

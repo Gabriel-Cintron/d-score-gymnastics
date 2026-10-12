@@ -1,0 +1,10 @@
+{
+  "extends": ["expo/tsconfig.base", "../../tsconfig.base.json"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "resolveJsonModule": true,
+    "types": ["react"]
+  },
+  "include": ["index.ts", "src/**/*.ts", "src/**/*.tsx"]
+}

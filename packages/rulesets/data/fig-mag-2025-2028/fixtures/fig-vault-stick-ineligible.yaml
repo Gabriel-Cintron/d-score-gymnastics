@@ -1,0 +1,19 @@
+schemaVersion: 1
+kind: fig-vault
+id: fig-vault-stick-ineligible
+description: Keeps the listed value but withholds stick bonus from a non-salto Vault.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.vault
+routine:
+  apparatus: vault
+  vaultId: vt:mag-0024
+  landing: stuck
+expected:
+  total: 1.2
+  vaultDifficulty: 1.2
+  bonus: 0.0
+  vaultId: vt:mag-0024
+  awards: []
+  warnings:
+    - code: fig.vault-stick-ineligible
+      parameters: { vaultId: vt:mag-0024 }

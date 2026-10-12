@@ -1,0 +1,76 @@
+# Catalog and scoring policies are complete for the published source snapshot.
+schemaVersion: 1
+id: fig-mag-2025-2028
+name: FIG Men's Artistic Gymnastics 2025-2028
+discipline: mens-artistic-gymnastics
+authority:
+  name: Fédération Internationale de Gymnastique (FIG)
+  url: https://www.gymnastics.sport/
+authoritativeRulesUrl: https://www.gymnastics.sport/site/rules/
+catalogWording:
+  profile: independent-public
+  revision: 2026-09-03
+cycle: 2025-2028
+dataVersion: 1.0.0
+dataRevision: 2026-09-03
+status: complete
+
+apparatus:
+  - floor-exercise
+  - pommel-horse
+  - still-rings
+  - vault
+  - parallel-bars
+  - horizontal-bar
+
+catalogCoverage:
+  officialPublicationCutoff: 2026-08-10
+  expectedElements:
+    floor-exercise: 101
+    pommel-horse: 107
+    still-rings: 138
+    vault: 82
+    parallel-bars: 179
+    horizontal-bar: 131
+
+# Familiar decimal values compile to integer tenths.
+difficultyScale:
+  A: 0.1
+  B: 0.2
+  C: 0.3
+  D: 0.4
+  E: 0.5
+  F: 0.6
+  G: 0.7
+  H: 0.8
+  I: 0.9
+  J: 1.0
+
+sources:
+  - id: mag-code-of-points
+    title: Men's Artistic Gymnastics Code of Points 2025-2028
+    url: https://www.gymnastics.sport/publicdir/rules/files/en_1.1%20-%20MAG%20Code%20of%20Points%202025-2028.pdf
+    publicationDate: 2025-04-25
+    revision: Version published 14 April 2025
+  - id: mag-code-of-points-appendix
+    title: Appendix to the Men's Artistic Gymnastics Code of Points 2025-2028
+    url: https://www.gymnastics.sport/publicdir/rules/files/en_1.2%20-%20Appendix%20to%20the%20Code%20of%20Points%202025-2028.pdf
+    publicationDate: 2026-05-25
+  - id: mag-specific-judges-rules
+    title: Men's Artistic Gymnastics Specific Judges' Rules 2025-2028
+    url: https://www.gymnastics.sport/publicdir/rules/files/en_1.3%20-%20MAG%20Specific%20Judges%27%20Rules%202025-2028.pdf
+    publicationDate: 2026-03-27
+  - id: mag-newsletter-1-2025
+    title: Men's Artistic Gymnastics Newsletter No. 1 - August 2025
+    url: https://www.fig-docs.com/website/newsletters/MAG/2025/MAG_NL_1_en.pdf
+  - id: mag-newsletter-2-2025
+    title: Men's Artistic Gymnastics Newsletter No. 2 - September 2025
+    url: https://www.fig-docs.com/website/newsletters/MAG/2025/MAG_NL_2_en.pdf
+    publicationDate: 2025-09-19
+  - id: mag-newsletter-3-2025
+    title: Men's Artistic Gymnastics Newsletter No. 3 - December 2025
+    url: https://www.fig-docs.com/website/newsletters/MAG/2025/MAG_NL_3_en.pdf
+    publicationDate: 2025-12-01
+  - id: mag-newsletter-4-2026
+    title: Men's Artistic Gymnastics Newsletter No. 4 - July 2026
+    url: https://www.fig-docs.com/website/newsletters/MAG/2026/MAG_NL_4_en.pdf

@@ -1,0 +1,85 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-parallel-bars-repetition
+description: Covers salto-family and giant-swing special repetition with highest-value selection.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: parallel-bars
+  occurrences:
+    - { occurrenceId: morisue-e, elementId: pb:mag-0055 }
+    - { occurrenceId: morisue-f, elementId: pb:mag-0056 }
+    - occurrenceId: giant-c
+      elementId: pb:mag-0096
+    - occurrenceId: giant-e
+      elementId: pb:mag-0098
+    - occurrenceId: giant-f
+      elementId: pb:mag-0099
+    - occurrenceId: dismount
+      elementId: pb:mag-0160
+expected:
+  total: 3.9
+  breakdown: { elementDifficulty: 2.4, elementGroup: 1.5, connection: 0.0, bonus: 0.0 }
+  elementDecisions:
+    - occurrenceId: morisue-e
+      elementId: pb:mag-0055
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.special-repetition-limit
+      reasonParameters: { limitId: salto-morisue, maximum: 1 }
+    - occurrenceId: morisue-f
+      elementId: pb:mag-0056
+      status: counted
+      creditedDifficulty: 0.6
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: giant-c
+      elementId: pb:mag-0096
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.special-repetition-limit
+      reasonParameters: { limitId: giant-swing, maximum: 2 }
+    - occurrenceId: giant-e
+      elementId: pb:mag-0098
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: giant-f
+      elementId: pb:mag-0099
+      status: counted
+      creditedDifficulty: 0.6
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: pb:mag-0160
+      status: counted
+      creditedDifficulty: 0.7
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [morisue-f]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [giant-f]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 3 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+  warnings:
+    - code: fig.special-repetition-limit
+      occurrenceIds: [morisue-e]
+      parameters: { limitId: salto-morisue, maximum: 1 }
+    - code: fig.special-repetition-limit
+      occurrenceIds: [giant-c]
+      parameters: { limitId: giant-swing, maximum: 2 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }

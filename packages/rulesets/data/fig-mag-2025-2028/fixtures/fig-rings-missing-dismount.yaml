@@ -1,0 +1,48 @@
+schemaVersion: 1
+kind: fig-element-counting
+id: fig-rings-missing-dismount
+description: Returns a partial element subtotal and warning when no final dismount is entered.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+
+routine:
+  apparatus: still-rings
+  occurrences:
+    - occurrenceId: kip
+      elementId: sr:mag-0017
+
+expected:
+  total: 0.6
+  breakdown:
+    elementDifficulty: 0.1
+    elementGroup: 0.5
+    connection: 0.0
+    bonus: 0.0
+  elementDecisions:
+    - occurrenceId: kip
+      elementId: sr:mag-0017
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters:
+        slot: regular
+  awards:
+    - component: element-group
+      occurrenceIds:
+        - kip
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters:
+        group: 1
+  warnings:
+    - code: fig.missing-dismount
+      occurrenceIds: []
+      parameters: {}
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters:
+        group: 2
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters:
+        group: 3

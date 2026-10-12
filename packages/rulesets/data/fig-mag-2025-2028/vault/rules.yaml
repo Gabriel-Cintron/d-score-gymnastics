@@ -1,0 +1,5 @@
+schemaVersion: 1
+apparatus: vault
+sources:
+  - documentId: mag-code-of-points
+    pages: [81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91]

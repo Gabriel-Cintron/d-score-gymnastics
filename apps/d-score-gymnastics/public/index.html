@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="%LANG_ISO_CODE%">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Build and explain men's artistic gymnastics difficulty scores with a private, local-first routine calculator."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f6f8" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="D-Score Gymnastics" />
+    <meta
+      property="og:description"
+      content="A private, local-first men's artistic gymnastics difficulty calculator."
+    />
+    <meta property="og:image" content="https://d-score.app/social-card.png" />
+    <meta property="og:url" content="https://d-score.app/app/" />
+    <link rel="canonical" href="https://d-score.app/app/" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <title>%WEB_TITLE%</title>
+
+    <style id="expo-reset">
+      :root {
+        --d-score-background: #f4f6f8;
+        --d-score-scrollbar: #667085;
+        background-color: var(--d-score-background);
+        color-scheme: light;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --d-score-background: #0b1120;
+          --d-score-scrollbar: #94a3b8;
+          color-scheme: dark;
+        }
+      }
+
+      html,
+      body {
+        background-color: var(--d-score-background);
+        height: 100%;
+        margin: 0;
+        min-height: 100%;
+        padding: 0;
+        width: 100%;
+      }
+
+      body {
+        -webkit-text-size-adjust: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+        text-size-adjust: 100%;
+      }
+
+      #root {
+        background-color: var(--d-score-background);
+        box-sizing: border-box;
+        display: flex;
+        flex: 1;
+        height: 100%;
+        min-height: 100%;
+        min-width: 0;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        padding-left: env(safe-area-inset-left, 0px);
+        padding-right: env(safe-area-inset-right, 0px);
+        padding-top: env(safe-area-inset-top, 0px);
+        width: 100%;
+      }
+
+      @supports (height: 100dvh) {
+        html,
+        body,
+        #root {
+          height: 100dvh;
+          min-height: 100dvh;
+        }
+      }
+
+      * {
+        scrollbar-color: var(--d-score-scrollbar) transparent;
+        scrollbar-width: thin;
+      }
+
+      *::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-clip: content-box;
+        background-color: var(--d-score-scrollbar);
+        border: 2px solid transparent;
+        border-radius: 999px;
+      }
+    </style>
+
+    <script>
+      (function () {
+        var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var background = dark ? '#0b1120' : '#f4f6f8';
+        var scrollbar = dark ? '#94a3b8' : '#667085';
+        var mode = dark ? 'dark' : 'light';
+        var root = document.documentElement;
+        var themeColor = document.querySelector('meta[name="theme-color"]');
+        var statusBar = document.querySelector(
+          'meta[name="apple-mobile-web-app-status-bar-style"]',
+        );
+
+        root.setAttribute('data-theme', mode);
+        root.style.backgroundColor = background;
+        root.style.colorScheme = mode;
+        root.style.setProperty('--d-score-background', background);
+        root.style.setProperty('--d-score-scrollbar', scrollbar);
+        if (themeColor) themeColor.setAttribute('content', background);
+        if (statusBar) {
+          statusBar.setAttribute('content', dark ? 'black-translucent' : 'default');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run D-Score Gymnastics.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

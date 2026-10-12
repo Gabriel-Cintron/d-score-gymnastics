@@ -1,0 +1,37 @@
+schemaVersion: 1
+kind: kernel
+id: ordinary-rings-element-difficulty
+description: Verifies ordered catalog values before FIG selection, group, and connection policies.
+rulesetId: fig-mag-2025-2028
+evaluatorId: foundation.credit-all-elements
+
+routine:
+  apparatus: still-rings
+  occurrences:
+    - occurrenceId: kip
+      elementId: sr:mag-0017
+    - occurrenceId: dismount
+      elementId: sr:mag-0128
+
+expected:
+  total: 0.3
+  breakdown:
+    elementDifficulty: 0.3
+    elementGroup: 0.0
+    connection: 0.0
+    bonus: 0.0
+  elementDecisions:
+    - occurrenceId: kip
+      elementId: sr:mag-0017
+      status: counted
+      creditedDifficulty: 0.1
+      reason: element.counted-as-entered
+      reasonParameters: {}
+    - occurrenceId: dismount
+      elementId: sr:mag-0128
+      status: counted
+      creditedDifficulty: 0.2
+      reason: element.counted-as-entered
+      reasonParameters: {}
+  awards: []
+  warnings: []

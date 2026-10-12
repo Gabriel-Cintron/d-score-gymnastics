@@ -1,0 +1,1604 @@
+schemaVersion: 1
+apparatus: pommel-horse
+elements:
+  - id: ph:mag-0001
+    code:
+      group: 1
+      number: 1
+    name: Scissor forward
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: A
+  - id: ph:mag-0002
+    code:
+      group: 1
+      number: 2
+    name: 'Scissor forward plus travel sideways (alternative: plus 1/2 rotation)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: B
+  - id: ph:mag-0003
+    code:
+      group: 1
+      number: 3
+    name: Scissor forward plus hop sideways beginning in one end into the other (3/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: C
+  - id: ph:mag-0004
+    code:
+      group: 1
+      number: 7
+    name: Scissor forward plus 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: A
+  - id: ph:mag-0005
+    code:
+      group: 1
+      number: 8
+    name: Double scissor forward (1/4 rotation forward then 1/4 rotation backward.)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: B
+  - id: ph:mag-0006
+    code:
+      group: 1
+      number: 9
+    name:
+      Double scissor forward (1/4 rotation forward then 1/4 rotation backward.) plus travel sideways
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: C
+  - id: ph:mag-0007
+    code:
+      group: 1
+      number: 10
+    name: Mikulak — Double scissor forward sideways beginning in one end into the other (3/3)
+    aliases:
+      - Mikulak
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: D
+  - id: ph:mag-0008
+    code:
+      group: 1
+      number: 15
+    name: Stepanyan — Double Scissor forward plus travel sideways through handstand
+    aliases:
+      - Stepanyan
+    families: []
+    roles: []
+    traits:
+      - handstand
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: C
+  - id: ph:mag-0009
+    code:
+      group: 1
+      number: 20
+    name: Leg cut or undercut backward through handstand then lower into support plus straddle legs
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - handstand
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: B
+  - id: ph:mag-0010
+    code:
+      group: 1
+      number: 22
+    name:
+      Li Ning — Scissor forward plus 1/4 rotation through handstand on 1 pommel, lower into support
+      plus straddle legs on the other arm (plus legs changing)
+    aliases:
+      - Li Ning
+      - Bryan
+    families: []
+    roles: []
+    traits:
+      - handstand
+    source:
+      documentId: mag-code-of-points
+      page: 47
+    difficulty: D
+  - id: ph:mag-0011
+    code:
+      group: 1
+      number: 25
+    name: Scissor backward
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: A
+  - id: ph:mag-0012
+    code:
+      group: 1
+      number: 26
+    name: 'Scissor backward plus travel sideways (alternative: plus 1/2 rotation)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: B
+  - id: ph:mag-0013
+    code:
+      group: 1
+      number: 27
+    name: Scissor backward plus hop sideways beginning in one end into the other (1 -2 into 4- 5)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: C
+  - id: ph:mag-0014
+    code:
+      group: 1
+      number: 31
+    name: Scissor backward plus 1/2 rotation
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: A
+  - id: ph:mag-0015
+    code:
+      group: 1
+      number: 32
+    name: Double scissor backward (1/4 rotation forward then 1/4 rotation backward)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: B
+  - id: ph:mag-0016
+    code:
+      group: 1
+      number: 39
+    name:
+      'Swing backward plus 1/4 rotation through handstand on 1 pommel (alternative: plus 1/4
+      rotation after), lower into support plus straddle legs (plus legs changing)'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - handstand
+    source:
+      documentId: mag-code-of-points
+      page: 48
+    difficulty: C
+  - id: ph:mag-0017
+    code:
+      group: 2
+      number: 1
+    name: Thomas — Any circle or flair in side support
+    aliases:
+      - Thomas
+    families: []
+    roles: []
+    traits:
+      - flair
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: A
+  - id: ph:mag-0018
+    code:
+      group: 2
+      number: 2
+    name: Circle in side support outside pommels or between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: B
+  - id: ph:mag-0019
+    code:
+      group: 2
+      number: 7
+    name: Circles in cross support frontways on end
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: A
+  - id: ph:mag-0020
+    code:
+      group: 2
+      number: 8
+    name: Circles in cross support on 1 pommel (beginning in or into 1/4 rotation forward.)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flop-circle
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: B
+  - id: ph:mag-0021
+    code:
+      group: 2
+      number: 13
+    name: Circles in cross support rearways on end
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: A
+  - id: ph:mag-0022
+    code:
+      group: 2
+      number: 14
+    name: Circles in cross support between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 49
+    difficulty: B
+  - id: ph:mag-0023
+    code:
+      group: 2
+      number: 25
+    name: Any 1/4 spindle
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: A
+  - id: ph:mag-0024
+    code:
+      group: 2
+      number: 26
+    name: Keikha 2 — Any 1/2 spindle
+    aliases:
+      - Keikha 2
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: B
+  - id: ph:mag-0025
+    code:
+      group: 2
+      number: 28
+    name: Any side support pommel between hands 1/1 spindle plus legs straddle inside max. 2 circles
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: D
+  - id: ph:mag-0026
+    code:
+      group: 2
+      number: 29
+    name:
+      Eichorn — Any side support 1/1 spindle plus hand support into the other side then return (max.
+      2 flairs or circles)
+    aliases:
+      - Eichorn
+    families: []
+    roles: []
+    traits:
+      - flair
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: E
+  - id: ph:mag-0027
+    code:
+      group: 2
+      number: 30
+    name: Keikha 1 — Any 1/1 spindle plus both pommels between the hands (flair or circle)
+    aliases:
+      - Keikha 1
+      - Keikha 5
+    families: []
+    roles: []
+    traits:
+      - flair
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: F
+  - id: ph:mag-0028
+    code:
+      group: 2
+      number: 34
+    name: Magyar — Any 1/1 spindle within max. 2 circles on the end
+    aliases:
+      - Magyar
+    families: []
+    roles: []
+    traits:
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: D
+  - id: ph:mag-0029
+    code:
+      group: 2
+      number: 35
+    name: Berki — 1/1 spindle plus legs straddle or together on the pommels inside max. 2 circles
+    aliases:
+      - Berki
+    families: []
+    roles: []
+    traits:
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: E
+  - id: ph:mag-0030
+    code:
+      group: 2
+      number: 36
+    name: Mousichidis — Cross support, 1/1 spindle plus hands between the pommels max. 2 circles
+    aliases:
+      - Mousichidis
+    families: []
+    roles: []
+    traits:
+      - full-spindle
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: F
+  - id: ph:mag-0031
+    code:
+      group: 2
+      number: 38
+    name: DSA — Direct Stöckli A on the pommels or pommel between hands
+    aliases:
+      - DSA
+    families: []
+    roles: []
+    traits:
+      - flop-dsa
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: B
+  - id: ph:mag-0032
+    code:
+      group: 2
+      number: 40
+    name: DSA — Direct Stöckli A outside pommels
+    aliases:
+      - DSA
+      - Keikha 3
+      - Keikha 6
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: D
+  - id: ph:mag-0033
+    code:
+      group: 2
+      number: 44
+    name: DSB — Direct Stöckli B
+    aliases:
+      - DSB
+    families: []
+    roles: []
+    traits:
+      - flop-dsb
+    source:
+      documentId: mag-code-of-points
+      page: 50
+    difficulty: B
+  - id: ph:mag-0034
+    code:
+      group: 2
+      number: 51
+    name:
+      Tippelt — Flair or circle through handstand (plus or without 1/2 rotation) then lower into
+      flair or circle
+    aliases:
+      - Tippelt
+    families: []
+    roles: []
+    traits:
+      - flair
+      - handstand
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: C
+  - id: ph:mag-0035
+    code:
+      group: 2
+      number: 52
+    name: Flair plus hop travel backward through handstand then lower into circles or flairs
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flair
+      - handstand
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: D
+  - id: ph:mag-0036
+    code:
+      group: 2
+      number: 54
+    name:
+      Busnari — Reverse Stöckli, DSA or pommel circle straddle through handstand, 3/3 travel
+      (forward - backward), 360° rotation into flairs
+    aliases:
+      - Busnari
+    families:
+      - busnari-variation
+    roles: []
+    traits:
+      - flair
+      - handstand
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: F
+  - id: ph:mag-0037
+    code:
+      group: 2
+      number: 55
+    name: Double rear (kehr)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: A
+  - id: ph:mag-0038
+    code:
+      group: 2
+      number: 56
+    name: Sohn technique — Kehr plus 270° rotation on 1 piked beginning in cross into side support
+    aliases:
+      - Sohn technique
+    families: []
+    roles: []
+    traits:
+      - sohn-bezugo
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: B
+  - id: ph:mag-0039
+    code:
+      group: 2
+      number: 57
+    name: Sohn technique — Kehr plus 270° rotation on 1 pommel beginning in side into cross support
+    aliases:
+      - Sohn technique
+      - Bertoncelj
+    families: []
+    roles: []
+    traits:
+      - flop-bertoncelj
+      - sohn-bezugo
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: C
+  - id: ph:mag-0040
+    code:
+      group: 2
+      number: 58
+    name: Sohn — Kehr plus 1/1 rotation on 1 pommel
+    aliases:
+      - Sohn
+    families: []
+    roles: []
+    traits:
+      - sohn-bezugo
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: D
+  - id: ph:mag-0041
+    code:
+      group: 2
+      number: 60
+    name: Moore — Bertoncelj into Busnari
+    aliases:
+      - Moore
+    families:
+      - busnari-variation
+    roles: []
+    traits: []
+    source:
+      documentId: mag-newsletter-1-2025
+      page: 7
+    difficulty: G
+  - id: ph:mag-0042
+    code:
+      group: 2
+      number: 62
+    name: Direct Tramlot
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: B
+  - id: ph:mag-0043
+    code:
+      group: 2
+      number: 68
+    name: Reverse Stöckli 180° (or 270° beginning in one pommel) rotation in one circle
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - pommel-sequence-separator
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: B
+  - id: ph:mag-0044
+    code:
+      group: 2
+      number: 69
+    name:
+      Bezugo technique — Reverse Stöckli plus 270° rotation beginning in 2 pommels into cross
+      support on 1 pommel
+    aliases:
+      - Bezugo technique
+      - Davtyan
+    families: []
+    roles: []
+    traits:
+      - flop-davtyan
+      - sohn-bezugo
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: C
+  - id: ph:mag-0045
+    code:
+      group: 2
+      number: 71
+    name: Bezugo — Reverse Stöckli plus 360° rotation on 1 pommel
+    aliases:
+      - Bezugo
+    families: []
+    roles: []
+    traits:
+      - sohn-bezugo
+    source:
+      documentId: mag-code-of-points
+      page: 51
+    difficulty: E
+  - id: ph:mag-0046
+    code:
+      group: 2
+      number: 73
+    name: Schwabenflank
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: A
+  - id: ph:mag-0047
+    code:
+      group: 2
+      number: 74
+    name: Czechkehre on the pommels or pommel between hands
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: B
+  - id: ph:mag-0048
+    code:
+      group: 2
+      number: 76
+    name: Pinheiro — Czechkehre outside pommels
+    aliases:
+      - Pinheiro
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: D
+  - id: ph:mag-0049
+    code:
+      group: 2
+      number: 79
+    name:
+      Wendeswing forward plus 1/2 rotation into support forward on the end, beginning in side
+      support using 1 or 2 pommels
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: A
+  - id: ph:mag-0050
+    code:
+      group: 2
+      number: 85
+    name: Russian wendeswing plus 180° or 270°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: A
+  - id: ph:mag-0051
+    code:
+      group: 2
+      number: 91
+    name: Russian wendeswing plus 360° or 540°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: A
+  - id: ph:mag-0052
+    code:
+      group: 2
+      number: 92
+    name: Russian wendeswing plus 720° or 900°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: B
+  - id: ph:mag-0053
+    code:
+      group: 2
+      number: 93
+    name: Russian wendeswing plus 1080° or more
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 52
+    difficulty: C
+  - id: ph:mag-0054
+    code:
+      group: 2
+      number: 97
+    name: 'On the leather, Russian wendeswing plus 180°, or 270° alternative: plus travel'
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: A
+  - id: ph:mag-0055
+    code:
+      group: 2
+      number: 103
+    name: On the leather, Russian wendeswing plus 360° or 540°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: A
+  - id: ph:mag-0056
+    code:
+      group: 2
+      number: 104
+    name: On the leather, Russian wendeswing plus 720° or 900°
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: B
+  - id: ph:mag-0057
+    code:
+      group: 2
+      number: 105
+    name: On the leather, Russian wendeswing plus 1080° or more
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: C
+  - id: ph:mag-0058
+    code:
+      group: 2
+      number: 110
+    name: Russian wendeswing plus 180° or 270° on 1 pommel or between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flop-russian
+      - russian-location-required
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: B
+  - id: ph:mag-0059
+    code:
+      group: 2
+      number: 111
+    name: Russian wendeswing plus 360° or 540° on 1 pommel or between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flop-russian
+      - russian-location-required
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: C
+  - id: ph:mag-0060
+    code:
+      group: 2
+      number: 112
+    name: 720° or 900° Russian wendeswing on 1 pommel or between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flop-russian
+      - russian-location-required
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: D
+  - id: ph:mag-0061
+    code:
+      group: 2
+      number: 113
+    name: 1080° Russian wendeswing or more on 1 pommel or between the pommels
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - flop-russian
+      - russian-location-required
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 53
+    difficulty: E
+  - id: ph:mag-0062
+    code:
+      group: 2
+      number: newsletter-3-manukyan
+    name: Manukyan — Bertoncelj into Davtyan on one pommel
+    aliases:
+      - Manukyan
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-newsletter-3-2025
+      page: 5
+    difficulty: F
+  - id: ph:mag-0063
+    code:
+      group: 3
+      number: 1
+    name: 'Circles plus any travel in side support (1/3) (alternative: plus 1/4 rotation)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: A
+  - id: ph:mag-0064
+    code:
+      group: 3
+      number: 2
+    name: Circles plus any travel in side support (3/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: B
+  - id: ph:mag-0065
+    code:
+      group: 3
+      number: 3
+    name: 'Any travel in side support (3/3), hands between 4 pommels. (alternative: plus hop)'
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: C
+  - id: ph:mag-0066
+    code:
+      group: 3
+      number: 8
+    name: Circles plus any hop travel in side support (1/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: B
+  - id: ph:mag-0067
+    code:
+      group: 3
+      number: 9
+    name: Circles plus any hop travel 2x in side support (3/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: C
+  - id: ph:mag-0068
+    code:
+      group: 3
+      number: 11
+    name:
+      Yamawaki — Travel hop over 2 pommels into support forward on other end (1 -1 into 5- 5);
+      begins in side support beside the pommel
+    aliases:
+      - Yamawaki
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: E
+  - id: ph:mag-0069
+    code:
+      group: 3
+      number: 14
+    name: Travel forward or backward plus 1/4 spindle into side support on 2 pommels
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: B
+  - id: ph:mag-0070
+    code:
+      group: 3
+      number: 15
+    name: All travels plus 1/2 spindle in side support
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: C
+  - id: ph:mag-0071
+    code:
+      group: 3
+      number: 17
+    name: Beginning in an end side travel plus 2x 1/2 spindle into other end
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - spindle-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: E
+  - id: ph:mag-0072
+    code:
+      group: 3
+      number: 22
+    name:
+      Nin Reyes — Any travel forward 3/3 plus 1/2 Spindle beginning in one pommel over the other
+      pommel
+    aliases:
+      - Nin Reyes
+      - Titov
+    families:
+      - nin-reyes-variation
+    roles: []
+    traits:
+      - spindle-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: D
+  - id: ph:mag-0073
+    code:
+      group: 3
+      number: 23
+    name: Nin Reyes 2 — Travel 3/3 over both pommels plus 1/2 Spindle
+    aliases:
+      - Nin Reyes 2
+      - Keikha 4
+    families:
+      - nin-reyes-variation
+    roles: []
+    traits:
+      - spindle-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 54
+    difficulty: E
+  - id: ph:mag-0074
+    code:
+      group: 3
+      number: 29
+    name: Urzica 2 — Any 3/3 travel in flairs plus 1/1 Spindle inside 2 circles
+    aliases:
+      - Urzica 2
+      - Burkhart
+    families: []
+    roles: []
+    traits:
+      - flair
+      - spindle-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: E
+  - id: ph:mag-0075
+    code:
+      group: 3
+      number: 32
+    name: Travel forward in cross support (1/2 or 2/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: B
+  - id: ph:mag-0076
+    code:
+      group: 3
+      number: 33
+    name:
+      Travel forward in cross support plus support on leather, pommel, pommel, leather (3/3) (1
+      -2-4- 5)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: C
+  - id: ph:mag-0077
+    code:
+      group: 3
+      number: 34
+    name: Magyar — Any other travel forward in cross support into other end (3/3)
+    aliases:
+      - Magyar
+      - Magyar travel
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: D
+  - id: ph:mag-0078
+    code:
+      group: 3
+      number: 35
+    name: 'Driggs — Travel forward in cross support over both pommels (alternative: plus hop)'
+    aliases:
+      - Driggs
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: E
+  - id: ph:mag-0079
+    code:
+      group: 3
+      number: 37
+    name: Travel backward in cross support beginning in one horse part or pommel into another (⅓)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: A
+  - id: ph:mag-0080
+    code:
+      group: 3
+      number: 38
+    name: Travel backward in cross support (1/2 or 2/3)
+    aliases: []
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: B
+  - id: ph:mag-0081
+    code:
+      group: 3
+      number: 39
+    name:
+      Travel backward in cross support plus support on leather, pommel, pommel, leather (3/3) (5
+      -4-2- 1)
+    aliases: []
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: C
+  - id: ph:mag-0082
+    code:
+      group: 3
+      number: 40
+    name: Sivado — Any other travel backward in cross support into other end (3/3)
+    aliases:
+      - Sivado
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: D
+  - id: ph:mag-0083
+    code:
+      group: 3
+      number: 41
+    name: 'Kurbanov — Travel backward in cross support over both pommels (alternative: plus hop)'
+    aliases:
+      - Kurbanov
+      - Reid
+    families: []
+    roles: []
+    traits:
+      - cross-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: E
+  - id: ph:mag-0084
+    code:
+      group: 3
+      number: 46
+    name: Moguilny — Kehre forward., reverse Stöckli, kehre forward
+    aliases:
+      - Moguilny
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 55
+    difficulty: D
+  - id: ph:mag-0085
+    code:
+      group: 3
+      number: 52
+    name: Belenki — Kehre backward., kehre forward., kehre backward
+    aliases:
+      - Belenki
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: D
+  - id: ph:mag-0086
+    code:
+      group: 3
+      number: 57
+    name:
+      Russian wendeswing forward into other end without support on or between the pommels (side into
+      side support, side into cross support); begins in support on 1 pommel
+    aliases: []
+    families:
+      - tong-fei-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: C
+  - id: ph:mag-0087
+    code:
+      group: 3
+      number: 58
+    name:
+      Tong Fei — Russian wendeswing forward into other end without support on or between the pommels
+      (side into side, side into cross, cross into side, cross into cross); begins in support on end
+    aliases:
+      - Tong Fei
+    families:
+      - tong-fei-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: D
+  - id: ph:mag-0088
+    code:
+      group: 3
+      number: 59
+    name:
+      Vammen — On the leather, beginning in cross support, Russian wendeswing plus 360° or more over
+      both pommels
+    aliases:
+      - Vammen
+    families:
+      - tong-fei-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: E
+  - id: ph:mag-0089
+    code:
+      group: 3
+      number: 64
+    name: 3/3 travel in Russian type wendeswing plus 630° or more turning; begins in support 1- 2
+    aliases: []
+    families:
+      - russian-travel-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: D
+  - id: ph:mag-0090
+    code:
+      group: 3
+      number: 65
+    name:
+      Wu Guonian — Any 3/3 travel in Russian type wendeswing plus 720° or more turning plus two
+      hands between pommels
+    aliases:
+      - Wu Guonian
+    families:
+      - russian-travel-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: E
+  - id: ph:mag-0091
+    code:
+      group: 3
+      number: 70
+    name: Roth — Any Russian wendeswing plus 360° rotation then 3/3 travel
+    aliases:
+      - Roth
+    families:
+      - russian-travel-variation
+    roles: []
+    traits:
+      - russian-travel-3-3
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 56
+    difficulty: D
+  - id: ph:mag-0092
+    code:
+      group: 3
+      number: 75
+    name: Romero — Reverse Stöckli beginning in cross support on end into the far pommel
+    aliases:
+      - Romero
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 57
+    difficulty: C
+  - id: ph:mag-0093
+    code:
+      group: 3
+      number: 76
+    name: Abu Alsoud — Reverse Stöckli beginning in cross support on one end into the other
+    aliases:
+      - Abu Alsoud
+    families: []
+    roles: []
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 57
+    difficulty: D
+  - id: ph:mag-0094
+    code:
+      group: 4
+      number: 1
+    name: 'On the end Wende beginning in circle (alternative: Russian 180° or 270° into Wende)'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: A
+  - id: ph:mag-0095
+    code:
+      group: 4
+      number: 2
+    name: Chaguinian into wende
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: B
+  - id: ph:mag-0096
+    code:
+      group: 4
+      number: 4
+    name:
+      Kolyvanov — Circle or flair into handstand then travel 3/3 plus 450° or more rotation; begins
+      in side support on end
+    aliases:
+      - Kolyvanov
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: D
+  - id: ph:mag-0097
+    code:
+      group: 4
+      number: 5
+    name: DSA into handstand 3/3 plus 450° or more rotation
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: E
+  - id: ph:mag-0098
+    code:
+      group: 4
+      number: 7
+    name: On the end, Russian wendeswing plus 360° or 540°
+    aliases: []
+    families:
+      - russian-location-end
+    roles:
+      - dismount
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: A
+  - id: ph:mag-0099
+    code:
+      group: 4
+      number: 8
+    name: On the end, Russian wendeswing plus 720° or 900°
+    aliases: []
+    families:
+      - russian-location-end
+    roles:
+      - dismount
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: B
+  - id: ph:mag-0100
+    code:
+      group: 4
+      number: 9
+    name: On the end, Russian wendeswing plus 1080° or more
+    aliases: []
+    families:
+      - russian-location-end
+    roles:
+      - dismount
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: C
+  - id: ph:mag-0101
+    code:
+      group: 4
+      number: 10
+    name:
+      Dolidze — Circle plus 1/4 rotation into Russian wendeswing 270° on one pommel into handstand;
+      begins in pommels
+    aliases:
+      - Dolidze
+    families: []
+    roles:
+      - dismount
+    traits:
+      - russian-wendeswing
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: D
+  - id: ph:mag-0102
+    code:
+      group: 4
+      number: 13
+    name:
+      Beginning in side support wendeswing forward plus 1/2 rotation into support followed by wende
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: A
+  - id: ph:mag-0103
+    code:
+      group: 4
+      number: 15
+    name: DSA, reverse Stöckli or circle on one pommel through handstand
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: C
+  - id: ph:mag-0104
+    code:
+      group: 4
+      number: 16
+    name: Loos — DSA plus hop backward through handstand on other end
+    aliases:
+      - Loos
+      - Jessen
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: D
+  - id: ph:mag-0105
+    code:
+      group: 4
+      number: 20
+    name:
+      'Circle or flair through handstand (alternative: plus 3/4 rotation plus or without travel)'
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: B
+  - id: ph:mag-0106
+    code:
+      group: 4
+      number: 21
+    name: Circle or flair plus hop travel backward through handstand
+    aliases: []
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: C
+  - id: ph:mag-0107
+    code:
+      group: 4
+      number: 22
+    name:
+      Targhetta — 180° Russian beginning in one end of the horse into the other end through
+      handstand into dismount Bertoncelj through handstand into dismount
+    aliases:
+      - Targhetta
+    families: []
+    roles:
+      - dismount
+    traits: []
+    source:
+      documentId: mag-code-of-points
+      page: 58
+    difficulty: D

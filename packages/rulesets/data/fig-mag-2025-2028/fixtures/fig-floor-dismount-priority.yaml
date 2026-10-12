@@ -1,0 +1,106 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-floor-dismount-priority
+description:
+  Covers counted-first dismount repetition, the group cap, high connection value, and stick.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: floor-exercise
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - { occurrenceId: early-dismount, elementId: fx:mag-0056 }
+    - { occurrenceId: handspring, elementId: fx:mag-0050 }
+    - { occurrenceId: front-d, elementId: fx:mag-0051 }
+    - { occurrenceId: double-front-d, elementId: fx:mag-0055 }
+    - { occurrenceId: dive-roll, elementId: fx:mag-0052 }
+    - { occurrenceId: front-half, elementId: fx:mag-0054 }
+    - { occurrenceId: balance, elementId: fx:mag-0024 }
+    - { occurrenceId: dismount, elementId: fx:mag-0056 }
+  relationships:
+    - kind: connection
+      connectionId: high-connection
+      occurrenceIds: [front-d, double-front-d]
+expected:
+  total: 2.9
+  breakdown: { elementDifficulty: 1.6, elementGroup: 1.0, connection: 0.2, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: early-dismount
+      elementId: fx:mag-0056
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-repeated
+      reasonParameters: { creditedOccurrenceId: dismount }
+    - occurrenceId: handspring
+      elementId: fx:mag-0050
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-group-limit
+      reasonParameters: { group: 2, maximum: 4 }
+    - occurrenceId: front-d
+      elementId: fx:mag-0051
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: double-front-d
+      elementId: fx:mag-0055
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dive-roll
+      elementId: fx:mag-0052
+      status: excluded
+      creditedDifficulty: 0.0
+      reason: fig.element-group-limit
+      reasonParameters: { group: 2, maximum: 4 }
+    - occurrenceId: front-half
+      elementId: fx:mag-0054
+      status: counted
+      creditedDifficulty: 0.2
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: balance
+      elementId: fx:mag-0024
+      status: counted
+      creditedDifficulty: 0.1
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: fx:mag-0056
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [balance]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 1 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: connection
+      occurrenceIds: [front-d, double-front-d]
+      value: 0.2
+      reason: fig.connection-awarded
+      reasonParameters: { connectionId: high-connection }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.repeated-element
+      occurrenceIds: [dismount, early-dismount]
+      parameters: { group: 2, number: 17 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 4 }

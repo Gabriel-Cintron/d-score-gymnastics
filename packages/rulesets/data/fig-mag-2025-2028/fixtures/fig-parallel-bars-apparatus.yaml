@@ -1,0 +1,65 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-parallel-bars-healy-upgrade
+description: Covers the one-rail to Healy value increases, capped dismount group credit, and stick.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: parallel-bars
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - occurrenceId: one-rail
+      elementId: pb:mag-0051
+    - occurrenceId: healy
+      elementId: pb:mag-0066
+    - occurrenceId: dismount
+      elementId: pb:mag-0160
+  relationships:
+    - kind: connection
+      connectionId: healy-upgrade
+      occurrenceIds: [one-rail, healy]
+expected:
+  total: 2.6
+  breakdown: { elementDifficulty: 1.5, elementGroup: 1.0, connection: 0.0, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: one-rail
+      elementId: pb:mag-0051
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.parallel-bars-healy-upgrade
+      reasonParameters: { connectionId: healy-upgrade }
+    - occurrenceId: healy
+      elementId: pb:mag-0066
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.parallel-bars-healy-upgrade
+      reasonParameters: { connectionId: healy-upgrade }
+    - occurrenceId: dismount
+      elementId: pb:mag-0160
+      status: counted
+      creditedDifficulty: 0.7
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [one-rail]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 1 }
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }

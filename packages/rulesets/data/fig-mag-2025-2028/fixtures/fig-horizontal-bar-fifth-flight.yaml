@@ -1,0 +1,108 @@
+schemaVersion: 1
+kind: fig-apparatus
+id: fig-horizontal-bar-fifth-flight
+description:
+  Covers a selected C+C fifth-flight qualifier and the high non-flight-to-flight connection value.
+rulesetId: fig-mag-2025-2028
+evaluatorId: fig-2025-2028.element-counting
+routine:
+  apparatus: horizontal-bar
+  landing: { occurrenceId: dismount, outcome: stuck }
+  occurrences:
+    - occurrenceId: tkatchev-c
+      elementId: hb:mag-0034
+    - occurrenceId: jaeger-c
+      elementId: hb:mag-0045
+    - occurrenceId: nonflight-d
+      elementId: hb:mag-0021
+    - occurrenceId: forward-e
+      elementId: hb:mag-0055
+    - occurrenceId: markelov-g
+      elementId: hb:mag-0032
+    - occurrenceId: kovacs-d
+      elementId: hb:mag-0062
+    - occurrenceId: dismount
+      elementId: hb:mag-0118
+  relationships:
+    - kind: connection
+      connectionId: fifth-flight-pair
+      occurrenceIds: [tkatchev-c, jaeger-c]
+    - kind: connection
+      connectionId: nonflight-flight
+      occurrenceIds: [nonflight-d, forward-e]
+expected:
+  total: 4.9
+  breakdown: { elementDifficulty: 3.1, elementGroup: 1.5, connection: 0.2, bonus: 0.1 }
+  elementDecisions:
+    - occurrenceId: tkatchev-c
+      elementId: hb:mag-0034
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: jaeger-c
+      elementId: hb:mag-0045
+      status: counted
+      creditedDifficulty: 0.3
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: nonflight-d
+      elementId: hb:mag-0021
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: forward-e
+      elementId: hb:mag-0055
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: markelov-g
+      elementId: hb:mag-0032
+      status: counted
+      creditedDifficulty: 0.7
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: kovacs-d
+      elementId: hb:mag-0062
+      status: counted
+      creditedDifficulty: 0.4
+      reason: fig.element-counted
+      reasonParameters: { slot: regular }
+    - occurrenceId: dismount
+      elementId: hb:mag-0118
+      status: counted
+      creditedDifficulty: 0.5
+      reason: fig.dismount-counted
+      reasonParameters: { slot: reserved-dismount }
+  awards:
+    - component: element-group
+      occurrenceIds: [nonflight-d]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 1 }
+    - component: element-group
+      occurrenceIds: [markelov-g]
+      value: 0.5
+      reason: fig.element-group-awarded
+      reasonParameters: { group: 2 }
+    - component: element-group
+      occurrenceIds: [dismount]
+      value: 0.5
+      reason: fig.dismount-group-awarded
+      reasonParameters: { group: 4 }
+    - component: connection
+      occurrenceIds: [nonflight-d, forward-e]
+      value: 0.2
+      reason: fig.connection-awarded
+      reasonParameters: { connectionId: nonflight-flight }
+    - component: bonus
+      occurrenceIds: [dismount]
+      value: 0.1
+      reason: fig.stick-bonus-awarded
+      reasonParameters: {}
+  warnings:
+    - code: fig.missing-element-group
+      occurrenceIds: []
+      parameters: { group: 3 }
