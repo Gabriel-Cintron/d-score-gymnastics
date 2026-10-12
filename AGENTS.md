@@ -17,9 +17,13 @@
 - Catalog worksheets, samples, second approvers and signature gates have been removed at the user's
   request. Preserve automated scoring/backup/build checks, source notices, recorded rights
   conditions and private-file exclusions. Catalog digests identify contents, not approval.
-- Cloudflare Pages Git integration is configured in docs/release.md. Manual artifact deployment
-  reuses successful main CI; verify manifest commit/catalog/assets. Never rebuild in the artifact
-  upload job or expose deployment secrets to PR jobs.
+- Cloudflare Pages keeps its historical Git binding to the private archive. Canonical releases use
+  the manual artifact workflow in docs/release.md. A dashboard archive commit link may not resolve a
+  public snapshot commit; use canonical source links and the manifest. Artifact deployment reuses
+  successful main CI; verify manifest commit/catalog/assets. Never rebuild in the artifact upload
+  job or expose deployment secrets to PR jobs.
+- Preserve Pages cache headers on the custom domain; Browser Cache TTL should respect existing
+  headers. The deployment credential expires 10 January 2027; rotate it before later deployments.
 - Keep static /, /app/, /about/, /support/, /privacy/, and real 404.html; SW scope is /app/. No
   catch-all redirects, telemetry, Analytics or Zaraz. Keep the production origin stable.
 - A CDN rollback cannot instantly replace an active worker. Preserve IndexedDB, test the update path

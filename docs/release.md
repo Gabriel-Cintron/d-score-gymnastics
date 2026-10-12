@@ -1,7 +1,8 @@
 # Release process
 
-The first release is the static web application on Cloudflare Pages. iOS follows separately; native
-builds, App Store screenshots, and device signoff do not block web acceptance.
+The first release is the static web application on Cloudflare Pages, promoted from its verified
+GitHub Actions artifact. iOS follows separately; native builds, App Store screenshots, and device
+signoff do not block web acceptance.
 
 ## Source use
 
@@ -39,6 +40,11 @@ CI exports once, tests that directory with `DSCORE_USE_EXISTING_BUILD=1`, and re
 containing `site/` and `manifest.json`. The manifest records the commit, catalog wording digest, and
 every asset checksum. Deployment workflows verify it before uploading.
 
+After accepting a candidate, retain the exact CI ZIP, its manifest and SHA256SUMS as GitHub release
+assets before the CI artifact expires. Version 1.0.0 is retained at
+[the release](https://github.com/Gabriel-Cintron/d-score-gymnastics/releases/tag/v1.0.0). Do not
+retag or rebuild an existing release merely to update its evidence documents.
+
 ## Preserve the private handoff and public snapshot
 
 Fedora files are not runtime prerequisites. Leave that partition and its old checkout intact until
@@ -62,7 +68,10 @@ or expose the development archive.
 
 ## Cloudflare Pages configuration
 
-The selected primary setup is **Pages Git integration**, with no framework preset:
+The existing Pages project retains its original Git integration with the private development
+archive. Production now uses **GitHub Actions artifact promotion** from the clean canonical
+repository, without replacing the project or domain. Keep automatic Git production deployments
+paused. The retained Git build settings use no framework preset:
 
 | Field                     | Value                                               |
 | ------------------------- | --------------------------------------------------- |
@@ -75,16 +84,19 @@ The selected primary setup is **Pages Git integration**, with no framework prese
 
 The release command generates the ruleset, runs Expo export, assembles public routes, generates the
 Workbox worker, and checks required assets. Cloudflare installs workspace dependencies beforehand.
-Keep automatic production deployment disabled until acceptance; select the tested candidate for a
-manual retry. Git integration rebuilds in Cloudflare, so record that deployment's commit and compare
-served assets with the CI manifest. Do not claim it uploads the identical CI artifact.
+Git integration rebuilds in Cloudflare and remains an historical fallback. A canonical snapshot
+commit is not in the archive's history: use its canonical source link and artifact manifest rather
+than the dashboard's retained archive commit link. Do not retry a canonical commit through the old
+Git binding.
 
-For exact artifact promotion, the optional **Deploy verified artifact to Cloudflare Pages** workflow
-takes a successful push-to-main CI run ID and uploads its existing artifact without rebuilding.
-Configure separate `cloudflare-preview` and `cloudflare-production` GitHub environments, with an
-account-scoped Pages-edit API token and account ID in deployment secrets. Production environment
-approval protects promotion. A Git-integrated Pages project can accept these manual Wrangler
-deployments after automatic deployments are disabled. See
+For exact artifact promotion, use **Deploy verified artifact to Cloudflare Pages** in the canonical
+repository. The workflow takes a successful push-to-main CI run ID and uploads its existing artifact
+without rebuilding. The configured `cloudflare-preview` and `cloudflare-production` GitHub
+environments use an account-scoped Pages-edit API token and account ID in deployment secrets.
+Production environment approval and main-only branch policies protect promotion. The Pages-edit
+token expires 10 January 2027; rotate it before later deployments. Wrangler installs in a temporary
+tool directory, without changing application dependencies. A Git-integrated Pages project accepts
+these manual Wrangler deployments after automatic deployments are disabled. See
 [Cloudflare Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/).
 
 Retain **Deploy GitHub Pages** as an inactive manual fallback using the same verified CI artifact.
@@ -92,7 +104,12 @@ Changing the domain to the fallback is a deliberate recovery operation.
 
 The artifact contains `/`, `/app/`, `/about/`, `/support/`, `/privacy/`, and a real `404.html`. Do
 not add a catch-all redirect. The service worker controls `/app/` only. Use Pages default
-revalidation; leave Analytics, Zaraz, and telemetry disabled.
+revalidation; on a custom domain, verify that its Browser Cache TTL respects the existing headers
+instead of imposing a four-hour minimum on mutable files such as /sw.js. See
+[Cloudflare browser caching](https://developers.cloudflare.com/cache/how-to/edge-browser-cache-ttl/).
+Leave Analytics, Zaraz, and application telemetry disabled. Default email obfuscation can transform
+the support/privacy HTML on the custom domain; verify other asset hashes and the untransformed
+deployment URL against the manifest.
 
 ## Accept, promote, and recover
 
@@ -179,5 +196,5 @@ rebuild merely to change a binary; any new binary returns through internal TestF
 - Recognized-as-entered D-score only; no execution, neutral deductions, or official result.
 - No account, cloud sync, analytics, advertising, or telemetry.
 - One-vault planning only; no two-vault qualification/final calculation.
-- English, iPhone, United States, and Canada at launch.
+- Web is English and browser-based. Planned native launch targets iPhone, United States and Canada.
 - Local data should be backed up before clearing browser storage or removing the app.

@@ -1,5 +1,9 @@
 # Web deployment checklist
 
+This is the reusable checklist for future candidates. Completed v1.0.0 evidence is in
+[verification.md](../verification.md) and [release-signoff.md](release-signoff.md). Support mail
+receipt and supplemental physical-browser checks remain explicitly unverified.
+
 ## Preparation
 
 - [ ] Retain Fedora originals until two private copies of important data are available.
@@ -24,7 +28,8 @@
 - [ ] Save, rename, load and delete routines; switch workspaces using Save/Don't save/Cancel.
 - [ ] Acknowledged saves survive reload; export, clear a disposable profile, restore and reload.
 - [ ] Reject malformed, incompatible and oversized imports without changing existing data.
-- [ ] In Chrome, Firefox, Edge and Safari: online first load, offline reload/edit, reconnect.
+- [ ] In all five Playwright projects: online first load, offline reload/edit, reconnect. Record
+      supplemental physical Safari/Edge evidence separately.
 - [ ] Verify desktop/mobile layouts at 320, 390, 768 and 1280 px, both themes and keyboard controls.
 - [ ] No serious/critical Axe issues; Lighthouse meets 0.80 performance, 0.95 accessibility/best
       practices and 0.90 SEO.
