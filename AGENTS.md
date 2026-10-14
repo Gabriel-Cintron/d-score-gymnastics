@@ -25,8 +25,15 @@
 - Preserve Pages cache headers on the custom domain; Browser Cache TTL should respect existing
   headers. The deployment credential expires 10 January 2027; rotate it before later deployments.
 - Keep static /, /app/, /about/, /support/, /privacy/, and real 404.html; SW scope is /app/. No
-  catch-all redirects, telemetry, Analytics or Zaraz. Keep the production origin stable.
+  catch-all redirects, third-party Analytics or Zaraz. Only the declared optional first-party
+  usage/search collector is allowed; native capture stays disabled. Keep the production origin
+  stable.
 - A CDN rollback cannot instantly replace an active worker. Preserve IndexedDB, test the update path
   and keep a known-good production recovery target. Preview deployments are not rollback targets.
 - Changes remain reviewable by phase; environment normalization, persistence and publication changes
   should not be bundled into a single commit.
+
+- Telemetry lives in dscore-telemetry, never routine records/backups. Consent defaults off; search
+  text needs separate permission. No routine, score, apparatus, navigation or contact payloads.
+  Preserve stable event IDs on retry and atomic server dedup. Alias acceptance is a proposal only.
+  Collector failures never block app use. See docs/analytics.md for provisioning and retention.

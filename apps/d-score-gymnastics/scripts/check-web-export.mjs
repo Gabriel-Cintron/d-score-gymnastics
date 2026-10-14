@@ -132,5 +132,12 @@ for (const pattern of telemetryPatterns) {
 }
 
 globalThis.process.stdout.write(
-  `Validated production web release with ${requiredFiles.length} required files and no telemetry references.\n`,
+  `Validated production web release with ${requiredFiles.length} required files and no undeclared third-party telemetry references.\n`,
 );
+
+if (
+  !/Both\s+start\s+off/.test(privacy) ||
+  !/Native\s+analytics\s+remains\s+disabled/.test(privacy)
+) {
+  throw new Error('Web analytics privacy defaults and native boundary must be disclosed.');
+}

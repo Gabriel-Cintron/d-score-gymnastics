@@ -16,7 +16,8 @@ receipt and supplemental physical-browser checks remain explicitly unverified.
 - [ ] Configure Cloudflare Pages using the exact fields in `docs/release.md`.
 - [ ] Disable automatic production promotions; leave GitHub Pages fallback inactive.
 - [ ] Verify domain control, HTTPS readiness, previous DNS values, support email and account access.
-- [ ] Analytics, Zaraz and telemetry remain disabled.
+- [ ] Third-party Analytics and Zaraz remain disabled. Optional first-party usage/search consent,
+      deletion, Access protection and offline behavior pass docs/analytics.md.
 
 ## Preview and acceptance
 

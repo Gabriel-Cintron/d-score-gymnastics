@@ -1,0 +1,83 @@
+name: Deploy optional analytics
+on:
+  workflow_dispatch:
+    inputs:
+      ci_run_id:
+        description: Successful canonical main CI run
+        required: true
+      target:
+        type: choice
+        options: [preview, production]
+        default: preview
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: analytics-${{ inputs.target }}
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      WRANGLER_SEND_METRICS: 'false'
+    environment:
+      ${{ inputs.target == 'production' && 'cloudflare-production' || 'cloudflare-preview' }}
+    steps:
+      - name: Select successful trusted candidate
+        id: candidate
+        uses: actions/github-script@v7
+        env:
+          RUN_ID: ${{ inputs.ci_run_id }}
+        with:
+          script: |
+            if (!/^\d+$/.test(process.env.RUN_ID)) throw new Error('Invalid CI run');
+            const {data: run} = await github.rest.actions.getWorkflowRun({...context.repo, run_id:Number(process.env.RUN_ID)});
+            if (run.conclusion !== 'success' || run.event !== 'push' || run.head_branch !== 'main' || run.path !== '.github/workflows/ci.yml' || run.head_repository.full_name !== `${context.repo.owner}/${context.repo.repo}`) throw new Error('Select successful canonical main CI');
+            core.setOutput('sha',run.head_sha);
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.candidate.outputs.sha }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm analytics:test
+      - name: Prepare isolated target configuration
+        run: node scripts/create-analytics-config.mjs
+        env:
+          ANALYTICS_TARGET: ${{ inputs.target }}
+          ANALYTICS_CANDIDATE_SHA: ${{ steps.candidate.outputs.sha }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ANALYTICS_D1_ID: ${{ vars.ANALYTICS_D1_ID }}
+          ANALYTICS_ACCESS_TEAM: ${{ vars.ANALYTICS_ACCESS_TEAM }}
+          ANALYTICS_ACCESS_AUD: ${{ vars.ANALYTICS_ACCESS_AUD }}
+          ANALYTICS_PREVIOUS_BUILDS: ${{ vars.ANALYTICS_PREVIOUS_BUILDS }}
+      - name: Isolate Wrangler tooling from application dependencies
+        run: |
+          node --input-type=module -e 'import {mkdir,writeFile} from "node:fs/promises"; const path=process.env.RUNNER_TEMP+"/dscore-analytics-deploy"; await mkdir(path); await writeFile(path+"/package.json","{\"private\":true}\n");'
+      - name: Apply migrations to selected analytics database
+        uses: cloudflare/wrangler-action@v4
+        with:
+          wranglerVersion: '4.150.0'
+          apiToken: ${{ secrets.CLOUDFLARE_ANALYTICS_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: npm
+          workingDirectory: ${{ runner.temp }}/dscore-analytics-deploy
+          command:
+            d1 migrations apply DB --remote --config "${{ github.workspace
+            }}/build/analytics-config.json"
+      - name: Deploy Worker and protected dashboard
+        uses: cloudflare/wrangler-action@v4
+        with:
+          wranglerVersion: '4.150.0'
+          apiToken: ${{ secrets.CLOUDFLARE_ANALYTICS_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: npm
+          workingDirectory: ${{ runner.temp }}/dscore-analytics-deploy
+          command: deploy --config "${{ github.workspace }}/build/analytics-config.json"
