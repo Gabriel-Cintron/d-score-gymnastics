@@ -21,6 +21,7 @@ import {
   type ThemeColors,
   type ThemeMode,
 } from '../theme';
+import { AnalyticsPreferences } from './AnalyticsPreferences';
 import { ConfirmationModal } from './ConfirmationModal';
 
 interface RulesetSummary {
@@ -280,6 +281,15 @@ export function SettingsScreen({
           </Text>
         </SettingsCard>
 
+        {Platform.OS === 'web' ? (
+          <SettingsCard
+            title="Help improve D-Score"
+            copy="Optional, privacy-conscious usage and search diagnostics."
+          >
+            <AnalyticsPreferences />
+          </SettingsCard>
+        ) : null}
+
         <SettingsCard
           copy="The evaluator and catalogue are loaded from the bundled 2025–2028 MAG data package."
           title="Scoring rules"
@@ -340,12 +350,12 @@ export function SettingsScreen({
 
         <SettingsCard
           copy="Permanently remove all locally saved all-arounds, routines, preferences, and the current editor state from this browser or device."
-          title="Local data"
+          title="Local routine data"
         >
           <SettingsButton
             danger
             disabled={busy || !ready || !persistent}
-            label="Clear all local data"
+            label="Clear local routine data"
             onPress={() => setClearVisible(true)}
           />
         </SettingsCard>
@@ -371,7 +381,7 @@ export function SettingsScreen({
         eyebrow="PERMANENT ACTION"
         onCancel={() => setClearVisible(false)}
         onConfirm={() => void clearLocalData()}
-        title={`Clear all ${PRODUCT_NAME} data?`}
+        title="Clear local routines and preferences?"
         visible={clearVisible}
       />
     </View>

@@ -1,6 +1,6 @@
 import type { ApparatusId, ElementId } from '@d-score-gymnastics/scoring';
 import type { CompiledElement, CompiledPommelHorseRules } from '@d-score-gymnastics/rulesets';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   FlatList,
   KeyboardAvoidingView,
@@ -13,6 +13,7 @@ import {
   View,
 } from 'react-native';
 
+import { telemetry, createSearchTracker } from '../telemetry';
 import { APPARATUS_LABELS } from '../apparatus';
 import { excludeCatalogElements, searchCatalog, type CatalogMatch } from '../catalog-search';
 import {
@@ -123,6 +124,41 @@ export function CatalogPicker({
     setMinimumDifficulty(undefined);
     setMode('element');
   }, [apparatus, visible]);
+
+  const tracker = useRef(createSearchTracker(telemetry));
+  // Actual filter values and apparatus stay LOCAL. Their changes split evidence contexts.
+  const context = useMemo(
+    () => (telemetry.available ? crypto.randomUUID() : ''),
+    [apparatus, visible, mode, elementGroup, maximumDifficulty, minimumDifficulty, flopDraft],
+  );
+  function observation() {
+    const filters: ('group' | 'minimum' | 'maximum')[] = [];
+    if (elementGroup !== undefined) filters.push('group');
+    if (minimumDifficulty !== undefined) filters.push('minimum');
+    if (maximumDifficulty !== undefined) filters.push('maximum');
+    let zero: 'none' | 'no_match' | 'filters' | 'excluded' | 'context' = 'none';
+    if (matches.length === 0) {
+      if (searchCatalog(elements, query, {}, elements.length).length === 0) zero = 'no_match';
+      else if (mode === 'flop') zero = 'context';
+      else if (searchCatalog(availableElements, query, {}, availableElements.length).length === 0)
+        zero = 'excluded';
+      else zero = 'filters';
+    }
+    return { query, context, count: matches.length, filters, zero };
+  }
+  useEffect(() => {
+    if (!visible || !telemetry.available) return;
+    const timer = setTimeout(() => tracker.current.record(observation()), 750);
+    return () => clearTimeout(timer);
+  }, [visible, query, context, matches]);
+  useEffect(() => {
+    tracker.current.reset();
+  }, [context]);
+  function selectResult(element: CompiledElement) {
+    if (telemetry.available) tracker.current.select(observation(), element.id);
+    if (mode === 'flop') setFlopDraft((current) => [...current, element]);
+    else onSelect(element);
+  }
 
   function changeMode(nextMode: PickerMode): void {
     setMode(nextMode);
@@ -240,6 +276,9 @@ export function CatalogPicker({
               autoCapitalize="none"
               autoCorrect={false}
               onChangeText={setQuery}
+              onSubmitEditing={() => {
+                if (telemetry.available) tracker.current.record(observation());
+              }}
               placeholder={
                 mode === 'flop' ? 'Search valid next parts' : 'Name or alias, for example Peach'
               }
@@ -311,11 +350,7 @@ export function CatalogPicker({
               <CatalogRow
                 actionLabel={mode === 'flop' ? 'Add to flop' : 'Add element'}
                 match={item}
-                onSelect={(element) =>
-                  mode === 'flop'
-                    ? setFlopDraft((current) => [...current, element])
-                    : onSelect(element)
-                }
+                onSelect={selectResult}
               />
             )}
             style={[styles.resultsList, scrollbarStyle]}

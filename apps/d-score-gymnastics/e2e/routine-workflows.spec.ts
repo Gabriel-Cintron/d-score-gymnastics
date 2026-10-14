@@ -147,7 +147,7 @@ test('essential dialogs are accessible and close with Escape', async ({ page }) 
     await expect(page.getByRole('dialog')).toBeHidden();
   }
   await page.getByRole('button', { name: 'Open Settings' }).click();
-  for (const name of ['Paste backup', 'Clear all local data']) {
+  for (const name of ['Paste backup', 'Clear local routine data']) {
     await page.getByRole('button', { name, exact: true }).click();
     await expect(page.getByRole('dialog')).toBeVisible();
     const axe = await new AxeBuilder({ page }).analyze();

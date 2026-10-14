@@ -13,7 +13,7 @@
     "start": "expo start",
     "postinstall": "pnpm --dir ../.. rules:build",
     "android": "expo start --android",
-    "export:web": "expo export --platform web && node scripts/assemble-web-release.mjs && workbox generateSW workbox-config.cjs && node scripts/check-web-export.mjs",
+    "export:web": "node scripts/export-web.mjs && node scripts/assemble-web-release.mjs && workbox generateSW workbox-config.cjs && node scripts/check-web-export.mjs",
     "ios": "expo start --ios",
     "screenshots:store": "playwright test --config=playwright.store.config.ts && node scripts/compose-store-screenshots.mjs",
     "serve:web": "expo serve dist --port 4173",

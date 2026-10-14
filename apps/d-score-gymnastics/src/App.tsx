@@ -38,6 +38,7 @@ import {
   serializeDScoreGymnasticsBackup,
 } from './backup';
 import { exportBackupText } from './backup-transport';
+import { AnalyticsInvitation } from './components/AnalyticsInvitation';
 import { AllAroundSidebar, type WorkspaceSaveStatus } from './components/AllAroundSidebar';
 import { AllAroundSwitchModal, type NamedRoutineToSave } from './components/AllAroundSwitchModal';
 import { AppHeader, type AppScreen } from './components/AppHeader';
@@ -86,6 +87,7 @@ import {
 } from './russian-location';
 import { buildRoutineItems, moveRoutineItem } from './routine-items';
 import { usePwaControls } from './pwa';
+import { telemetry } from './telemetry';
 import { CURRENT_DISCIPLINE_ID } from './product';
 import { ThemeProvider, useTheme, type ThemeColors, type ThemeMode } from './theme';
 import type {
@@ -973,6 +975,8 @@ function Workbench({
     setScreen('home');
   }
 
+  useEffect(() => telemetry.start(), []);
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style={themeMode === 'dark' ? 'light' : 'dark'} />
@@ -997,6 +1001,11 @@ function Workbench({
           onThemeModeChange={onThemeModeChange}
           screen={screen}
           themeMode={themeMode}
+        />
+
+        <AnalyticsInvitation
+          visible={screen === 'home' && !tourVisible && libraryReady && workspaceReady}
+          onSettings={openSettings}
         />
 
         {screen === 'home' ? (
