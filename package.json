@@ -33,13 +33,14 @@
     "test:e2e": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app test:e2e",
     "test:lighthouse": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app test:lighthouse",
     "test:watch": "vitest",
-    "typecheck": "pnpm rules:build && tsc --noEmit --project packages/scoring/tsconfig.json && tsc --noEmit --project packages/rulesets/tsconfig.json && tsc --noEmit --project apps/d-score-gymnastics/tsconfig.json",
+    "typecheck": "pnpm rules:build && tsc --noEmit --project packages/scoring/tsconfig.json && tsc --noEmit --project packages/rulesets/tsconfig.json && tsc --noEmit --project apps/d-score-gymnastics/tsconfig.json && tsc --noEmit --project services/analytics/tsconfig.json",
     "web": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app web",
     "web:export": "pnpm rules:build && pnpm --filter @d-score-gymnastics/app export:web",
     "web:serve": "pnpm --filter @d-score-gymnastics/app serve:web",
     "release:web:validate": "node scripts/check-web-release-materials.mjs",
     "release:web:check": "node scripts/check-web-release.mjs",
-    "release:web:preflight": "node scripts/check-web-release.mjs --preflight"
+    "release:web:preflight": "node scripts/check-web-release.mjs --preflight",
+    "analytics:test": "vitest run services/analytics packages/telemetry apps/d-score-gymnastics/src/telemetry"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

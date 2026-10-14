@@ -29,3 +29,6 @@ packages/rulesets/generated/
 .DS_Store
 *.log
 release/app-store/screenshots/raw/*.png
+
+# Local Worker/D1 state
+.wrangler/

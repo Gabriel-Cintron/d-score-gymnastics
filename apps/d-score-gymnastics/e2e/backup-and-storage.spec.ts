@@ -47,7 +47,7 @@ test('exports, clears and restores a complete backup, rejecting invalid imports 
   });
   await expect(page.getByText(/backup file is too large/)).toBeVisible();
   expect(await savedRecords(page)).toEqual(before);
-  await page.getByRole('button', { name: 'Clear all local data', exact: true }).click();
+  await page.getByRole('button', { name: 'Clear local routine data', exact: true }).click();
   await page.getByRole('button', { name: 'Clear everything', exact: true }).click();
   await page.getByRole('button', { name: 'Skip tour', exact: true }).click();
   await page.getByRole('button', { name: 'Open Settings' }).click();
@@ -127,7 +127,7 @@ test('failed database opens preserve the usable session and never report durable
   await addElement(page);
   await page.getByRole('button', { name: 'Open Settings' }).click();
   await expect(
-    page.getByRole('button', { name: 'Clear all local data', exact: true }),
+    page.getByRole('button', { name: 'Clear local routine data', exact: true }),
   ).toBeDisabled();
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export backup', exact: true }).click();

@@ -98,14 +98,14 @@ invariant(
 );
 invariant(
   Object.values(metadata.privacy).every((value) => value === false),
-  'The privacy declaration must remain no collection, tracking, analytics, ads, or account.',
+  'The native privacy declaration remains no collection; web optional analytics is disclosed separately.',
 );
 const directDependencyNames = Object.keys(appPackage.dependencies ?? {});
 invariant(
   directDependencyNames.every(
     (name) => !/(analytics|appcenter|firebase|posthog|segment|sentry)/iu.test(name),
   ),
-  'A direct analytics, telemetry, or crash-reporting dependency conflicts with the privacy declaration.',
+  'Undeclared third-party analytics/crash SDKs are prohibited; native first-party capture remains disabled.',
 );
 invariant(
   rights.figDistributionPermission.requestSent === true,
@@ -204,3 +204,9 @@ await Promise.all([
 globalThis.process.stdout.write(
   `Validated D-Score Gymnastics ${expectedVersion} metadata and ${metadata.screenshots.length} App Store screenshots.\n`,
 );
+
+const nativeTelemetry = await readFile(
+  resolve(root, 'apps/d-score-gymnastics/src/telemetry.ts'),
+  'utf8',
+);
+invariant(nativeTelemetry.includes('available: false'), 'Native analytics must remain disabled.');

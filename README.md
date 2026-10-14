@@ -31,7 +31,8 @@ The Expo application provides:
 - Validated, versioned backup/restore and explicit local-data deletion.
 - Dark and light themes, safe-area handling, offline web use, and explicit updates.
 
-There is no account, advertising, analytics, crash-reporting service, or cloud synchronization.
+There is no account, advertising, crash-reporting service, or routine cloud synchronization. Web
+usage and search diagnostics are optional, off by default, and controlled in Settings.
 
 ## Development
 

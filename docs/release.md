@@ -107,9 +107,10 @@ not add a catch-all redirect. The service worker controls `/app/` only. Use Page
 revalidation; on a custom domain, verify that its Browser Cache TTL respects the existing headers
 instead of imposing a four-hour minimum on mutable files such as /sw.js. See
 [Cloudflare browser caching](https://developers.cloudflare.com/cache/how-to/edge-browser-cache-ttl/).
-Leave Analytics, Zaraz, and application telemetry disabled. Default email obfuscation can transform
-the support/privacy HTML on the custom domain; verify other asset hashes and the untransformed
-deployment URL against the manifest.
+Leave third-party Analytics and Zaraz disabled. Only the optional first-party collector in
+`docs/analytics.md` is permitted. Default email obfuscation can transform the support/privacy HTML
+on the custom domain; verify other asset hashes and the untransformed deployment URL against the
+manifest.
 
 ## Accept, promote, and recover
 
@@ -194,7 +195,14 @@ rebuild merely to change a binary; any new binary returns through internal TestF
 ## Version 1 limitations
 
 - Recognized-as-entered D-score only; no execution, neutral deductions, or official result.
-- No account, cloud sync, analytics, advertising, or telemetry.
+- No account, routine cloud sync, advertising, or undeclared telemetry. Native analytics remains
+  disabled.
 - One-vault planning only; no two-vault qualification/final calculation.
 - Web is English and browser-based. Planned native launch targets iPhone, United States and Canada.
 - Local data should be backed up before clearing browser storage or removing the app.
+
+## Optional web analytics
+
+The usage/search update has its own protected Worker and D1. Provision and validate it using
+`docs/analytics.md` before promoting the instrumented web artifact. The existing Pages workflow
+continues to reuse verified CI output; backend deployment never rebuilds the web application.
