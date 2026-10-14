@@ -66,8 +66,9 @@ binding, origin, routes, service-worker scope, cache headers or artifact upload 
 1. Create separate **dscore-analytics-staging** and **dscore-analytics-production** D1 databases in
    the existing account, using the Free plan. Do not select a routine or unrelated database.
 2. Configure Cloudflare Access applications for **admin-staging.d-score.app** and
-   **admin.d-score.app**. Use one allow policy containing only the owner's verified email with email
-   OTP. No public/bypass policy. Record each application audience and the Access team domain.
+   **admin.d-score.app**. Use one allow policy containing only the owner's verified email with the
+   existing Cloudflare account login. No public/bypass policy. Record each application audience and
+   the Access team domain.
 3. In the existing GitHub **cloudflare-preview** / **cloudflare-production** environments, add
    `ANALYTICS_D1_ID`, `ANALYTICS_ACCESS_TEAM`, `ANALYTICS_ACCESS_AUD` as variables. Keep the
    existing account ID secret. Production retains owner approval and main-only branch restrictions.

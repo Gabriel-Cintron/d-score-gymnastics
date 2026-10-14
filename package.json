@@ -40,7 +40,7 @@
     "release:web:validate": "node scripts/check-web-release-materials.mjs",
     "release:web:check": "node scripts/check-web-release.mjs",
     "release:web:preflight": "node scripts/check-web-release.mjs --preflight",
-    "analytics:test": "vitest run services/analytics packages/telemetry apps/d-score-gymnastics/src/telemetry"
+    "analytics:test": "pnpm rules:build && vitest run services/analytics packages/telemetry apps/d-score-gymnastics/src/telemetry"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
