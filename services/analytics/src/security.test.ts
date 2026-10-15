@@ -59,6 +59,27 @@ describe('collector and owner access', () => {
     expect((await handle(request('https://d-score.app', 'b'.repeat(40)), e)).status).toBe(400);
     expect((await handle(request('https://d-score.app', 'a'.repeat(40)), e)).status).toBe(200);
   });
+  it('retries a database failure before ingestion instead of rejecting a valid batch', async () => {
+    const e = env(),
+      event = await usage(undefined, Date.now());
+    const request = () =>
+      new Request('https://analytics.d-score.app/v1/events', {
+        method: 'POST',
+        headers: { Origin: e.APP_ORIGIN, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ events: [event] }),
+      });
+    const unavailable = vi.spyOn(e.DB, 'prepare').mockImplementationOnce(() => {
+      throw new Error('database temporarily unavailable');
+    });
+    const failed = await handle(request(), e);
+    unavailable.mockRestore();
+    expect(failed.status).toBe(503);
+    expect(failed.headers.get('Retry-After')).toBe('30');
+    expect((await handle(request(), e)).status).toBe(200);
+    expect(await e.DB.prepare("SELECT value FROM totals WHERE key='users'").first()).toEqual({
+      value: 1,
+    });
+  });
   it('applies the configured daily cap atomically', async () => {
     const e = { ...env(), DAILY_EVENT_LIMIT: '1' };
     const now = Date.now();

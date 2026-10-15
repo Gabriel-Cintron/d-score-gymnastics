@@ -185,10 +185,10 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     )
       return json({ error: 'Invalid event or unapproved build' }, 400, cors);
     const limit = Math.max(1, Math.min(10000, Number(env.DAILY_EVENT_LIMIT) || 2000));
-    await env.DB.prepare("UPDATE limits SET value=? WHERE key='daily' AND value<>?")
-      .bind(limit, limit)
-      .run();
     try {
+      await env.DB.prepare("UPDATE limits SET value=? WHERE key='daily' AND value<>?")
+        .bind(limit, limit)
+        .run();
       await ingest(env.DB, events, now);
     } catch (error) {
       if (error instanceof Error && /erased identity|invalid identity/.test(error.message))
