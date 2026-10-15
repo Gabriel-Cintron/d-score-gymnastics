@@ -11,6 +11,7 @@ import {
   type RoutineLibrary,
   type SavedAllAround,
 } from './routine-library';
+import { profileSelectionKey } from './scoring-profile-state';
 import type { WorkbenchState } from './types';
 
 export function recoverWorkspace(
@@ -28,10 +29,12 @@ export function recoverWorkspace(
   if (selected !== undefined) {
     if (
       workbench === undefined ||
-      APPARATUS_IDS.every(
-        (apparatus) =>
-          routineContentKey(selected.state, apparatus) === routineContentKey(workbench, apparatus),
-      )
+      (profileSelectionKey(selected.state) === profileSelectionKey(workbench) &&
+        APPARATUS_IDS.every(
+          (apparatus) =>
+            routineContentKey(selected.state, apparatus) ===
+            routineContentKey(workbench, apparatus),
+        ))
     ) {
       return {
         blocked: false,

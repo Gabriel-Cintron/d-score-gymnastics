@@ -30,6 +30,8 @@ type PickerMode = 'element' | 'flop';
 
 interface CatalogPickerProps {
   readonly apparatus: ApparatusId;
+  readonly profileContext: string;
+  readonly contextElements: readonly CompiledElement[];
   readonly difficultyLetterByTenths: ReadonlyMap<number, string>;
   readonly elements: readonly CompiledElement[];
   readonly excludedElementIds: ReadonlySet<ElementId>;
@@ -45,6 +47,8 @@ interface CatalogPickerProps {
 
 export function CatalogPicker({
   apparatus,
+  profileContext,
+  contextElements,
   difficultyLetterByTenths,
   elements,
   excludedElementIds,
@@ -123,13 +127,22 @@ export function CatalogPicker({
     setMaximumDifficulty(undefined);
     setMinimumDifficulty(undefined);
     setMode('element');
-  }, [apparatus, visible]);
+  }, [apparatus, visible, profileContext]);
 
   const tracker = useRef(createSearchTracker(telemetry));
   // Actual filter values and apparatus stay LOCAL. Their changes split evidence contexts.
   const context = useMemo(
     () => (telemetry.available ? crypto.randomUUID() : ''),
-    [apparatus, visible, mode, elementGroup, maximumDifficulty, minimumDifficulty, flopDraft],
+    [
+      apparatus,
+      visible,
+      mode,
+      elementGroup,
+      maximumDifficulty,
+      minimumDifficulty,
+      flopDraft,
+      profileContext,
+    ],
   );
   function observation() {
     const filters: ('group' | 'minimum' | 'maximum')[] = [];
@@ -138,7 +151,12 @@ export function CatalogPicker({
     if (maximumDifficulty !== undefined) filters.push('maximum');
     let zero: 'none' | 'no_match' | 'filters' | 'excluded' | 'context' = 'none';
     if (matches.length === 0) {
-      if (searchCatalog(elements, query, {}, elements.length).length === 0) zero = 'no_match';
+      if (
+        searchCatalog(contextElements, query, {}, contextElements.length).length > 0 &&
+        searchCatalog(elements, query, {}, elements.length).length === 0
+      )
+        zero = 'context';
+      else if (searchCatalog(elements, query, {}, elements.length).length === 0) zero = 'no_match';
       else if (mode === 'flop') zero = 'context';
       else if (searchCatalog(availableElements, query, {}, availableElements.length).length === 0)
         zero = 'excluded';

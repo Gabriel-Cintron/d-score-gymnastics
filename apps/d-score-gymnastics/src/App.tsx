@@ -48,7 +48,7 @@ import { ConfirmationModal } from './components/ConfirmationModal';
 import { HomeScreen } from './components/HomeScreen';
 import { OnboardingModal } from './components/OnboardingModal';
 import { PwaUpdateBanner } from './components/PwaUpdateBanner';
-import { MAX_ROUTINE_ELEMENTS, RoutineBuilder, VaultBuilder } from './components/RoutineBuilder';
+import { RoutineBuilder, VaultBuilder } from './components/RoutineBuilder';
 import { RoutineLibraryModal } from './components/RoutineLibraryModal';
 import { RussianLocationModal } from './components/RussianLocationModal';
 import { ScorePanel } from './components/ScorePanel';
@@ -57,7 +57,16 @@ import type { CompletedPommelFlop } from './flop-builder';
 import { replaceStoredLocalData } from './local-data-repository';
 import { createLocalDataController } from './local-data-controller';
 import { recoverWorkspace } from './workspace-recovery';
-import { figRuleset, figRuntime } from './ruleset';
+import { figRuleset, getProfileRuntime, profileLabel, catalogElementById } from './ruleset';
+import { RulesetControl } from './components/RulesetControl';
+import {
+  defaultProfileSelection,
+  cloneProfileSelection,
+  effectiveProfile,
+  setAllAroundProfile,
+  setRoutineProfile,
+} from './scoring-profile-state';
+import { profileKey } from '@d-score-gymnastics/rulesets';
 import {
   activeAllAround,
   allAroundsInLibrary,
@@ -108,26 +117,12 @@ import {
   pruneRelationships,
 } from './workbench-state';
 
-const elementById: ReadonlyMap<ElementId, CompiledElement> = new Map(
-  figRuleset.elements.map((element) => [element.id, element]),
-);
-const difficultyLetterByTenths: ReadonlyMap<number, string> = new Map(
-  Object.entries(figRuleset.difficultyScale).map(([letter, difficulty]) => [difficulty, letter]),
-);
 const rulesetIdentity = {
   dataRevision: figRuleset.dataRevision,
   dataVersion: figRuleset.dataVersion,
   disciplineId: CURRENT_DISCIPLINE_ID,
   id: figRuleset.id,
 };
-const pommelRules: CompiledPommelHorseRules = (() => {
-  const rules = figRuleset.apparatusRules['pommel-horse'];
-  if (rules.apparatus !== 'pommel-horse') {
-    throw new Error('The compiled Pommel Horse rules are not available.');
-  }
-  return rules;
-})();
-
 type PendingRussianLocation =
   | { readonly element: CompiledElement; readonly kind: 'add' }
   | {
@@ -183,6 +178,25 @@ function Workbench({
   const { width } = useWindowDimensions();
   const isWide = width >= 980;
   const [apparatus, setApparatus] = useState<ApparatusId>('floor-exercise');
+  const [profileSelection, setProfileSelection] = useState(defaultProfileSelection);
+  const activeProfile = effectiveProfile(profileSelection, apparatus);
+  const runtime = getProfileRuntime(activeProfile);
+  const activeRuleset = runtime?.ruleset ?? figRuleset;
+  const elementById = useMemo(
+    () =>
+      new Map([...catalogElementById, ...activeRuleset.elements.map((e) => [e.id, e] as const)]),
+    [activeRuleset],
+  );
+  const difficultyLetterByTenths = useMemo(
+    () =>
+      new Map(
+        Object.entries(activeRuleset.difficultyScale).map(([letter, value]) => [value, letter]),
+      ),
+    [activeRuleset],
+  );
+  const pommelRules = activeRuleset.apparatusRules['pommel-horse'] as CompiledPommelHorseRules;
+  const maximumRoutineElements = runtime?.countingLimit(apparatus) ?? 32;
+
   const [allAroundsVisible, setAllAroundsVisible] = useState(false);
   const [appPreferences, setAppPreferences] = useState<AppPreferences>(defaultAppPreferences);
   const [appPreferencesReady, setAppPreferencesReady] = useState(false);
@@ -223,7 +237,11 @@ function Workbench({
 
   useEffect(() => {
     let active = true;
-    const context = { disciplineId: CURRENT_DISCIPLINE_ID, elementById, rulesetId: figRuleset.id };
+    const context = {
+      disciplineId: CURRENT_DISCIPLINE_ID,
+      elementById: catalogElementById,
+      rulesetId: figRuleset.id,
+    };
     void Promise.allSettled([
       appPreferencesRepository.load(),
       workbenchRepository.load(),
@@ -259,6 +277,7 @@ function Workbench({
       setRoutines(state.routines);
       setStuckByApparatus(state.stuckByApparatus);
       setVaultId(state.vaultId);
+      setProfileSelection(cloneProfileSelection(state));
       onThemeModeChange(state.themeMode);
       setLibrary(recovered.library);
       setAppPreferences(preferences ?? defaultAppPreferences);
@@ -305,6 +324,7 @@ function Workbench({
     vaultId,
     library,
     libraryRevision,
+    profileSelection,
     appPreferences,
     workspaceReady,
     libraryWritable,
@@ -346,12 +366,12 @@ function Workbench({
   }
 
   useEffect(() => {
-    setRelationships((current) =>
-      pruneIneligibleConnections(pruneRelationships(current, routines), routines),
-    );
+    setRelationships((current) => pruneRelationships(current, routines));
   }, [routines]);
 
-  const apparatusElements = figRuntime.elementsForApparatus(apparatus);
+  const apparatusElements = (runtime?.elementsForApparatus(apparatus) ?? []).filter(
+    (e) => !runtime?.excludedElementIds.has(e.id),
+  );
   const selectedElementIds = useMemo<ReadonlySet<ElementId>>(
     () =>
       apparatus === 'vault'
@@ -367,17 +387,19 @@ function Workbench({
   const catalogueCount = routinesInCatalogue(library).length;
   const elementGroups = useMemo(() => {
     if (apparatus === 'vault') return [];
-    const regularGroups = figRuleset.sharedRules.elementGroupRequirements.regularGroups[apparatus];
+    const regularGroups =
+      activeRuleset.sharedRules.elementGroupRequirements.regularGroups[apparatus];
     const dismountGroups = apparatusElements
       .filter((element) => element.roles.includes('dismount'))
       .map((element) => element.code.group);
     return [...new Set([...regularGroups, ...dismountGroups])].sort((left, right) => left - right);
-  }, [apparatus, apparatusElements]);
+  }, [apparatus, apparatusElements, activeRuleset]);
   const selectedVault = vaultId === undefined ? undefined : elementById.get(vaultId);
   const score = useMemo<WorkbenchScore>(() => {
+    if (!runtime) return { kind: 'unsupported', label: profileLabel(activeProfile) };
     if (apparatus === 'vault') {
       if (vaultId === undefined) return { kind: 'empty' };
-      const outcome = figRuntime.scoreVault({
+      const outcome = runtime.scoreVault({
         apparatus: 'vault',
         vaultId,
         ...(stuckByApparatus.vault ? { landing: 'stuck' } : {}),
@@ -402,11 +424,16 @@ function Workbench({
         ? { landing: { occurrenceId: finalEntry.occurrenceId, outcome: 'stuck' } }
         : {}),
     };
-    const outcome = figRuntime.scoreRoutine(routine);
+    const outcome = runtime.scoreRoutine(routine);
     return outcome.ok
       ? { kind: 'routine', result: outcome.result }
       : { issues: outcome.issues, kind: 'issues' };
-  }, [apparatus, relationships, routines, stuckByApparatus, vaultId]);
+  }, [apparatus, relationships, routines, stuckByApparatus, vaultId, runtime, activeProfile]);
+
+  const programBonus =
+    runtime && (score.kind === 'routine' || score.kind === 'vault')
+      ? runtime.programBonus(apparatus, score.result.total)
+      : undefined;
 
   function selectApparatus(nextApparatus: ApparatusId): void {
     setApparatus(nextApparatus);
@@ -437,7 +464,7 @@ function Workbench({
     updateRoutine(routineApparatus, (entries) => {
       if (
         buildRoutineItems(entries, relationships[routineApparatus]).length >=
-          MAX_ROUTINE_ELEMENTS ||
+          maximumRoutineElements ||
         entries.some(({ elementId }) => elementId === element.id)
       ) {
         return entries;
@@ -573,7 +600,7 @@ function Workbench({
     if (
       apparatus !== 'pommel-horse' ||
       buildRoutineItems(routines['pommel-horse'], relationships['pommel-horse']).length >=
-        MAX_ROUTINE_ELEMENTS
+        maximumRoutineElements
     ) {
       return;
     }
@@ -621,6 +648,7 @@ function Workbench({
 
   function currentWorkbenchState(): WorkbenchState {
     return {
+      ...cloneProfileSelection(profileSelection),
       apparatus,
       nextOccurrenceNumber: occurrenceCounter.current,
       relationships,
@@ -690,6 +718,7 @@ function Workbench({
     setRoutines(next.routines);
     setStuckByApparatus(next.stuckByApparatus);
     setVaultId(next.vaultId);
+    setProfileSelection(cloneProfileSelection(next));
     setPickerVisible(false);
     setPendingRussianLocation(undefined);
   }
@@ -895,7 +924,8 @@ function Workbench({
   async function restoreBackup(text: string): Promise<boolean> {
     const restored = parseDScoreGymnasticsBackup(text, {
       disciplineId: CURRENT_DISCIPLINE_ID,
-      elementById,
+      elementById: catalogElementById,
+      supportsProfile: (ref) => getProfileRuntime(ref) !== undefined,
       rulesetId: figRuleset.id,
     });
     if (restored === undefined) return false;
@@ -918,6 +948,7 @@ function Workbench({
       setRoutines(restored.workbench.routines);
       setStuckByApparatus(restored.workbench.stuckByApparatus);
       setVaultId(restored.workbench.vaultId);
+      setProfileSelection(cloneProfileSelection(restored.workbench));
       onThemeModeChange(restored.workbench.themeMode);
       setLibrary(nextLibrary);
       setLibraryError(undefined);
@@ -964,6 +995,7 @@ function Workbench({
     setRoutines(state.routines);
     setStuckByApparatus(state.stuckByApparatus);
     setVaultId(undefined);
+    setProfileSelection(cloneProfileSelection(state));
     onThemeModeChange(nextThemeMode);
     setLibrary({ activeAllAroundId: item.id, items: [item] });
     setLibraryError(undefined);
@@ -1094,6 +1126,20 @@ function Workbench({
               </View>
             </View>
 
+            <RulesetControl
+              scope="all-around"
+              current={profileSelection.defaultScoringProfile}
+              defaultProfile={profileSelection.defaultScoringProfile}
+              disabled={!workspaceReady}
+              onApply={(ref) => {
+                if (ref) setProfileSelection((current) => setAllAroundProfile(current, ref));
+              }}
+            />
+            {Object.keys(profileSelection.routineScoringOverrides).length ? (
+              <Text style={{ color: colors.muted, marginBottom: 12 }}>
+                Mixed rulesets · individual overrides are active
+              </Text>
+            ) : null}
             <ApparatusSelector onChange={selectApparatus} selected={apparatus} />
 
             <View style={[styles.workspace, isWide && styles.workspaceWide]}>
@@ -1109,8 +1155,13 @@ function Workbench({
                 ) : (
                   <RoutineBuilder
                     apparatus={apparatus}
+                    maximumElements={maximumRoutineElements}
                     canConnect={(first, second) =>
-                      isFigConnectionEligible(first, second, figRuleset.apparatusRules[apparatus])
+                      isFigConnectionEligible(
+                        first,
+                        second,
+                        activeRuleset.apparatusRules[apparatus],
+                      )
                     }
                     difficultyLetterByTenths={difficultyLetterByTenths}
                     elementById={elementById}
@@ -1131,12 +1182,43 @@ function Workbench({
                 )}
               </View>
               <View style={styles.scoreColumn}>
+                <RulesetControl
+                  scope="routine"
+                  current={activeProfile}
+                  defaultProfile={profileSelection.defaultScoringProfile}
+                  overridden={profileSelection.routineScoringOverrides[apparatus] !== undefined}
+                  disabled={!workspaceReady}
+                  onApply={(ref) =>
+                    setProfileSelection((current) => setRoutineProfile(current, apparatus, ref))
+                  }
+                />
+                {runtime?.profile.excludedBonuses?.map((label) => (
+                  <Text key={label} style={{ color: colors.muted }}>
+                    {label} — not included (requires an execution score).
+                  </Text>
+                ))}
+                {programBonus ? (
+                  <View
+                    style={{
+                      padding: 12,
+                      borderColor: colors.border,
+                      borderWidth: 1,
+                      borderRadius: 10,
+                      marginBottom: 10,
+                    }}
+                  >
+                    <Text style={{ color: colors.ink }}>
+                      {programBonus.label}: +{(programBonus.milliPoints / 1000).toFixed(3)}
+                    </Text>
+                    <Text style={{ color: colors.muted }}>{programBonus.explanation}</Text>
+                  </View>
+                ) : null}
                 <ScorePanel
                   difficultyLetterByTenths={difficultyLetterByTenths}
                   elementById={elementById}
                   elementGroups={elementGroups}
                   routineIsFull={
-                    apparatus !== 'vault' && activeRoutineItemCount >= MAX_ROUTINE_ELEMENTS
+                    apparatus !== 'vault' && activeRoutineItemCount >= maximumRoutineElements
                   }
                   score={score}
                 />
@@ -1148,6 +1230,8 @@ function Workbench({
 
       <CatalogPicker
         apparatus={apparatus}
+        profileContext={profileKey(activeProfile)}
+        contextElements={activeRuleset.elements.filter((e) => e.apparatus === apparatus)}
         elements={apparatusElements}
         excludedElementIds={selectedElementIds}
         difficultyLetterByTenths={difficultyLetterByTenths}
@@ -1428,32 +1512,4 @@ function libraryWithActiveSnapshot(
     updatedAt: now,
   };
   return { activeAllAroundId: item.id, items: [item, ...library.items] };
-}
-
-function pruneIneligibleConnections(
-  relationships: RelationshipState,
-  routines: RoutineState,
-): RelationshipState {
-  let next = relationships;
-  for (const apparatus of Object.keys(routines) as ElementRoutineApparatusId[]) {
-    const entryByOccurrenceId = new Map(
-      routines[apparatus].map((entry) => [entry.occurrenceId, entry]),
-    );
-    const kept = relationships[apparatus].filter((relationship) => {
-      if (relationship.kind === 'sequence') return true;
-      const firstEntry = entryByOccurrenceId.get(relationship.occurrenceIds[0]);
-      const secondEntry = entryByOccurrenceId.get(relationship.occurrenceIds[1]);
-      const first = firstEntry === undefined ? undefined : elementById.get(firstEntry.elementId);
-      const second = secondEntry === undefined ? undefined : elementById.get(secondEntry.elementId);
-      return (
-        first !== undefined &&
-        second !== undefined &&
-        isFigConnectionEligible(first, second, figRuleset.apparatusRules[apparatus])
-      );
-    });
-    if (kept.length !== relationships[apparatus].length) {
-      next = { ...next, [apparatus]: kept };
-    }
-  }
-  return next;
 }

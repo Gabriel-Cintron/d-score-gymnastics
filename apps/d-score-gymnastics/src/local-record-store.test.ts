@@ -1,3 +1,4 @@
+import { defaultProfileSelection } from './scoring-profile-state';
 import { describe, expect, it } from 'vitest';
 
 import { createStoredAppPreferences } from './app-preferences';
@@ -58,6 +59,7 @@ describe('local record repository boundary', () => {
     await workbench.save(
       createStoredWorkbenchState(
         {
+          ...defaultProfileSelection(),
           apparatus: 'floor-exercise',
           nextOccurrenceNumber: 1,
           relationships: emptyRelationships,

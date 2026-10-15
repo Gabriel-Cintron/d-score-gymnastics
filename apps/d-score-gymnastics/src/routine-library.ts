@@ -9,6 +9,13 @@ import {
 } from '@d-score-gymnastics/scoring';
 import type { CompiledElement } from '@d-score-gymnastics/rulesets';
 
+import {
+  defaultProfileSelection,
+  effectiveProfile,
+  cloneProfileSelection,
+  setRoutineProfile,
+} from './scoring-profile-state';
+import { profileKey } from '@d-score-gymnastics/rulesets';
 import type { RoutineEntry, WorkbenchState } from './types';
 import {
   emptyLandings,
@@ -18,7 +25,8 @@ import {
   WORKBENCH_STATE_SCHEMA_VERSION,
 } from './workbench-state';
 
-export const ROUTINE_LIBRARY_SCHEMA_VERSION = 3;
+export const ROUTINE_LIBRARY_SCHEMA_VERSION = 4;
+const PROFILELESS_ROUTINE_LIBRARY_SCHEMA_VERSION = 3;
 const LEGACY_ROUTINE_LIBRARY_SCHEMA_VERSION = 1;
 const PREVIOUS_ROUTINE_LIBRARY_SCHEMA_VERSION = 2;
 export const MAX_LIBRARY_NAME_LENGTH = 80;
@@ -95,9 +103,10 @@ export function parseStoredRoutineLibrary(
   if (
     (schemaVersion !== ROUTINE_LIBRARY_SCHEMA_VERSION &&
       schemaVersion !== PREVIOUS_ROUTINE_LIBRARY_SCHEMA_VERSION &&
-      schemaVersion !== LEGACY_ROUTINE_LIBRARY_SCHEMA_VERSION) ||
+      schemaVersion !== LEGACY_ROUTINE_LIBRARY_SCHEMA_VERSION &&
+      schemaVersion !== PROFILELESS_ROUTINE_LIBRARY_SCHEMA_VERSION) ||
     ruleset?.id !== context.rulesetId ||
-    (schemaVersion === ROUTINE_LIBRARY_SCHEMA_VERSION &&
+    (schemaVersion >= PROFILELESS_ROUTINE_LIBRARY_SCHEMA_VERSION &&
       ruleset.disciplineId !== context.disciplineId) ||
     (ruleset.disciplineId !== undefined && ruleset.disciplineId !== context.disciplineId) ||
     typeof ruleset.dataRevision !== 'string' ||
@@ -112,7 +121,7 @@ export function parseStoredRoutineLibrary(
   const ids = new Set<string>();
   const names = new Set<string>();
   for (const value of record.items) {
-    const item = parseLibraryItem(value, context, {
+    const item = parseLibraryItem(value, context, schemaVersion, {
       dataRevision: ruleset.dataRevision,
       dataVersion: ruleset.dataVersion,
       disciplineId: context.disciplineId,
@@ -156,6 +165,8 @@ export function captureRoutineState(state: WorkbenchState, apparatus: ApparatusI
           [apparatus]: cloneRelationships(state.relationships[apparatus]),
         };
   return {
+    defaultScoringProfile: { ...effectiveProfile(state, apparatus) },
+    routineScoringOverrides: {},
     apparatus,
     nextOccurrenceNumber: state.nextOccurrenceNumber,
     relationships,
@@ -198,6 +209,7 @@ export function blankAllAroundState(
   nextOccurrenceNumber = 1,
 ): WorkbenchState {
   return {
+    ...defaultProfileSelection(),
     apparatus: 'floor-exercise',
     nextOccurrenceNumber,
     relationships: emptyRelationships,
@@ -232,6 +244,7 @@ export function routineContentKey(state: WorkbenchState, apparatus: ApparatusId)
   if (apparatus === 'vault') {
     return JSON.stringify({
       apparatus,
+      profile: profileKey(effectiveProfile(state, apparatus)),
       stuck: state.stuckByApparatus.vault,
       vaultId: state.vaultId,
     });
@@ -251,6 +264,7 @@ export function routineContentKey(state: WorkbenchState, apparatus: ApparatusId)
     .sort((left, right) => JSON.stringify(left).localeCompare(JSON.stringify(right), 'en-US'));
   return JSON.stringify({
     apparatus,
+    profile: profileKey(effectiveProfile(state, apparatus)),
     entries: entries.map(({ elementId, qualifiers }) => ({
       elementId,
       ...(qualifiers === undefined ? {} : { qualifiers: [...qualifiers].sort() }),
@@ -287,7 +301,7 @@ export function applyLibraryItem(
     if (item.apparatus === 'vault') {
       if (item.state.vaultId === undefined) return current;
       return {
-        ...current,
+        ...setRoutineProfile(current, 'vault', effectiveProfile(item.state, 'vault')),
         apparatus: 'vault',
         nextOccurrenceNumber: startingOccurrenceNumber,
         stuckByApparatus: {
@@ -304,7 +318,7 @@ export function applyLibraryItem(
       startingOccurrenceNumber,
     );
     return {
-      ...current,
+      ...setRoutineProfile(current, item.apparatus, effectiveProfile(item.state, item.apparatus)),
       apparatus: item.apparatus,
       nextOccurrenceNumber: instantiated.nextOccurrenceNumber,
       relationships: {
@@ -333,6 +347,7 @@ export function applyLibraryItem(
     nextOccurrenceNumber = instantiated.nextOccurrenceNumber;
   }
   return {
+    ...cloneProfileSelection(item.state),
     apparatus: item.state.apparatus,
     nextOccurrenceNumber,
     relationships,
@@ -346,6 +361,7 @@ export function applyLibraryItem(
 function parseLibraryItem(
   value: unknown,
   context: RoutineLibraryContext,
+  libraryVersion: number,
   ruleset: RoutineLibraryRuleset,
 ): RoutineLibraryItem | undefined {
   const record = objectRecord(value);
@@ -364,7 +380,8 @@ function parseLibraryItem(
     {
       ...stateRecord,
       ruleset,
-      schemaVersion: WORKBENCH_STATE_SCHEMA_VERSION,
+      schemaVersion:
+        libraryVersion === ROUTINE_LIBRARY_SCHEMA_VERSION ? WORKBENCH_STATE_SCHEMA_VERSION : 2,
     },
     context,
   );
@@ -473,6 +490,7 @@ function instantiateElementRoutine(
 
 function cloneWorkbenchState(state: WorkbenchState): WorkbenchState {
   return {
+    ...cloneProfileSelection(state),
     apparatus: state.apparatus,
     nextOccurrenceNumber: state.nextOccurrenceNumber,
     relationships: {

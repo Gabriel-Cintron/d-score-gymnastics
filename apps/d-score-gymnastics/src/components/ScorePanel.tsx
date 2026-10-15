@@ -25,6 +25,16 @@ export function ScorePanel({
   score,
 }: ScorePanelProps) {
   const styles = useStyles();
+  if (score.kind === 'unsupported')
+    return (
+      <View style={styles.card}>
+        <Text accessibilityRole="alert" style={styles.emptyTitle}>
+          {score.label}. Scoring is unavailable for this saved revision. Your routine is preserved;
+          choose a supported ruleset or export a backup.
+        </Text>
+      </View>
+    );
+
   const groupStatuses = summarizeElementGroups(
     elementGroups,
     score.kind === 'routine' ? score.result : undefined,

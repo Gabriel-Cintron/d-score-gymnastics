@@ -1,5 +1,5 @@
 import type { ElementId } from '@d-score-gymnastics/scoring';
-import type { CompiledElement } from '@d-score-gymnastics/rulesets';
+import type { CompiledElement, ScoringProfileRef } from '@d-score-gymnastics/rulesets';
 
 import {
   parseStoredAppPreferences,
@@ -16,7 +16,7 @@ import type { CurrentDisciplineId } from './product';
 import { parseStoredWorkbenchState, type StoredWorkbenchState } from './workbench-state';
 
 export const BACKUP_FORMAT = 'd-score-gymnastics-backup';
-export const BACKUP_SCHEMA_VERSION = 2;
+export const BACKUP_SCHEMA_VERSION = 3;
 export const MAX_BACKUP_CHARACTERS = 2_000_000;
 const LEGACY_BACKUP_FORMAT = 'easyscore-backup';
 const LEGACY_BACKUP_SCHEMA_VERSION = 1;
@@ -41,6 +41,7 @@ interface BackupContext {
   readonly disciplineId: string;
   readonly elementById: ReadonlyMap<ElementId, CompiledElement>;
   readonly rulesetId: string;
+  readonly supportsProfile?: (ref: ScoringProfileRef) => boolean;
 }
 
 export function serializeDScoreGymnasticsBackup(document: DScoreGymnasticsBackupDocument): string {
@@ -61,7 +62,7 @@ export function parseDScoreGymnasticsBackup(
   const record = objectRecord(value);
   const isCurrentBackup =
     record?.format === BACKUP_FORMAT &&
-    record.schemaVersion === BACKUP_SCHEMA_VERSION &&
+    (record.schemaVersion === BACKUP_SCHEMA_VERSION || record.schemaVersion === 2) &&
     record.disciplineId === context.disciplineId;
   const isLegacyBackup =
     record?.format === LEGACY_BACKUP_FORMAT &&
@@ -74,6 +75,18 @@ export function parseDScoreGymnasticsBackup(
   const preferences = parseStoredAppPreferences(record.preferences);
   if (workbench === undefined || library === undefined || preferences === undefined) {
     return undefined;
+  }
+  const supportsProfile = context.supportsProfile;
+  if (supportsProfile) {
+    const states = [workbench, ...library.items.map((item) => item.state)];
+    if (
+      states.some((state) =>
+        [state.defaultScoringProfile, ...Object.values(state.routineScoringOverrides)].some(
+          (ref) => !supportsProfile(ref),
+        ),
+      )
+    )
+      return undefined;
   }
   return { library, preferences, workbench };
 }

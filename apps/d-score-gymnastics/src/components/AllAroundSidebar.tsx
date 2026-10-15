@@ -1,3 +1,4 @@
+import { profileLabel } from '../ruleset';
 import { useEffect, useMemo, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -178,7 +179,10 @@ export function AllAroundSidebar({
                         {item.name}
                       </Text>
                       <Text style={styles.itemMeta}>
-                        {active ? 'Currently editing' : `Updated ${formatDate(item.updatedAt)}`}
+                        {active ? 'Currently editing' : `Updated ${formatDate(item.updatedAt)}`} ·{' '}
+                        {Object.keys(item.state.routineScoringOverrides).length
+                          ? 'Mixed rulesets'
+                          : profileLabel(item.state.defaultScoringProfile)}
                       </Text>
                     </View>
                   </Pressable>

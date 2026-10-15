@@ -1,3 +1,4 @@
+import { profileLabel } from '../ruleset';
 import { APPARATUS_IDS, type ApparatusId } from '@d-score-gymnastics/scoring';
 import { useMemo } from 'react';
 import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
@@ -312,7 +313,10 @@ function LibrarySection({
                 {item.name}
               </Text>
               <Text style={styles.itemMeta}>
-                {countStartedEvents(item.state)}/6 events · {formatDate(item.updatedAt)}
+                {countStartedEvents(item.state)}/6 events · {formatDate(item.updatedAt)} ·{' '}
+                {Object.keys(item.state.routineScoringOverrides).length
+                  ? 'Mixed rulesets'
+                  : profileLabel(item.state.defaultScoringProfile)}
               </Text>
             </View>
             <Text style={styles.itemArrow}>›</Text>
