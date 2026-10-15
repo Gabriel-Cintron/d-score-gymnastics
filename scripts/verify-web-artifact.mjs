@@ -12,8 +12,12 @@ const files = await inventory(resolve(directory, 'site'));
 const rules = JSON.parse(
   await readFile(resolve(root, 'packages/rulesets/generated/fig-mag-2025-2028.json'), 'utf8'),
 );
+const scoringProfiles = JSON.parse(
+  await readFile(resolve(root, 'packages/rulesets/generated/scoring-profiles.json'), 'utf8'),
+);
 if (
-  manifest.schemaVersion !== 1 ||
+  manifest.schemaVersion !== 2 ||
+  JSON.stringify(manifest.scoringProfiles) !== JSON.stringify(scoringProfiles) ||
   manifest.commit !== commit ||
   manifest.catalogDigest !== publicWordingDigest(rules.elements) ||
   manifest.artifactDigest !== artifactDigest(files) ||

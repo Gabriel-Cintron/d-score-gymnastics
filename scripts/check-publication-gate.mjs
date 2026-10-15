@@ -170,3 +170,13 @@ async function assertNoLegacyWorkspaceSymlink() {
     if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT')) throw error;
   }
 }
+
+const profiles = await readJson('packages/rulesets/generated/scoring-profiles.json');
+invariant(
+  profiles.every(
+    (p) =>
+      ['complete', 'unavailable'].includes(p.status) &&
+      /^sha256:[a-f0-9]{64}$/.test(p.scoringDigest),
+  ),
+  'Every bundled scoring profile must have an explicit status and scoring digest.',
+);

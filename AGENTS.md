@@ -37,3 +37,11 @@
   text needs separate permission. No routine, score, apparatus, navigation or contact payloads.
   Preserve stable event IDs on retry and atomic server dedup. Alias acceptance is a proposal only.
   Collector failures never block app use. See docs/analytics.md for provisioning and retention.
+
+- Scoring profiles use exact immutable `{ id, revision }` references. FIG remains the default;
+  incomplete USAG definitions are disabled until the private manual and six-event fixtures are
+  complete. See docs/scoring-profiles.md. Never substitute FIG scoring for unknown profiles.
+- Applying/reapplying an all-around profile clears all six overrides. Individual routine loading
+  changes only its event's effective profile. Profile changes preserve inputs and relationships.
+  Workbench 3/library 4/backup 3 retain older readers; use compatible forward recovery.
+- Source PDFs belong only in .private/rule-sources/. Profile digests identify content, not approval.

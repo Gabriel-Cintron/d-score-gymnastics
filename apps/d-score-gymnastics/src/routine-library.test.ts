@@ -1,3 +1,4 @@
+import { defaultProfileSelection } from './scoring-profile-state';
 import { scoreTenths, type ElementId } from '@d-score-gymnastics/scoring';
 import type { CompiledElement } from '@d-score-gymnastics/rulesets';
 import { describe, expect, it } from 'vitest';
@@ -276,6 +277,7 @@ function savedAllAround(state: WorkbenchState): SavedAllAround {
 
 function workbenchState(): WorkbenchState {
   return {
+    ...defaultProfileSelection(),
     apparatus: 'pommel-horse',
     nextOccurrenceNumber: 4,
     relationships: {

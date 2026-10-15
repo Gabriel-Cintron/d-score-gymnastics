@@ -34,3 +34,11 @@ execFileSync(globalThis.process.execPath, ['scripts/check-web-export.mjs'], {
 globalThis.console.log(
   `Validated web release ${pkg.version}; native release materials are separate.`,
 );
+
+const profiles = await json('packages/rulesets/generated/scoring-profiles.json');
+if (
+  !profiles.length ||
+  !profiles.some((p) => p.id === rules.id && p.status === 'complete') ||
+  profiles.some((p) => !/^sha256:[a-f0-9]{64}$/.test(p.scoringDigest))
+)
+  throw new Error('Scoring profile inventory is invalid.');

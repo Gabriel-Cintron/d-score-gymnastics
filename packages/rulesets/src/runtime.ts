@@ -3,7 +3,9 @@ import {
   calculateDifficulty,
   calculateVaultDifficulty,
   indexScorableElements,
+  scoreTenths,
   type ApparatusId,
+  type ElementId,
   type DifficultyCalculationOutcome,
   type ElementRoutine,
   type ElementRoutineApparatusId,
@@ -26,7 +28,10 @@ export interface FigRulesetRuntime {
  * Creates the application-facing interface for one compiled FIG ruleset.
  * UI code does not need to know how element lookups or apparatus evaluators are assembled.
  */
-export function createFigRulesetRuntime(ruleset: CompiledRuleset): FigRulesetRuntime {
+export function createFigRulesetRuntime(
+  ruleset: CompiledRuleset,
+  excludedElementIds: ReadonlySet<ElementId> = new Set(),
+): FigRulesetRuntime {
   if (ruleset.discipline !== 'mens-artistic-gymnastics') {
     throw new Error(`Cannot create a MAG runtime for discipline "${ruleset.discipline}".`);
   }
@@ -49,10 +54,26 @@ export function createFigRulesetRuntime(ruleset: CompiledRuleset): FigRulesetRun
       ruleset.sharedRules,
       apparatus,
       ruleset.apparatusRules[apparatus],
+      excludedElementIds,
     );
   }
 
-  const vaultEvaluator = createFigVaultEvaluator(ruleset.sharedRules);
+  const vaultBase = createFigVaultEvaluator(ruleset.sharedRules);
+  const vaultEvaluator = {
+    ...vaultBase,
+    evaluate: (context: Parameters<typeof vaultBase.evaluate>[0]) =>
+      excludedElementIds.has(context.vault.id)
+        ? {
+            awards: [],
+            warnings: [
+              {
+                code: 'profile.element-not-eligible' as const,
+                parameters: { elementId: context.vault.id },
+              },
+            ],
+          }
+        : vaultBase.evaluate(context),
+  };
 
   return {
     ruleset,
@@ -63,7 +84,20 @@ export function createFigRulesetRuntime(ruleset: CompiledRuleset): FigRulesetRun
         evaluator: evaluatorByApparatus[routine.apparatus],
         routine,
       }),
-    scoreVault: (routine) =>
-      calculateVaultDifficulty({ elementLookup, evaluator: vaultEvaluator, routine }),
+    scoreVault: (routine) => {
+      const vault = elementLookup.get(routine.vaultId);
+      const lookup =
+        excludedElementIds.has(routine.vaultId) && vault
+          ? new Map(elementLookup).set(routine.vaultId, {
+              ...vault,
+              difficulty: { ...vault.difficulty, tenths: scoreTenths(0) },
+            })
+          : elementLookup;
+      return calculateVaultDifficulty({
+        elementLookup: lookup,
+        evaluator: vaultEvaluator,
+        routine,
+      });
+    },
   };
 }

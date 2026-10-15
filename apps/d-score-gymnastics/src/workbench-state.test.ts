@@ -1,3 +1,4 @@
+import { defaultProfileSelection } from './scoring-profile-state';
 import { scoreTenths, type ElementId } from '@d-score-gymnastics/scoring';
 import type { CompiledElement } from '@d-score-gymnastics/rulesets';
 import { describe, expect, it } from 'vitest';
@@ -154,6 +155,7 @@ describe('stored workbench state', () => {
 
 function workbenchState(): WorkbenchState {
   return {
+    ...defaultProfileSelection(),
     apparatus: 'parallel-bars',
     nextOccurrenceNumber: 2,
     relationships: {

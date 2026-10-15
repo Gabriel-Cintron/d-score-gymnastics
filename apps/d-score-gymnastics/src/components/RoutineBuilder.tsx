@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { APPARATUS_LABELS } from '../apparatus';
 import { completePommelFlop } from '../flop-builder';
-import { formatDifficulty, formatOfficialCode } from '../format';
+import { formatDifficulty, formatOfficialCode, formatScore } from '../format';
 import {
   requiresRussianLocation,
   russianLocationLabel,
@@ -16,10 +16,9 @@ import { radii, useTheme, type ThemeColors } from '../theme';
 import type { RoutineEntry } from '../types';
 import { DirectConnectionToggle } from './RoutineRelationshipControls';
 
-export const MAX_ROUTINE_ELEMENTS = 8;
-
 interface RoutineBuilderProps {
   readonly apparatus: Exclude<ApparatusId, 'vault'>;
+  readonly maximumElements: number;
   readonly canConnect: (first: CompiledElement, second: CompiledElement) => boolean;
   readonly difficultyLetterByTenths: ReadonlyMap<number, string>;
   readonly elementById: ReadonlyMap<ElementId, CompiledElement>;
@@ -38,6 +37,7 @@ interface RoutineBuilderProps {
 
 export function RoutineBuilder({
   apparatus,
+  maximumElements,
   canConnect,
   difficultyLetterByTenths,
   elementById,
@@ -58,14 +58,14 @@ export function RoutineBuilder({
   return (
     <View style={styles.card}>
       <BuilderHeading
-        count={`${items.length}/${MAX_ROUTINE_ELEMENTS}`}
+        count={`${items.length}/${maximumElements}`}
         subtitle="Counted skill order"
         title={`${APPARATUS_LABELS[apparatus]} routine`}
         {...(items.length === 0 ? {} : { onClear })}
       />
 
       <View style={styles.slots}>
-        {Array.from({ length: MAX_ROUTINE_ELEMENTS }, (_, index) => {
+        {Array.from({ length: Math.max(maximumElements, items.length) }, (_, index) => {
           const item = items[index];
           if (item === undefined) {
             const canAdd = index === items.length;
@@ -156,6 +156,12 @@ export function RoutineBuilder({
                         : `${flop.difficultyLetter} value · counted as one sequence element`
                       : `${formatOfficialCode(element)} · ${formatDifficulty(element)} value`}
                   </Text>
+                  {element.profileAdjustment ? (
+                    <Text style={styles.elementMetadata}>
+                      FIG {formatScore(element.profileAdjustment.originalTenths)} →{' '}
+                      {formatDifficulty(element)} · {element.profileAdjustment.reason}
+                    </Text>
+                  ) : null}
                   {needsRussianLocation ? (
                     <Pressable
                       accessibilityLabel={`${russianLocation === undefined ? 'Choose' : 'Change'} location for ${itemName}`}
@@ -275,7 +281,7 @@ export function VaultBuilder({
         >
           <Text style={styles.vaultAddMark}>+</Text>
           <Text style={styles.vaultEmptyTitle}>Choose a Vault</Text>
-          <Text style={styles.vaultEmptyCopy}>Search the complete FIG table</Text>
+          <Text style={styles.vaultEmptyCopy}>Search the current ruleset’s Vault table</Text>
         </Pressable>
       ) : (
         <Pressable

@@ -74,3 +74,20 @@ export type {
   ScoringFixtureSource,
   ValidationIssue,
 } from './validation';
+
+export {
+  FIG_PROFILE,
+  createProfileRegistry,
+  profileKey,
+  sameProfile,
+  parseProfileRef,
+} from './profiles';
+export type {
+  ScoringProfileRef,
+  ScoringProfileDefinition,
+  ProfileRuntime,
+  ProgramBonus,
+  ElementOverride,
+} from './profiles';
+
+export { bundledProfileDefinitions } from './profile-definitions';

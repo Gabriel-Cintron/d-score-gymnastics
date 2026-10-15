@@ -1,8 +1,11 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 import {
   compileRuleset,
+  createProfileRegistry,
+  bundledProfileDefinitions,
   formatValidationIssues,
   type CompiledRuleset,
 } from '@d-score-gymnastics/rulesets';
@@ -46,4 +49,28 @@ if (result.issues.length > 0) {
     }),
   );
   await writeFile(indexFile, `${JSON.stringify(index, null, 2)}\n`, 'utf8');
+}
+
+if (!process.exitCode) {
+  const compiledBase = JSON.parse(
+    await readFile(new URL('../generated/fig-mag-2025-2028.json', import.meta.url), 'utf8'),
+  ) as CompiledRuleset;
+  const definitions = bundledProfileDefinitions(compiledBase);
+  const registry = createProfileRegistry(compiledBase, definitions);
+  const profiles = definitions.map((definition) => ({
+    ...definition.ref,
+    label: definition.label,
+    status: definition.status,
+    scoringDigest: `sha256:${createHash('sha256')
+      .update(JSON.stringify({ base: compiledBase, definition }))
+      .digest('hex')}`,
+  }));
+  await writeFile(
+    new URL('../generated/scoring-profiles.json', import.meta.url),
+    JSON.stringify(profiles, null, 2) + '\n',
+  );
+  await writeFile(
+    new URL('../generated/profile-catalog.json', import.meta.url),
+    JSON.stringify({ elements: registry.catalogElements }, null, 2) + '\n',
+  );
 }

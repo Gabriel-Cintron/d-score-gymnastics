@@ -1,6 +1,7 @@
 import type { ExplanationParameters } from '@d-score-gymnastics/scoring';
 
 const LABELS: Readonly<Record<string, string>> = {
+  'profile.element-not-eligible': 'Not eligible under this ruleset',
   'fig.connection-awarded': 'Connection value awarded',
   'fig.dismount-counted': 'Counted as the dismount',
   'fig.dismount-group-awarded': 'Dismount group awarded',

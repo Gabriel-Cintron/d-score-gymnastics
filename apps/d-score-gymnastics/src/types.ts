@@ -9,6 +9,7 @@ import type {
   VaultDifficultyResult,
 } from '@d-score-gymnastics/scoring';
 
+import type { ProfileSelection } from './scoring-profile-state';
 import type { ThemeMode } from './theme';
 
 export interface RoutineEntry {
@@ -23,7 +24,7 @@ export type RelationshipState = Readonly<
 >;
 export type LandingState = Readonly<Record<ApparatusId, boolean>>;
 
-export interface WorkbenchState {
+export interface WorkbenchState extends ProfileSelection {
   readonly apparatus: ApparatusId;
   readonly nextOccurrenceNumber: number;
   readonly relationships: RelationshipState;
@@ -35,6 +36,7 @@ export interface WorkbenchState {
 
 export type WorkbenchScore =
   | { readonly kind: 'empty' }
+  | { readonly kind: 'unsupported'; readonly label: string }
   | {
       readonly issues: readonly (CalculationIssue | VaultCalculationIssue)[];
       readonly kind: 'issues';

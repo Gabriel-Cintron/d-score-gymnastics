@@ -1,3 +1,5 @@
+import { profileLabel } from '../ruleset';
+import { effectiveProfile } from '../scoring-profile-state';
 import type { ApparatusId } from '@d-score-gymnastics/scoring';
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -281,7 +283,8 @@ export function RoutineLibraryModal({
                         </Text>
                       )}
                       <Text style={styles.itemMeta}>
-                        {APPARATUS_LABELS[item.apparatus]} · Updated{' '}
+                        {APPARATUS_LABELS[item.apparatus]} ·{' '}
+                        {profileLabel(effectiveProfile(item.state, item.apparatus))} · Updated{' '}
                         {formatLibraryDate(item.updatedAt)}
                       </Text>
                       {editing && renameSubmitted && !renameValid ? (

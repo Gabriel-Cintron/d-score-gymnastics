@@ -19,8 +19,12 @@ const files = await inventory(resolve(output, 'site'));
 const rules = JSON.parse(
   await readFile(resolve(root, 'packages/rulesets/generated/fig-mag-2025-2028.json'), 'utf8'),
 );
+const scoringProfiles = JSON.parse(
+  await readFile(resolve(root, 'packages/rulesets/generated/scoring-profiles.json'), 'utf8'),
+);
 const manifest = {
-  schemaVersion: 1,
+  schemaVersion: 2,
+  scoringProfiles,
   commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
   version: JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8')).version,
   catalogDigest: publicWordingDigest(rules.elements),

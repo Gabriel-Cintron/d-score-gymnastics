@@ -8,6 +8,7 @@ import {
 } from '@d-score-gymnastics/scoring';
 import type { CompiledElement } from '@d-score-gymnastics/rulesets';
 
+import { parseProfileSelection } from './scoring-profile-state';
 import type {
   LandingState,
   RelationshipState,
@@ -16,7 +17,8 @@ import type {
   WorkbenchState,
 } from './types';
 
-export const WORKBENCH_STATE_SCHEMA_VERSION = 2;
+export const WORKBENCH_STATE_SCHEMA_VERSION = 3;
+const PREVIOUS_WORKBENCH_STATE_SCHEMA_VERSION = 2;
 const LEGACY_WORKBENCH_STATE_SCHEMA_VERSION = 1;
 const MAX_STORED_ROUTINE_ELEMENTS = 32;
 
@@ -82,9 +84,10 @@ export function parseStoredWorkbenchState(
   const schemaVersion = record.schemaVersion;
   if (
     (schemaVersion !== WORKBENCH_STATE_SCHEMA_VERSION &&
-      schemaVersion !== LEGACY_WORKBENCH_STATE_SCHEMA_VERSION) ||
+      schemaVersion !== LEGACY_WORKBENCH_STATE_SCHEMA_VERSION &&
+      schemaVersion !== PREVIOUS_WORKBENCH_STATE_SCHEMA_VERSION) ||
     ruleset?.id !== context.rulesetId ||
-    (schemaVersion === WORKBENCH_STATE_SCHEMA_VERSION &&
+    (schemaVersion !== LEGACY_WORKBENCH_STATE_SCHEMA_VERSION &&
       ruleset.disciplineId !== context.disciplineId) ||
     (ruleset.disciplineId !== undefined && ruleset.disciplineId !== context.disciplineId) ||
     typeof record.nextOccurrenceNumber !== 'number' ||
@@ -97,6 +100,8 @@ export function parseStoredWorkbenchState(
     return undefined;
   }
 
+  const profiles = parseProfileSelection(record, schemaVersion !== WORKBENCH_STATE_SCHEMA_VERSION);
+  if (!profiles) return undefined;
   const routines = parseRoutines(record.routines, context.elementById);
   const stuckByApparatus = parseLandings(record.stuckByApparatus);
   if (routines === undefined || stuckByApparatus === undefined) return undefined;
@@ -117,6 +122,7 @@ export function parseStoredWorkbenchState(
       .map(({ occurrenceId }) => nextNumberAfter(occurrenceId)),
   );
   return {
+    ...profiles,
     apparatus: record.apparatus,
     nextOccurrenceNumber: Math.max(record.nextOccurrenceNumber, derivedNextOccurrence),
     relationships,

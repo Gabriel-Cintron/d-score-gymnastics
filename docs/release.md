@@ -37,7 +37,8 @@ Lighthouse. The preflight alias remains for compatibility. Neither requires a hu
 signature or reads native screenshots.
 
 CI exports once, tests that directory with `DSCORE_USE_EXISTING_BUILD=1`, and retains `web-release`
-containing `site/` and `manifest.json`. The manifest records the commit, catalog wording digest, and
+containing `site/` and `manifest.json`. The schema-2 manifest records every bundled scoring
+profile/revision/status and scoring-data digest, as well as the commit, catalog wording digest, and
 every asset checksum. Deployment workflows verify it before uploading.
 
 After accepting a candidate, retain the exact CI ZIP, its manifest and SHA256SUMS as GitHub release
@@ -206,3 +207,10 @@ rebuild merely to change a binary; any new binary returns through internal TestF
 The usage/search update has its own protected Worker and D1. Provision and validate it using
 `docs/analytics.md` before promoting the instrumented web artifact. The existing Pages workflow
 continues to reuse verified CI output; backend deployment never rebuilds the web application.
+
+## Scoring profile candidate
+
+See [scoring profiles](scoring-profiles.md) for the pending USAG source matrix, storage migrations,
+profile acceptance and compatible forward recovery. Disabled placeholders are not supported
+programs. Do not promote the profile candidate as USAG support before its source/fixture acceptance
+is complete.

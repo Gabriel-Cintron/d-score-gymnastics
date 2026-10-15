@@ -1,5 +1,5 @@
 import { DAY, sanitizeTerm, utcDay, validateEvent } from '../../../packages/telemetry/src/protocol';
-import catalog from '../../../packages/rulesets/generated/fig-mag-2025-2028.json';
+import catalog from '../../../packages/rulesets/generated/profile-catalog.json';
 import { authorize } from './access';
 import { aggregate, cleanup, erase, ingest, searchReport, summary, type Filters } from './data';
 import { aliasScript } from './aliases';
