@@ -17,7 +17,10 @@ export async function openApp(page: Page, url = '/app/') {
     page.getByRole('button', { name: 'Start a new Floor Exercise routine' }),
   ).toBeEnabled();
   const skip = page.getByRole('button', { name: 'Skip tour' });
-  if (await skip.isVisible()) await skip.click();
+  if (await skip.isVisible()) {
+    await skip.click();
+    await expect(skip).toBeHidden();
+  }
 }
 
 export async function addElement(page: Page, query = 'Manna') {
