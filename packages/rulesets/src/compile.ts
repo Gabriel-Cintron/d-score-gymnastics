@@ -26,6 +26,7 @@ export type CompiledDifficulty =
     };
 
 export interface CompiledElement {
+  readonly profileAdjustment?: { readonly originalTenths: ScoreTenths; readonly reason: string };
   readonly aliases: readonly string[];
   readonly apparatus: ApparatusId;
   readonly code: {

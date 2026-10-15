@@ -3,6 +3,7 @@ import {
   type DifficultyAward,
   type DifficultyWarning,
   type ElementDecision,
+  type ElementId,
   type ElementRoutine,
   type ElementRoutineApparatusId,
   type ResolvedElementOccurrence,
@@ -160,6 +161,7 @@ export function createFigElementCountingEvaluator(
   sharedRules: CompiledSharedRules,
   apparatus: ElementRoutineApparatusId,
   apparatusRules?: CompiledApparatusRules,
+  excludedElementIds: ReadonlySet<ElementId> = new Set(),
 ): RoutineEvaluator {
   const policy = sharedRules.elementCounting[apparatus];
   if (apparatusRules !== undefined && apparatusRules.apparatus !== apparatus) {
@@ -172,7 +174,15 @@ export function createFigElementCountingEvaluator(
     apparatus,
     id: FIG_ELEMENT_COUNTING_EVALUATOR_ID,
     evaluate: ({ occurrences, routine }) =>
-      evaluateElementCounting(occurrences, routine, policy, sharedRules, apparatus, apparatusRules),
+      evaluateElementCounting(
+        occurrences,
+        routine,
+        policy,
+        sharedRules,
+        apparatus,
+        apparatusRules,
+        excludedElementIds,
+      ),
   };
 }
 
@@ -183,9 +193,24 @@ function evaluateElementCounting(
   sharedRules: CompiledSharedRules,
   apparatus: ElementRoutineApparatusId,
   apparatusRules: CompiledApparatusRules | undefined,
+  excludedElementIds: ReadonlySet<ElementId>,
 ): RoutineEvaluationDraft {
   const groupRequirements = sharedRules.elementGroupRequirements;
-  const prepared = prepareApparatusEvaluation(occurrences, routine, apparatusRules);
+  const preparedBase = prepareApparatusEvaluation(occurrences, routine, apparatusRules);
+  const blocked = new Set(
+    occurrences.filter((o) => excludedElementIds.has(o.element.id)).map((o) => o.occurrenceId),
+  );
+  for (const relationship of routine.relationships ?? []) {
+    if (
+      relationship.kind === 'sequence' &&
+      relationship.occurrenceIds.some((id) => blocked.has(id))
+    )
+      for (const id of relationship.occurrenceIds) blocked.add(id);
+  }
+  const exclusionsForProfile = new Map(preparedBase.exclusions);
+  for (const id of blocked)
+    exclusionsForProfile.set(id, { reason: 'profile.element-not-eligible', parameters: {} });
+  const prepared = { ...preparedBase, exclusions: exclusionsForProfile };
   const effectiveOccurrences = occurrences.map(
     (occurrence) => prepared.effectiveByOccurrenceId.get(occurrence.occurrenceId) ?? occurrence,
   );
