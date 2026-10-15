@@ -10,7 +10,7 @@ import {
   type CompiledPommelHorseRules,
 } from '@d-score-gymnastics/rulesets';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   Pressable,
   Platform,
@@ -303,7 +303,8 @@ function Workbench({
     // Startup uses the initial theme only; subsequent appearance changes use the unified save path.
   }, [onThemeModeChange]);
 
-  useEffect(() => {
+  // Queue the new complete snapshot before paint, so an old save cannot acknowledge a new edit.
+  useLayoutEffect(() => {
     if (!workspaceReady || !libraryWritable || mutationInProgress.current) return;
     const now = new Date().toISOString();
     const state = currentWorkbenchState();
