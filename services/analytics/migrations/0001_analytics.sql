@@ -50,8 +50,9 @@ END;
 CREATE TABLE budget(day TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0);
 CREATE TABLE limits(key TEXT PRIMARY KEY,value INTEGER NOT NULL);
 INSERT INTO limits VALUES('daily',2000);
+-- Keep trigger guards in WHERE form for Cloudflare's remote migration parser.
 CREATE TRIGGER event_budget BEFORE INSERT ON events WHEN NOT EXISTS(SELECT 1 FROM events WHERE id=NEW.id) BEGIN
- SELECT CASE WHEN COALESCE((SELECT count FROM budget WHERE day=NEW.received_day),0)>=(SELECT value FROM limits WHERE key='daily') THEN RAISE(ABORT,'ingestion budget') END;
+ SELECT RAISE(ABORT,'ingestion budget') WHERE COALESCE((SELECT count FROM budget WHERE day=NEW.received_day),0)>=(SELECT value FROM limits WHERE key='daily');
 END;
 CREATE TRIGGER event_count AFTER INSERT ON events BEGIN
  INSERT INTO budget VALUES(NEW.received_day,1) ON CONFLICT(day) DO UPDATE SET count=count+1;
@@ -59,7 +60,7 @@ END;
 
 CREATE TABLE records(scope TEXT NOT NULL, metric TEXT NOT NULL, value INTEGER NOT NULL, day TEXT NOT NULL, PRIMARY KEY(scope,metric));
 CREATE TRIGGER event_identity BEFORE INSERT ON events WHEN NOT EXISTS(SELECT 1 FROM events WHERE id=NEW.id) BEGIN
- SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM registry WHERE id=NEW.installation AND purpose=CASE WHEN NEW.type='usage' THEN 'usage' ELSE 'search' END) THEN RAISE(ABORT,'invalid identity') END;
+ SELECT RAISE(ABORT,'invalid identity') WHERE NOT EXISTS(SELECT 1 FROM registry WHERE id=NEW.installation AND ((purpose='usage' AND NEW.type='usage') OR (purpose='search' AND NEW.type<>'usage')));
 END;
 
 CREATE TRIGGER registry_credential BEFORE INSERT ON registry WHEN EXISTS(SELECT 1 FROM registry WHERE id=NEW.id AND (deletion_hash<>NEW.deletion_hash OR purpose<>NEW.purpose)) BEGIN
