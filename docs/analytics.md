@@ -106,3 +106,10 @@ telemetry outage must never require deleting routine data or changing catalog ID
 
 Provisioning, protected staging and production smoke evidence must be recorded before calling this
 update live. Preparing source/configuration alone is not an analytics deployment.
+
+## Initial production evidence
+
+See [the analytics verification record](../release/analytics-verification.md) for the deployed
+candidate, CI/artifact identity, hosted smoke results and recovery target. Keep domain-level
+Cloudflare Web Analytics/RUM disabled as well as Pages analytics; the domain setting can inject a
+measurement script even when the Pages project reports analytics disabled.
